@@ -4,26 +4,26 @@
     font-family: 'Inter';
 }
 header{
-    width: 100%;
+
     margin-bottom: 0px;
     position: relative;
 }
 #title_background{
+    z-index: -2;
     width: 100%;
     height: 400px;
     object-fit: cover;
     position: absolute;
 }
 #title_gr{
-   
-    z-index: 1;
+    z-index: -1;
     width: 100%;
     height: 400px;
     position: absolute;
     background-image: linear-gradient(to bottom, #002e4e, #005A9C);
     opacity: 0.6;
 }
-#projects{
+#projects_overview{
     margin-top: 300px;
     display: flex;
     flex-direction: column;
@@ -37,13 +37,18 @@ header{
     text-transform: uppercase;
     background-color: #005A9C;
     border-radius: 35px;
-    height: 10px;
+    height: 7px;
+    font-size: 15px;
     justify-content: center;
     display: flex;
     align-items:center ;
     padding: 25px;
-    width: 250px;
-
+    width: 200px;
+    transition: all 0.2s ease-in-out;
+}
+.filter:hover{
+    font-weight: 700;
+    transform: scale(1.2);
 }
 #projects-filter{
     margin-top: 20px;
@@ -135,27 +140,80 @@ header{
     position: absolute;
     transition: all 0.2s ease-in-out;
 }
-.image-container{
+.image-container {
     position: relative;
     display: flex;
     height: fit-content;
     width: 100%;
     margin-bottom: 20px;
 }
-.image-container:hover > #project-gr{
-    opacity: 0.9;
-}
-.image-container:hover > #more{
-    opacity: 1;
-}
-#more{
-    transition: all 0.2s ease-in-out;
+
+#more_link {
     position: absolute;
-    z-index: 1;
+    z-index: 3; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 150px;
+    width: 50%;
+    height: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.image-container:hover > #more_link {
+    opacity: 1;
+}
+
+#more {
+    width: 50%;
+    height: auto;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+#more:hover{
+    transform: scale(1.1);
+}
+
+#project-gr {
+    border-radius: 10px;
+    width: 100%;
+    background-color: #005A9C;
+    height: 100%;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.image-container:hover > #project-gr {
+    opacity: 0.9;
+}
+#projects_list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+.page-selector{
+    background-color: #005A9C;
+     border-radius: 10px;
+    padding: 20px;
+    width: 35px;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.page-selector:hover {
+   transform: scale(1.1);
+   font-weight: 900;
+}
+#projects-pages{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    margin-top: 50px;
 }

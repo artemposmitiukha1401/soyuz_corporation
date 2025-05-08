@@ -136,8 +136,8 @@ header{
     display: flex;
     align-items: center;
     background-color: #005A9C;
-    padding: 20px;
-    width: 100%;
+    padding: 2%;
+    width: 96%;
     border-radius: 0;
     margin-bottom: 50px;
 }

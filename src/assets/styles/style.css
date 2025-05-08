@@ -153,12 +153,11 @@ header{
     transform: rotate(180deg);
   }
   .menu_link{
+    font-weight: 400;
     text-decoration: none;
     font-size: 18px;
-    transition: transform 0.1s ease-in-out;
-    transform-origin: right;
-    
-    
+    transition: all 0.1s ease-in-out;
+    transform-origin: right;  
   }
  .menu_link:hover{
     font-weight: 700;
