@@ -1,0 +1,161 @@
+@import url('/src/assets/styles/about.css');
+*{
+    border-radius: 0;
+    font-family: 'Inter';
+}
+header{
+    width: 100%;
+    margin-bottom: 0px;
+    position: relative;
+}
+#title_background{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    position: absolute;
+}
+#title_gr{
+   
+    z-index: 1;
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    background-image: linear-gradient(to bottom, #002e4e, #005A9C);
+    opacity: 0.6;
+}
+#projects{
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+}
+#sectionTitle{
+    width: 500px;
+    color: #005A9C;
+    border: none;
+}
+.filter{
+    text-transform: uppercase;
+    background-color: #005A9C;
+    border-radius: 35px;
+    height: 10px;
+    justify-content: center;
+    display: flex;
+    align-items:center ;
+    padding: 25px;
+    width: 250px;
+
+}
+#projects-filter{
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    gap: 80px;
+}
+/* #project-card{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: #005A9C;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+}
+#project-title{
+    width: 90%;
+}
+#project-mainimage{
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    width: 100%;
+}
+.info-item{
+    display: flex;
+    width: 90%;
+    gap: 40px;
+    align-items: center;
+    justify-content: flex-start;
+}
+#project-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.info-value{
+    text-align: left;
+    flex: 1;
+}
+.info-key{
+    text-align: right;
+} */
+
+.project-container {
+    background-color: #005A9C;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.info-item {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    align-items: center;
+
+}
+
+.info-key {
+    width: 150px;
+    font-weight: bold;
+}
+
+.info-value {
+    flex: 1;
+}
+
+.info-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;;
+    font-family: 'Nunito Sans';
+}
+#project-mainimage{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+    object-fit: cover;
+}
+#project-gr{
+    border-radius: 10px;
+    width: 100%;
+    background-color: #005A9C;
+    height: 100%;
+    opacity: 0.3;
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+}
+.image-container{
+    position: relative;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.image-container:hover > #project-gr{
+    opacity: 0.9;
+}
+.image-container:hover > #more{
+    opacity: 1;
+}
+#more{
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    opacity: 0;
+    cursor: pointer;
+}
