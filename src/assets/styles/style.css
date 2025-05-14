@@ -13,7 +13,7 @@
   margin: 0;
   padding: 0;
 
-}
+} 
 
 body { background-color: var(--background-color); }
 
@@ -63,7 +63,10 @@ header {
   
 }
 
-#logo { width: 400px; }
+#logo {
+   width: 400px; 
+   min-width: 200px;
+}
 
 #map {
   width: 250px;
@@ -74,12 +77,13 @@ header {
 .welcome {
   display: flex;
   margin-top: 50px;
+  margin-left: 50px;
   flex-direction: column;
 }
 
 #welcome-title {
-  font-size: 70px;
-  margin-left: 50px;
+  font-size: 70px; 
+  
   font-family: var(--font-nunito);
   text-transform: uppercase;
 }
@@ -88,7 +92,7 @@ header {
   font-family: var(--font-nunito);
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
+  
 }
 
 .welcome-slogan {
@@ -247,6 +251,7 @@ header {
   padding: 30px;
   display: flex;
   width: 600px;
+  min-width: 300px;
   position: relative;
   height: 300px;
   justify-content: right;
@@ -331,16 +336,18 @@ header {
 
 #projects {
   display: flex;
-  margin: 100px auto ;
+  margin: 100px auto;
   justify-content: space-between;
   gap: 15px;
   flex-direction: row;
-  width: 1200px;
+  width: 65%;
   flex-wrap: wrap;
 }
 
 .project-card {
   width: 550px;
+  min-width: 100px;
+  max-width: 550px;
   display: flex;
   gap: 5px;
   flex-direction: column;
@@ -373,7 +380,11 @@ header {
   font-family: var(--font-nunito);
   font-weight: 500;
 }
-
+#project-side{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
 .project-description {
   font-weight: 200;
 }
@@ -493,4 +504,33 @@ footer {
 
 #footer-logo {
   width: 300px;
+}
+@media only screen and (max-width: 600px){
+  #divisions{
+    flex-direction: column;
+  }
+  .division{
+    width: 200px;
+  }
+  .welcome{
+    margin-left: 15px;
+  }
+  #welcome-title{
+    font-size: 30px;
+  }
+  .welcome-slogan{
+    font-size: 20px;
+  }
+  header{
+    padding-left: 10px;
+  }
+  footer{
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  .project-card{
+    width: 300px;
+  }
 }
