@@ -150,10 +150,7 @@
     width: 80%;
   }
 
-  #checkbox2:checked~.toggle2 {
-    position: fixed;
-    right: 0;
-  }
+  
 
   #checkbox2:checked+.toggle2 .bars {
     position: absolute;
@@ -271,7 +268,7 @@
     flex-direction: row;
     margin: 6.25rem auto 0;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
     position: relative;
   }
@@ -279,7 +276,7 @@
   .division {
     padding: 1.875rem;
     display: flex;
-    width: 500px;
+    width: 555px;
     min-width: 200px;
     max-width: 600px;
     position: relative;
@@ -365,9 +362,9 @@
     display: flex;
     margin: 6.25rem auto;
     justify-content: center;
-    gap: 0.938rem;
+    gap: 1rem;
     flex-direction: row;
-    width: 75%;
+    width: 85%;
     flex-wrap: wrap;
   }
 
@@ -646,7 +643,7 @@
     }
 
     #divisions {
-      width: 95%;
+      width: 100%;
       gap: 1.25rem;
     }
 
@@ -687,19 +684,7 @@
       margin: 0 auto;
     }
 
-    .toggle2 {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      margin: 0;
-    }
-
-
-    #checkbox2:checked~.toggle2 {
-      position: fixed;
-      right: 20px;
-      top: 20px;
-    }
+    
 
 
     #projects {

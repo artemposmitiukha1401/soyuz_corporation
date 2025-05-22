@@ -8,6 +8,9 @@
 header {
   margin-bottom: 0;
   position: relative;
+  display: flex;
+  align-items: center;
+  
 }
 
 #title_background {
