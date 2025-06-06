@@ -4,6 +4,9 @@
   border-radius: 0;
   font-family: 'Inter';
 }
+.toggle2{
+  margin-right: 2%;
+}
 
 header {
   margin-bottom: 0;
@@ -41,6 +44,7 @@ header {
   max-width: 500px;
   color: #005A9C;
   border: none;
+  
 }
 
 .filter {
