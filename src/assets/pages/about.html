@@ -17,14 +17,22 @@
 <body>
     <header> 
         <img id="nav_logo" src="/src/assets/images/logo.png" alt="">
-        <nav id="horizontal_nav"> <a class="menu_link horizontal_nav" href="/index.html">Головна</a> <a
-                class="menu_link horizontal_nav" href="/index.html#divisions">Послуги</a> <a
-                class="menu_link horizontal_nav" href="">Проекти</a> <a class="menu_link horizontal_nav"
-                href="">Новини</a> <a class="menu_link horizontal_nav" href="">Контакти</a>
-
+         <input id="checkbox2" type="checkbox">
+        <label class="toggle toggle2" for="checkbox2">
+            <div id="bar4" class="bars"></div>
+            <div id="bar5" class="bars"></div>
+            <div id="bar6" class="bars"></div>
+        </label>
+        <nav id="menu_list">
+            <a class="menu_link" href="about.html">Про компанію</a>
+            <a class="menu_link" href="#divisions">Послуги</a>
+            <a class="menu_link" href="./projects_pages/projects.html">Проекти</a>
+            <a class="menu_link" href="news.html">Новини</a>
+            <a class="menu_link" href="contacts.html">Контакти</a>
         </nav>
     </header>
-    <h2 id="section_title">Про компанію</h2>
+    <a class="to_general" href="/index.html">На головну</a>
+    <h2 class="section_title">Про компанію</h2>
     <section id="info">
         <img class="info_image" src="/src/assets/images/about/about_image_1.avif" alt="">
         <div id="info_description">
@@ -95,13 +103,14 @@
             <p class="division_step">Навчання персоналу замовника</p>
         </div>
     </section>
+     <a class="to_general" href="/index.html">На головну</a>
     <footer>
         <img id="footer_logo" src="/src/assets/images/logo.png" alt="">
         <div id="links">
-            <a class="footer_links" href="/src/assets/pages/about.html">Про компанію</a>
-            <a class="footer_links" href="">Новини</a>
-            <a class="footer_links" href="">Контакти</a>
-            <a class="footer_links" href="">Проекти</a>
+            <a class="footer_links" href="about.html">Про компанію</a>
+            <a class="footer_links" href="news.html">Новини</a>
+            <a class="footer_links" href="contacts.html">Контакти</a>
+            <a class="footer_links" href="./projects_pages/projects.html">Проекти</a>
             <a class="footer_links" href="">Карʼєра</a>
         </div>
         <div id="contacts">

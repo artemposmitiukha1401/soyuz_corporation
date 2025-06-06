@@ -1,0 +1,56 @@
+@import url('style.css');
+@import url('projects.css');
+
+* {
+    font-family: var(--font-inter);
+}
+
+.contact_card {
+    justify-content: left;
+    align-items: center;
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    width: 100%;
+    min-width: 20rem;
+    max-width: 80rem;
+    border-radius: 0.625rem;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+#contacts_list {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#contacts_list {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    margin-top: 30rem;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.office_img {
+    width: 100%;
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .contact_card {
+        flex-direction: column;
+        padding: 1.5rem;
+        width: 90%;
+        gap: 2rem;
+        border-radius: 0.5rem;
+    }
+    
+    #contacts_list {
+        gap: 1.5rem;
+        margin-top: 25rem;
+    }
+}
