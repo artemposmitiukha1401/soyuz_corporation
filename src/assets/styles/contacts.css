@@ -1,5 +1,5 @@
 @import url('style.css');
-@import url('projects.css');
+@import url('news.css');
 
 * {
     font-family: var(--font-inter);
@@ -17,8 +17,8 @@
     border-radius: 0.625rem;
     flex-direction: row;
     gap: 3rem;
+    transition: all 0.2s ease-in-out;
 }
-
 #contacts_list {
     gap: 1rem;
     display: flex;
@@ -29,7 +29,7 @@
     display: flex;
     margin: auto;
     align-items: center;
-    margin-top: 30rem;
+    margin-top: 5rem;
     justify-content: center;
     gap: 5rem;
 }
@@ -38,9 +38,10 @@
     width: 100%;
     margin: 0;
 }
-
-
 @media only screen and (max-width: 480px) {
+    .to_general{
+        margin-top: 5rem;
+    }
     .contact_card {
         flex-direction: column;
         padding: 1.5rem;
@@ -51,6 +52,6 @@
     
     #contacts_list {
         gap: 1.5rem;
-        margin-top: 25rem;
+        margin-top: 5rem;
     }
 }

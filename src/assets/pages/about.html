@@ -1,72 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/src/assets/styles/normalize.css">
-    <link rel="stylesheet" href="/src/assets/styles/about.css">
-    <title>Document</title>
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles/normalize.css" />
+    <link rel="stylesheet" href="../styles/about.css" />
+    <title>Про компанію</title>
 </head>
 
 <body>
-    <header> 
-        <img id="nav_logo" src="/src/assets/images/logo.png" alt="">
-         <input id="checkbox2" type="checkbox">
+    <header>
+        <img id="nav_logo" src="../images/logo.png" alt="Логотип компанії Союз" />
+        <input id="checkbox2" type="checkbox" />
         <label class="toggle toggle2" for="checkbox2">
             <div id="bar4" class="bars"></div>
             <div id="bar5" class="bars"></div>
             <div id="bar6" class="bars"></div>
         </label>
         <nav id="menu_list">
-            <a class="menu_link" href="about.html">Про компанію</a>
-            <a class="menu_link" href="#divisions">Послуги</a>
-            <a class="menu_link" href="./projects_pages/projects.html">Проекти</a>
-            <a class="menu_link" href="news.html">Новини</a>
-            <a class="menu_link" href="contacts.html">Контакти</a>
+            <a class="menu_link" href="./about.html">Про компанію</a>
+            <a class="menu_link" href="../../../index.html#divisions">Послуги</a>
+            <a class="menu_link" href="./projects_pages/projects.html">Проєкти</a>
+            <a class="menu_link" href="./news.html">Новини</a>
+            <a class="menu_link" href="./contacts.html">Контакти</a>
         </nav>
     </header>
-    <a class="to_general" href="/index.html">На головну</a>
+
+    <a class="to_general" href="../../../index.html">На головну</a>
     <h2 class="section_title">Про компанію</h2>
+
     <section id="info">
-        <img class="info_image" src="/src/assets/images/about/about_image_1.avif" alt="">
+        <img class="info_image" src="../images/about/about_image_1.avif"
+            alt="Головний офіс або інфраструктура компанії" />
         <div id="info_description">
-            <img class="info_image" src="/src/assets/images/about/about_image_2.avif" alt="">
-            <p id="info_text"><strong>КОРПОРАЦІЯ ВИРОБНИЧИХ ТА КОМЕРЦІЙНИХ ПІДПРИЄМСТВ «СОЮЗ» (Корпорація
-                    «Союз»)</strong> утворена в 1991 році. Українська компанія, яка динамічно розвивається й
-                спеціалізується на проєктуванні, будівництві, модернізації та реконструкції об'єктів електро- і
-                теплоенергетики, альтернативної енергетики.
+            <img class="info_image" src="../images/about/about_image_2.avif"
+                alt="Команда або реалізований проєкт корпорації" />
+            <p id="info_text">
+                <strong>КОРПОРАЦІЯ ВИРОБНИЧИХ ТА КОМЕРЦІЙНИХ ПІДПРИЄМСТВ «СОЮЗ» (Корпорація «Союз»)</strong> утворена в
+                1991 році. Українська компанія, яка динамічно розвивається й спеціалізується на проєктуванні,
+                будівництві, модернізації та реконструкції об'єктів електро- і теплоенергетики, альтернативної
+                енергетики.
                 За останні роки Корпорація «Союз» ввела в експлуатацію понад 50 значних енергетичних об'єктів в Україні.
-                Підприємство сертифіковано по міжнародним стандартам: ISO 9001:2015, ISO 14001:2015, ISO 45001:2018</p>
+                Підприємство сертифіковано по міжнародним стандартам: ISO 9001:2015, ISO 14001:2015, ISO 45001:2018
+            </p>
         </div>
     </section>
+
     <section id="details">
         <div class="projects_geography">
             <h2 class="about_title">Географія великих проектів</h2>
-            <img class="details_image" src="/src/assets/images/about/projects_geography.jpg" alt="">
+            <img class="details_image" src="../images/about/projects_geography.jpg"
+                alt="Карта географії реалізованих проектів корпорації" />
         </div>
         <div class="projects_geography">
             <h2 class="about_title">Основні замовники та партнери</h2>
-            <img class="details_image" src="/src/assets/images/about/customers.png" alt="">
+            <img class="details_image" src="../images/about/customers.png"
+                alt="Логотипи партнерів та замовників компанії" />
         </div>
     </section>
 
     <section id="divisions_info">
         <div id="networks_generation">
-            <h2 class="about_title">Корпорація «СОЮЗ» об'єднує два бізнес-дивізіони,
-                які пропонують повний спектр послуг з будівництва
-                мережевих об'єктів та об'єктів генерації.</h2>
+            <h2 class="about_title">
+                Корпорація «СОЮЗ» об'єднує два бізнес-дивізіони, які пропонують повний спектр послуг з будівництва
+                мережевих об'єктів та об'єктів генерації.
+            </h2>
             <div class="division_description">
                 <div class="division_info">
                     <h3>БІЗНЕС-ДИВІЗІОН «МЕРЕЖІ»</h3>
                     <p>Проектування, будівництво та реконструкція ПС і ЛЕП.</p>
                 </div>
-                <img src="/src/assets/images/about_divisions/division_1.png" alt="">
+                <img src="../images/about_divisions/division_1.png" alt="Ілюстрація до бізнес-дивізіону Мережі" />
                 <div class="division_info">
                     <h3>БІЗНЕС-ДИВІЗІОН «ГЕНЕРАЦІЯ»</h3>
                     <p>Проектування, будівництво, модернізація, реконструкція теплових електростанцій та об'єктів
@@ -74,44 +84,53 @@
                 </div>
             </div>
         </div>
+
         <h2 class="about_title">Системи енергозабезпечення підприємств</h2>
+
         <div class="about_division">
-            <img src="/src/assets/images/about/image_1.avif" alt="">
-            <p class="division_text">Бізнес-дивізіон «Генерація» успішно здійснює будівництво, реконструкцію та
-                модернізацію об'єктів теплової генерації, використовуючи сучасні технологічні рішення.
+            <img src="../images/about/image_1.avif" alt="Об'єкт теплової генерації або енергетична установка" />
+            <p class="division_text">
+                Бізнес-дивізіон «Генерація» успішно здійснює будівництво, реконструкцію та модернізацію об'єктів
+                теплової генерації, використовуючи сучасні технологічні рішення.
                 Здійснює реалізацію проектів «під ключ», надає весь спектр інжинірингових послуг та робіт з високою
-                якістю.</p>
+                якістю.
+            </p>
             <h3 class="steps_title">ЕРС/ЕРСМ</h3>
-            <p class="division_step">Попереднє опрацювання проектів, що містять ТЕО та обгрунтування інвестицій</p>
+            <p class="division_step">Попереднє опрацювання проектів, що містять ТЕО та обґрунтування інвестицій</p>
             <p class="division_step">Комплексне проектування об'єктів, розробка проектної та робочої документації,
                 авторський нагляд за будівництвом</p>
             <p class="division_step">Постачання обладнання українських та закордонних виробників</p>
             <p class="division_step">Виконання функцій генерального підрядника в будівництві</p>
-            <p class="division_step">Будівельно-монтажні та пусконалогоджувальні роботи. Введення об'єкта в експлуатацію
+            <p class="division_step">Будівельно-монтажні та пусконалагоджувальні роботи. Введення об'єкта в експлуатацію
             </p>
         </div>
+
         <div class="about_division">
-            <img src="/src/assets/images/about/image_2.avif" alt="">
-            <p class="division_text">Бізнес-дивізіон «Мережі» здійснює проектування, будівництво, реконструкцію,
-                модернізацію об'єктів передачі та розподілу електроенергії «під ключ» та надає весь спектр
-                інжинірингових послуг.</p>
+            <img src="../images/about/image_2.avif" alt="Енергетичні мережі або об'єкти електропередачі" />
+            <p class="division_text">
+                Бізнес-дивізіон «Мережі» здійснює проектування, будівництво, реконструкцію, модернізацію об'єктів
+                передачі та розподілу електроенергії «під ключ» та надає весь спектр інжинірингових послуг.
+            </p>
             <h3 class="steps_title">ЕРС/ЕРСМ</h3>
             <p class="division_step">Комплексне проектування, виконання функцій генерального проектувальника</p>
             <p class="division_step">Комплектне постачання обладнання</p>
             <p class="division_step">Виконання функцій генерального підрядника в будівництві</p>
-            <p class="division_step">Будівельно-монтажні роботи. Пусконалагоджувальні роботи Сервісне обслуговування</p>
+            <p class="division_step">Будівельно-монтажні роботи. Пусконалагоджувальні роботи. Сервісне обслуговування
+            </p>
             <p class="division_step">Навчання персоналу замовника</p>
         </div>
     </section>
-     <a class="to_general" href="/index.html">На головну</a>
+
+    <a class="to_general" href="../../../index.html">На головну</a>
+
     <footer>
-        <img id="footer_logo" src="/src/assets/images/logo.png" alt="">
+        <img id="footer_logo" src="../images/logo.png" alt="Логотип корпорації Союз у футері" />
         <div id="links">
             <a class="footer_links" href="about.html">Про компанію</a>
             <a class="footer_links" href="news.html">Новини</a>
             <a class="footer_links" href="contacts.html">Контакти</a>
             <a class="footer_links" href="./projects_pages/projects.html">Проекти</a>
-            <a class="footer_links" href="">Карʼєра</a>
+            <a class="footer_links" href="#">Карʼєра</a>
         </div>
         <div id="contacts">
             <address>м. Одеса, пр-т. Шевченка 1</address>
@@ -120,6 +139,7 @@
         </div>
     </footer>
 
+    <script src="../scripts/script.js"></script>
 </body>
 
 </html>

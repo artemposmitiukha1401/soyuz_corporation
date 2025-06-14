@@ -9,14 +9,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/src/assets/styles/normalize.css">
-    <link rel="stylesheet" href="/src/assets/styles/projects.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/normalize.css">
+    <link rel="stylesheet" href="../../styles/projects.css">
+    <title>Проєкти</title>
 </head>
 
 <body>
     <header>
-        <img id="nav_logo" src="/src/assets/images/logo.png" alt="">
+        <img id="nav_logo" src="../../images/logo.png" alt="Логотип компанії">
         <input id="checkbox2" type="checkbox">
         <label class="toggle toggle2" for="checkbox2">
             <div id="bar4" class="bars"></div>
@@ -24,32 +24,67 @@
             <div id="bar6" class="bars"></div>
         </label>
         <nav id="menu_list">
-            <a class="menu_link" href="./src/assets/pages/about.html">Про компанію</a>
-            <a class="menu_link" href="#divisions">Послуги</a>
-            <a class="menu_link" href="./src/assets/pages/projects_pages/projects.html">Проекти</a>
-            <a class="menu_link" href="./src/assets/pages/news.html">Новини</a>
-            <a class="menu_link" href="">Контакти</a>
+            <a class="menu_link" href="../about.html">Про компанію</a>
+            <a class="menu_link" href="../../../index.html#divisions">Послуги</a>
+            <a class="menu_link" href="../projects_pages/projects.html">Проекти</a>
+            <a class="menu_link" href="../news.html">Новини</a>
+            <a class="menu_link" href="../contacts.html">Контакти</a>
         </nav>
     </header>
-    <img id="title_background" src="/src/assets/images/divisions/division_1.avif" alt="">
+
+    <img id="title_background" src="../../images/divisions/division_1.avif" alt="Фонове зображення розділу">
     <div id="title_gr"></div>
-    <h1 id="page_title">Проекти</h1>
+    <h1 id="page_title">Проєкти</h1>
+
+    <a class="to_general" href="../../../../index.html">На головну</a>
+
     <section id="projects_overview">
-        <h2 class="section_title">Наші проекти</h2>
+        <h2 class="section_title">Наші проєкти</h2>
         <div id="projects_filter">
-            <a class="filter" href="./projects.html" style="background-color: #002e4e;">Усі проекти</a>
-            <a class="filter" href="./projects filters pages/current_projects.html">Поточні</a>
-            <a class="filter" href="./projects filters pages/finished_projects.html">Завершені</a>
-            <a class="filter" href="./projects filters pages/big_projects.html">Великі проекти</a>
-        </div>  
+            <a class="filter" href="projects.html" style="background-color: #002e4e;">Усі проекти</a>
+            <a class="filter" href="projects_filters/current_projects.html">Поточні</a>
+            <a class="filter" href="projects_filters/finished_projects.html">Завершені</a>
+            <a class="filter" href="projects_filters/big_projects.html">Великі проєкти</a>
+        </div>
     </section>
 
     <section id="projects_list">
+        <div class="project_container">
+            <div class="image_container">
+                <img class="project_mainimage" src="../../images/main_background.avif" alt="Основне зображення проекту">
+                <a class="more_link" href=""><img class="more" src="../../images/icons/more.svg"
+                        alt="Детальніше про проект"></a>
+                <div class="project_gr"></div>
+            </div>
+            <div class="info_title">РЕКОНСТРУКЦІЯ ПЛ 330 КВ «АДЖАЛИК – ТРИХАТИ»</div>
+            <div class="info_item">
+                <div class="info_key">Замовник:</div>
+                <div class="info_value">ПрАТ «НЕК «Укренерго»</div>
+            </div>
+            <div class="info_item">
+                <div class="info_key">Предмет контракту:</div>
+                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ
+                    «Тилігул».</div>
+            </div>
+            <div class="info_item">
+                <div class="info_key">Галузь:</div>
+                <div class="info_value">Електроенергетика</div>
+            </div>
+            <div class="info_item">
+                <div class="info_key">Територія:</div>
+                <div class="info_value">Україна</div>
+            </div>
+            <div class="info_item">
+                <div class="info_key">Термін реалізації проекту:</div>
+                <div class="info_value">2023</div>
+            </div>
+        </div>
 
         <div class="project_container">
             <div class="image_container">
-                <img class="project_mainimage" src="/src/assets/images/main_background.avif" alt="Project Image">
-                <a class="more_link" href=""><img class="more" src="/src/assets/images/icons/more.svg" alt=""></a>
+                <img class="project_mainimage" src="../../images/main_background.avif" alt="Основне зображення проекту">
+                <a class="more_link" href=""><img class="more" src="../../images/icons/more.svg"
+                        alt="Детальніше про проект"></a>
                 <div class="project_gr"></div>
             </div>
             <div class="info_title">РЕКОНСТРУКЦІЯ ПЛ 330 КВ «АДЖАЛИК – ТРИХАТИ»</div>
@@ -59,7 +94,8 @@
             </div>
             <div class="info_item">
                 <div class="info_key">Предмет контракту:</div>
-                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ «Тилігул».</div>
+                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ
+                    «Тилігул».</div>
             </div>
             <div class="info_item">
                 <div class="info_key">Галузь:</div>
@@ -75,10 +111,11 @@
             </div>
         </div>
 
-                <div class="project_container">
+        <div class="project_container">
             <div class="image_container">
-                <img class="project_mainimage" src="/src/assets/images/main_background.avif" alt="Project Image">
-                <a class="more_link" href=""><img class="more" src="/src/assets/images/icons/more.svg" alt=""></a>
+                <img class="project_mainimage" src="../../images/main_background.avif" alt="Основне зображення проекту">
+                <a class="more_link" href=""><img class="more" src="../../images/icons/more.svg"
+                        alt="Детальніше про проект"></a>
                 <div class="project_gr"></div>
             </div>
             <div class="info_title">РЕКОНСТРУКЦІЯ ПЛ 330 КВ «АДЖАЛИК – ТРИХАТИ»</div>
@@ -88,7 +125,8 @@
             </div>
             <div class="info_item">
                 <div class="info_key">Предмет контракту:</div>
-                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ «Тилігул».</div>
+                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ
+                    «Тилігул».</div>
             </div>
             <div class="info_item">
                 <div class="info_key">Галузь:</div>
@@ -104,10 +142,11 @@
             </div>
         </div>
 
-                <div class="project_container">
+        <div class="project_container">
             <div class="image_container">
-                <img class="project_mainimage" src="/src/assets/images/main_background.avif" alt="Project Image">
-                <a class="more_link" href=""><img class="more" src="/src/assets/images/icons/more.svg" alt=""></a>
+                <img class="project_mainimage" src="../../images/main_background.avif" alt="Основне зображення проекту">
+                <a class="more_link" href=""><img class="more" src="../../images/icons/more.svg"
+                        alt="Детальніше про проект"></a>
                 <div class="project_gr"></div>
             </div>
             <div class="info_title">РЕКОНСТРУКЦІЯ ПЛ 330 КВ «АДЖАЛИК – ТРИХАТИ»</div>
@@ -117,7 +156,8 @@
             </div>
             <div class="info_item">
                 <div class="info_key">Предмет контракту:</div>
-                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ «Тилігул».</div>
+                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ
+                    «Тилігул».</div>
             </div>
             <div class="info_item">
                 <div class="info_key">Галузь:</div>
@@ -133,10 +173,11 @@
             </div>
         </div>
 
-                <div class="project_container">
+        <div class="project_container">
             <div class="image_container">
-                <img class="project_mainimage" src="/src/assets/images/main_background.avif" alt="Project Image">
-                <a class="more_link" href=""><img class="more" src="/src/assets/images/icons/more.svg" alt=""></a>
+                <img class="project_mainimage" src="../../images/main_background.avif" alt="Основне зображення проекту">
+                <a class="more_link" href=""><img class="more" src="../../images/icons/more.svg"
+                        alt="Детальніше про проект"></a>
                 <div class="project_gr"></div>
             </div>
             <div class="info_title">РЕКОНСТРУКЦІЯ ПЛ 330 КВ «АДЖАЛИК – ТРИХАТИ»</div>
@@ -146,7 +187,8 @@
             </div>
             <div class="info_item">
                 <div class="info_key">Предмет контракту:</div>
-                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ «Тилігул».</div>
+                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ
+                    «Тилігул».</div>
             </div>
             <div class="info_item">
                 <div class="info_key">Галузь:</div>
@@ -162,10 +204,11 @@
             </div>
         </div>
 
-                <div class="project_container">
+        <div class="project_container">
             <div class="image_container">
-                <img class="project_mainimage" src="/src/assets/images/main_background.avif" alt="Project Image">
-                <a class="more_link" href=""><img class="more" src="/src/assets/images/icons/more.svg" alt=""></a>
+                <img class="project_mainimage" src="../../images/main_background.avif" alt="Основне зображення проекту">
+                <a class="more_link" href=""><img class="more" src="../../images/icons/more.svg"
+                        alt="Детальніше про проект"></a>
                 <div class="project_gr"></div>
             </div>
             <div class="info_title">РЕКОНСТРУКЦІЯ ПЛ 330 КВ «АДЖАЛИК – ТРИХАТИ»</div>
@@ -175,7 +218,8 @@
             </div>
             <div class="info_item">
                 <div class="info_key">Предмет контракту:</div>
-                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ «Тилігул».</div>
+                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ
+                    «Тилігул».</div>
             </div>
             <div class="info_item">
                 <div class="info_key">Галузь:</div>
@@ -190,53 +234,25 @@
                 <div class="info_value">2023</div>
             </div>
         </div>
-
-                <div class="project_container">
-            <div class="image_container">
-                <img class="project_mainimage" src="/src/assets/images/main_background.avif" alt="Project Image">
-                <a class="more_link" href=""><img class="more" src="/src/assets/images/icons/more.svg" alt=""></a>
-                <div class="project_gr"></div>
-            </div>
-            <div class="info_title">РЕКОНСТРУКЦІЯ ПЛ 330 КВ «АДЖАЛИК – ТРИХАТИ»</div>
-            <div class="info_item">
-                <div class="info_key">Замовник:</div>
-                <div class="info_value">ПрАТ «НЕК «Укренерго»</div>
-            </div>
-            <div class="info_item">
-                <div class="info_key">Предмет контракту:</div>
-                <div class="info_value">Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ «Тилігул».</div>
-            </div>
-            <div class="info_item">
-                <div class="info_key">Галузь:</div>
-                <div class="info_value">Електроенергетика</div>
-            </div>
-            <div class="info_item">
-                <div class="info_key">Територія:</div>
-                <div class="info_value">Україна</div>
-            </div>
-            <div class="info_item">
-                <div class="info_key">Термін реалізації проекту:</div>
-                <div class="info_value">2023</div>
-            </div>
-        </div>
-
     </section>
 
     <div id="projects_pages">
-        <a class="page_selector" href="" style="background-color: #002e4e;">1</a>
-        <a  class="page_selector" href="./projects_2.html">2</a>
-        <a class="page_selector" href="./projects_3.html">3</a>
-        <a class="page_selector" href="./projects_4.html">4</a>
-        <a class="page_selector" href="./projects_5.html">5</a>
+        <a class="page_selector" href="projects.html" style="background-color: #002e4e;">1</a>
+        <a class="page_selector" href="projects_2.html">2</a>
+        <a class="page_selector" href="projects_3.html">3</a>
+        <a class="page_selector" href="projects_4.html">4</a>
+        <a class="page_selector" href="projects_5.html">5</a>
     </div>
 
+    <a class="to_general" href="../../../../index.html">На головну</a>
+
     <footer>
-        <img id="footer_logo" src="/src/assets/images/logo.png" alt="">
+        <img id="footer_logo" src="../../images/logo.png" alt="Логотип компанії">
         <div id="links">
-            <a class="footer_links" href="/src/assets/pages/about.html">Про компанію</a>
-            <a class="footer_links" href="">Новини</a>
-            <a class="footer_links" href="">Контакти</a>
-            <a class="footer_links" href="">Проекти</a>
+            <a class="footer_links" href="../../about.html">Про компанію</a>
+            <a class="footer_links" href="../../news.html">Новини</a>
+            <a class="footer_links" href="../../contacts.html">Контакти</a>
+            <a class="footer_links" href="projects.html">Проєкти</a>
             <a class="footer_links" href="">Карʼєра</a>
         </div>
         <div id="contacts">
@@ -246,7 +262,7 @@
         </div>
     </footer>
 
+    <script src="../../scripts/script.js"></script>
 </body>
-
 
 </html>
