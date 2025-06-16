@@ -5,6 +5,10 @@
   font-family: 'Inter';
 }
 
+body{
+  overflow-x: hidden;
+}
+
 
 header {
   margin-bottom: 0;

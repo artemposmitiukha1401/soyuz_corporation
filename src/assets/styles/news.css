@@ -4,6 +4,9 @@
 * {
   font-family: var(--font-inter);
 }
+body{
+  overflow-x: hidden;
+}
 
 #news_list {
   display: flex;
