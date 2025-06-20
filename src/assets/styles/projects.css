@@ -3,10 +3,18 @@
 * {
   border-radius: 0;
   font-family: 'Inter';
+  max-width: 100%;
 }
 
-body{
+body {
   overflow-x: hidden;
+
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 
@@ -15,20 +23,22 @@ header {
   position: relative;
   display: flex;
   align-items: center;
-  
+
 }
 
 .to_general:first-of-type {
-    margin-top: 22rem;
+  margin-top: 22rem;
 }
-.to_general:last-of-type{
-    margin-top: 2rem;
+
+.to_general:last-of-type {
+  margin-top: 2rem;
 }
+
 #title_background {
   max-width: 100%;
   z-index: -2;
   width: 100%;
-  height: 40vh;
+  height: 28rem;
   margin: 0;
   object-fit: cover;
   position: absolute;
@@ -37,7 +47,7 @@ header {
 #title_gr {
   z-index: -1;
   width: 100%;
-  height: 40vh;
+  height: 28rem;
   position: absolute;
   background-image: linear-gradient(to bottom, #002e4e, #005A9C);
   opacity: 0.6;
@@ -51,7 +61,8 @@ header {
 
 #section_title {
   width: 90%;
-  max-width: 500px;;
+  max-width: 500px;
+  ;
   color: #005A9C;
   border: none;
 }
@@ -162,7 +173,7 @@ header {
   transition: opacity 0.2s ease-in-out;
 }
 
-.image_container:hover > .more_link {
+.image_container:hover>.more_link {
   opacity: 1;
 }
 
@@ -190,7 +201,7 @@ header {
   transition: opacity 0.2s ease-in-out;
 }
 
-.image_container:hover > .project_gr {
+.image_container:hover>.project_gr {
   opacity: 0.9;
 }
 
@@ -227,56 +238,92 @@ header {
   margin-top: 3rem;
   flex-wrap: wrap;
 }
-.menu_link{
-    transform-origin: right;
+
+.menu_link {
+  transform-origin: right;
 }
+
 @media (max-width: 480px) {
-  #title_background, #title_gr {
+
+  #title_background,
+  #title_gr {
     margin: 0;
     height: 30vh;
     width: 100%;
-  
-  }
-.more {
-width: 10rem;
-height: 10rem;
-object-fit: contain;
 
   }
-  
+
+  .more {
+    width: 10rem;
+    height: 10rem;
+    object-fit: contain;
+
+  }
+
   #projects_overview {
     margin-top: 3rem;
   }
-  
+
   #projects_filter {
     gap: 1rem;
   }
-  
+
   .filter {
     padding: 0.8rem 0.6rem;
     min-width: 100px;
   }
-  
+
   #projects_list {
     gap: 2rem;
   }
-  
+
   .info_item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-  
+
   .info_key {
     width: 100%;
+  }
+
+  .to_general {
+    margin-top: 2rem;
   }
 
   .page_selector {
     padding: 0.7rem;
     width: 2rem;
   }
-  
+
   #projects_pages {
     gap: 0.8rem;
+  }
+
+  .to_general,
+  .to_general:first-of-type {
+    margin-inline: auto;
+    margin-top: 15rem;
+  }
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .project_container {
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+  .project_container {
+    width: 30rem;
+
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  footer {
+    flex-direction: column;
   }
 }

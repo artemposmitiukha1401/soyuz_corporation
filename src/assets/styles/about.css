@@ -6,8 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-  overflow-x: hidden;
+
+body {
+    overflow-x: hidden;
 }
 
 img {
@@ -420,8 +421,10 @@ header {
         min-width: 280px;
     }
 
-    .to_general {
+    .to_general,
+    .to_general:first-of-type {
         margin-inline: auto;
-        
+        margin-top: 3rem;
     }
+
 }
