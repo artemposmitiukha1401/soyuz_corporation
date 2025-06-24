@@ -255,6 +255,7 @@ header {
 .division_text {
     color: var(--primary-color);
     margin-bottom: 50px;
+    font-weight: 400;
     width: 60rem;
     max-width: 100%;
     min-width: 300px;
@@ -349,8 +350,7 @@ header {
     #page_title {
         font-size: 2rem;
         display: flex;
-        text-align: center;
-        ;
+        text-align: center;;
         margin-left: 2rem;
         width: 100%;
         margin-top: 2rem;
