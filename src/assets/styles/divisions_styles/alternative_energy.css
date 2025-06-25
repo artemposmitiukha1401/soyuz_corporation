@@ -1,0 +1,74 @@
+@import url('../projects.css');
+
+#page_title {
+    width: 90rem;
+    max-width: 90%;
+}
+
+#page_description {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+#division_properties {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.properties_card {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    width: 40rem;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.properties_card:hover {
+    transform: scale(1.05);
+}
+
+.properties_description {
+    width: 90%;
+    justify-self: center;
+    margin-inline: auto;
+    padding: 1.5rem;
+}
+
+.to_general:first-of-type {
+    margin-top: 12rem;
+}
+
+.to_general:last-of-type {
+    margin-top: 5rem;
+}
+
+.properties_image {
+    max-width: 100%;
+
+}
+
+@media only screen and (max-width: 480px) {
+    #page_title {
+        font-size: 2rem;
+    }
+
+    #page_description {
+        font-size: 1.2rem;
+    }
+
+    #page_title {
+        margin-inside: auto;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 5rem;
+    }
+}

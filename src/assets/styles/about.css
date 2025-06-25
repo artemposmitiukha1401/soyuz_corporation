@@ -190,7 +190,7 @@ header {
     border-radius: 0.625rem;
 }
 
-.division_description {
+.division_properties_description {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -384,7 +384,7 @@ header {
         min-width: 280px;
     }
 
-    .division_description {
+    .division_properties_description {
         flex-direction: column;
         min-width: 280px;
     }
