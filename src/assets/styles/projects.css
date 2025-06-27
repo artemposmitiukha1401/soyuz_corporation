@@ -247,11 +247,15 @@ header {
 }
 
 @media (max-width: 480px) {
+    #page_title {
+        justify-content: center;
+        margin-inline: auto;
+    }
 
     #title_background,
     #title_gr {
         margin: 0;
-        height: 30vh;
+        height: 20rem;
         width: 100%;
 
     }
