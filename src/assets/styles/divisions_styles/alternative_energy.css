@@ -1,5 +1,6 @@
 @import url('../projects.css');
 
+
 #page_title {
     width: 90rem;
     max-width: 90%;
@@ -8,6 +9,9 @@
 #page_description {
     display: flex;
     text-align: center;
+    text-transform: uppercase;
+    width: 60%;
+    margin-inline: auto;
     justify-content: center;
     font-size: 1.3rem;
     font-weight: 400;
