@@ -1,1 +1,1 @@
-Website redesign for energy corporation COYUZ
+Website redesign for energy corporation SOYUZ
