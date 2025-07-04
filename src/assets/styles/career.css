@@ -1,0 +1,174 @@
+@import "./about.css";
+
+#title_background, #title_gr {
+    height: 28rem;
+}
+
+#career_info {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    max-width: 100%;
+    min-width: 280px;
+}
+
+p, ul, h3, #career_info a {
+    font-weight: 200;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    min-width: 200px;
+}
+
+ul {
+    padding: 1.2rem;
+    min-width: 280px;
+}
+
+h3 {
+    font-size: 1.6rem;
+    min-width: 200px;
+}
+
+
+@media (max-width: 1400px) {
+    #title_background, #title_gr {
+        height: 25rem;
+    }
+
+    #career_info {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    p, ul, h3, a {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    ul {
+        padding: 1rem;
+    }
+}
+
+
+@media (max-width: 992px) {
+    #title_background, #title_gr {
+        height: 22rem;
+    }
+
+    #career_info {
+        max-width: 85%;
+        margin: 0 auto;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    p, ul, h3, a {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    ul {
+        padding: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #title_background, #title_gr {
+        height: 20rem;
+    }
+
+    #career_info {
+        max-width: 85%;
+        margin: 0 auto;
+        padding: 1.5rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    p, ul, h3, a {
+        font-size: 1.1rem;
+        min-width: 250px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        min-width: 250px;
+    }
+
+    ul {
+        padding: 1rem;
+        min-width: 250px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    #title_background, #title_gr {
+        height: 18rem;
+    }
+
+    #career_info {
+        max-width: 90%;
+        width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+        gap: 0.5rem;
+    }
+
+    p, ul, h3, a {
+        font-size: 1rem;
+        line-height: 1.4;
+        min-width: 250px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        min-width: 250px;
+    }
+
+    ul {
+        padding: 0.8rem;
+        min-width: 250px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    #title_background, #title_gr {
+        height: 15rem;
+    }
+
+    #career_info {
+        max-width: 95%;
+        width: 95%;
+        margin: 0 auto;
+        padding: 0.8rem;
+        gap: 0.5rem;
+    }
+
+    p, ul, h3, a {
+        font-size: 0.9rem;
+        min-width: 240px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        min-width: 240px;
+    }
+
+    ul {
+        padding: 0.6rem;
+        min-width: 240px;
+    }
+}

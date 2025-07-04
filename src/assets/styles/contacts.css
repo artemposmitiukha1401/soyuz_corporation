@@ -1,5 +1,5 @@
-@import url('style.css');
-@import url('news.css');
+@import url('./style.css');
+@import url('./news.css');
 
 * {
     font-family: var(--font-inter);
@@ -18,38 +18,32 @@ body {
 
 .contact_card {
     justify-content: left;
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     background-color: var(--primary-color);
     padding: 2rem;
-    width: 100%;
-    min-width: 20rem;
+    width: 25rem;
+    min-width: 8rem;
     max-width: 80rem;
     border-radius: 0.625rem;
-    flex-direction: row;
-    gap: 3rem;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 20rem !important;
+    height: 20rem;
     transition: all 0.2s ease-in-out;
 }
 
-#contacts_list {
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-}
 
 #contacts_list {
     display: flex;
     margin: auto;
     align-items: center;
     margin-top: 5rem;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 5rem;
 }
 
-.office_img {
-    width: 100%;
-    margin: 0;
-}
 
 @media only screen and (max-width: 480px) {
     .to_general {
@@ -60,12 +54,13 @@ body {
         flex-direction: column;
         padding: 1.5rem;
         width: 90%;
-        gap: 2rem;
+        gap: 3rem;
         border-radius: 0.5rem;
+        height: 20rem;
     }
 
     #contacts_list {
-        gap: 1.5rem;
+        gap: 3rem;
         margin-top: 5rem;
     }
 }

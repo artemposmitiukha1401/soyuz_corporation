@@ -1,3 +1,4 @@
+@import url('./contacts.css');
 @import url('./style.css');
 
 * {
@@ -9,6 +10,9 @@
 
 body {
     overflow-x: hidden;
+    background-color: var(--background-color);
+    font-size: 16px;
+    min-width: 280px;
 }
 
 img {
@@ -22,49 +26,43 @@ img {
     object-fit: cover;
 }
 
-body {
-    background-color: var(--background-color);
-    font-size: 16px;
-
-}
-
 p {
     font-weight: 200;
     line-height: 1.5;
     font-size: 1.3rem;
+    min-width: 200px;
 }
 
 a {
     text-decoration: none;
     transform-origin: center;
     transition: all 0.3s ease;
+    min-width: fit-content;
 }
 
 section {
     margin-top: 6.25rem;
     padding: 0 2rem;
-    max-width: 1400px;
-    min-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 60%;
+    min-width: 280px;
+    margin-inline: auto;
 }
 
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: var(--primary-color);
     padding: 2%;
     width: 100%;
-    margin-bottom: 2rem;
     max-width: 100%;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 #nav_logo {
-    width: 100%;
-    max-width: 300px;
-    min-width: 150px;
+    max-width: 320px;
+    min-width: 100px;
+    margin-right: 0;
     border-radius: 0;
     margin-left: 2%;
 }
@@ -82,9 +80,8 @@ header {
 
 #info {
     margin-top: 1rem;
-    width: 60%;
-    max-width: 1200px;
-    min-width: 300px;
+    width: 100%;
+    min-width: 280px;
     border-radius: 0.625rem;
     gap: 1rem;
     display: flex;
@@ -97,31 +94,29 @@ header {
 #info_description {
     display: flex;
     flex-direction: column;
-
+    min-width: 250px;
 }
 
 .info_image {
-    margin: 0;
     width: 100%;
     max-width: 500px;
-    min-width: 250px;
+    min-width: 200px;
     flex: 1 1 300px;
-
-
 }
 
 .info_image img {
     width: 100%;
     height: auto;
     max-width: 100%;
+    min-width: 200px;
     object-fit: cover;
 }
 
-#info_text {
+.info_text {
     margin-top: 1.875rem;
     width: 100%;
     max-width: 31rem;
-    min-width: 250px;
+    min-width: 200px;
     text-align: left;
     flex: 1 1 300px;
     word-wrap: break-word;
@@ -129,7 +124,11 @@ header {
     background-color: var(--primary-color);
     border-radius: 10px;
     padding: 2rem;
+}
 
+#info > .info_text {
+    max-width: 100%;
+    min-width: 280px;
 }
 
 .section_title:nth-child(2) {
@@ -142,19 +141,20 @@ header {
 
 .section_title {
     margin-top: 2rem;
+    min-width: 200px;
 }
 
 .about_title {
     text-transform: uppercase;
     color: var(--primary-color);
     font-family: var(--font-nunito);
-    font-size: 1.875rem;
+    font-size: 3rem;
     text-align: center;
     margin-inline: auto;
     margin-top: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     max-width: 65rem;
-    min-width: 250px;
+    min-width: 200px;
 }
 
 #details {
@@ -165,7 +165,7 @@ header {
     flex-direction: column;
     width: 100%;
     max-width: 1400px;
-    min-width: 300px;
+    min-width: 280px;
     margin: 0 auto;
 }
 
@@ -176,7 +176,7 @@ header {
     flex-direction: column;
     width: 100%;
     max-width: 1200px;
-    min-width: 300px;
+    min-width: 280px;
 }
 
 .networks_generation {
@@ -186,7 +186,7 @@ header {
     background-color: var(--primary-color);
     width: 70%;
     max-width: 90%;
-    min-width: 300px;
+    min-width: 280px;
     border-radius: 0.625rem;
 }
 
@@ -198,14 +198,13 @@ header {
     padding: 1.875rem 0;
     flex-wrap: wrap;
     max-width: 1200px;
-    min-width: 300px;
+    min-width: 280px;
     margin: 0 auto;
 }
 
 .division_info {
     width: 100%;
-    max-width: 63rem;
-    min-width: 250px;
+    min-width: 200px;
     text-align: left;
     display: flex;
     height: auto;
@@ -223,7 +222,7 @@ header {
 .about_division {
     width: 70%;
     max-width: 1000px;
-    min-width: 300px;
+    min-width: 280px;
     display: flex;
     flex-direction: column;
     margin-inline: auto;
@@ -238,7 +237,7 @@ header {
     padding: 0.9375rem;
     width: 60rem;
     max-width: 100%;
-    min-width: 20rem;
+    min-width: 280px;
     border-radius: 10px;
 }
 
@@ -258,21 +257,21 @@ header {
     font-weight: 400;
     width: 60rem;
     max-width: 100%;
-    min-width: 300px;
+    min-width: 280px;
     margin-inline: auto;
 }
 
 .projects_geography {
     margin-bottom: 50px;
     max-width: 1200px;
-    min-width: 300px;
+    min-width: 280px;
     margin-left: auto;
     margin-right: auto;
-
 }
 
 #footer_logo {
     margin-inline: 0;
+    min-width: 120px;
 }
 
 .to_general {
@@ -284,39 +283,307 @@ header {
     padding: 1rem;
     display: flex;
     width: 10rem;
-    min-width: 5rem;
+    min-width: 120px;
     max-width: 15rem;
     text-align: center;
     justify-content: center;
     margin-left: 3rem;
     transition: all 0.2s ease-in-out;
-
 }
 
 .to_general:hover {
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-    p {
-        font-size: 1rem;
+.reporting_card {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    width: 18rem;
+    min-width: 200px;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out;
+}
+
+.reporting_card:hover {
+    transform: scale(1.05) translateY(-1rem);
+}
+
+#reportings_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    min-width: 280px;
+}
+
+
+#diplomas {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+
+}
+
+#diplomas .reporting_card {
+    max-width: 50%;
+}
+
+#documents {
+    width: 60%;
+    min-width: 280px;
+}
+
+#reportings {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 280px;
+}
+
+.reporting_card h3 {
+    font-size: 3rem;
+    min-width: fit-content;
+}
+
+#corruption {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 280px;
+}
+
+#corruption .reporting_card h3 {
+    font-size: 2rem;
+    text-align: center;
+    min-width: fit-content;
+}
+
+#trust_line {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    min-width: 280px;
+    flex-wrap: wrap;
+}
+
+#trust_line p, #awards p {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    min-width: 200px;
+    flex: 1;
+}
+
+#corruption .reporting_card {
+    margin: 1rem auto;
+    transition: all 0.2s ease-in-out;
+    padding: 1.5rem;
+    width: 100%;
+    min-width: 280px;
+}
+
+#corruption .reporting_card:hover {
+    transform: translateY(0);
+}
+
+.read_btn {
+    display: flex;
+    text-decoration: none;
+    padding: 1.25rem;
+    text-transform: uppercase;
+    border: 2px solid var(--white);
+    width: 15rem;
+    min-width: 120px;
+    height: 2.5rem;
+    border-radius: 1.875rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.813rem;
+    transition: all 0.2s ease-in-out;
+    margin-top: 1.25rem;
+}
+
+.read_btn:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-weight: 700;
+    transform: scale(1.1);
+}
+
+#contacts_list {
+    width: 60%;
+    min-width: 280px;
+}
+
+.to_general:first-of-type {
+    margin-top: 25rem;
+}
+
+
+@media (max-width: 1400px) {
+    section {
+        max-width: 80% !important;
+        width: 80% !important;
+        margin-top: 2rem;
+    }
+
+    #page_title {
+        font-size: 3.5rem;
+    }
+
+    .info_text:last-child {
+        max-width: 100%;
+    }
+
+    #info > .info_image:nth-of-type(1) {
+        display: none;
+    }
+
+    #info > .info_image:nth-of-type(2) {
+        width: 100%;
+        max-width: 100% !important;
+    }
+
+    .about_title {
+        font-size: 2.5rem;
     }
 
     img {
         max-width: 100%;
+    }
+
+    #reportings .reporting_card {
+        width: 30%;
+    }
+
+    #trust_line {
+        flex-direction: column;
+    }
+
+    #documents {
+        display: flex;
+        gap: 3rem;
+        flex-direction: column;
+        flex-direction: column;
+    }
+
+    .contact_card {
+        width: 100%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+    section {
+
+        margin-top: 4rem;
+        max-width: 85%;
+    }
+
+    #page_title {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+
+    .about_title {
+        font-size: 2.2rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    img {
+        max-width: 85%;
+    }
+
+    #info {
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .info_text {
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    .division_properties_description {
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .to_general {
+        margin-left: 1rem;
+        width: 10rem;
+        min-width: 10rem;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 25rem;
+    }
+
+    #documents,
+    #contacts_list {
+        width: 70%;
+    }
+
+    #reportings .reporting_card {
+        width: 100%;
+    }
+
+    #trust_line {
+        flex-direction: column;
+    }
+
+}
+
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+    section {
+        margin-top: 2rem;
+        padding: 0 1rem;
+        max-width: 85%;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    img {
+        max-width: 85%;
         min-width: 200px;
+    }
+
+    #page_title {
+        font-size: 2.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .about_title {
+        font-size: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .steps_title {
+        font-size: 1.6rem;
     }
 
     #info {
         width: 90%;
         flex-direction: column;
         align-items: center;
-        padding: 1.25rem;
-        min-width: 280px;
+        padding: 1rem;
     }
 
     .info_image,
-    #info_text {
+    .info_text {
         width: 100%;
         max-width: 100%;
         min-width: 250px;
@@ -327,104 +594,279 @@ header {
         margin-bottom: 1rem;
     }
 
-    #info_text {
+    .info_text {
         margin-top: 0;
-    }
-}
-
-@media (max-width: 480px) {
-    p {
-        font-size: 1rem;
+        padding: 1.5rem;
     }
 
-    img {
-        max-width: 400px;
-        min-width: 280px;
-    }
-
-    #nav_logo {
-        max-width: 15rem;
-        min-width: 120px;
-    }
-
-    #page_title {
-        font-size: 2rem;
-        display: flex;
-        text-align: center;;
-        margin-left: 2rem;
-        width: 100%;
-        margin-top: 2rem;
-        min-width: 150px;
-    }
-
-    #horizontal_nav {
-        margin-left: 0;
-        justify-content: center;
-        width: 100%;
-        margin-top: 1rem;
+    #reportings_list {
         flex-direction: column;
-        gap: 1rem;
+        align-items: center;
+    }
+
+    .reporting_card {
+        width: 100%;
+        max-width: 20rem;
+        margin: 0.5rem 0;
         min-width: 250px;
     }
 
-    .menu_link {
-        transform-origin: center;
+    #trust_line {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #trust_line p, #awards p {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        min-width: 250px;
+    }
+
+    #documents,
+    #contacts_list {
+        width: 90%;
+    }
+
+    .networks_generation {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .about_division {
+        width: 95%;
+    }
+
+    .division_properties_description {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .to_general {
+        margin-inline: auto;
+        width: 100%;
+        max-width: 12rem;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 25rem;
+    }
+
+    #diplomas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #diplomas .reporting_card, #corruption .reporting_card,
+    #reportings .reporting_card {
+        max-width: 100%;
+    }
+
+    .division_step {
+        padding: 1rem;
+    }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 480px) {
+    .to_general:first-of-type {
+        margin-top: 18rem;
+    }
+
+    section {
+        margin-top: 3rem;
+        max-width: 90% !important;
+        width: 90% !important;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    img {
+        width: 100%;
+        max-width: 85%;
+        min-width: 250px;
+    }
+
+    #nav_logo {
+        max-width: 230px;
+
+        min-width: 120px;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    #page_title {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    header {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
     }
 
     .about_title,
     .steps_title {
         font-size: 1.5rem;
-        min-width: 150px;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     #info {
+        width: 100%;
         flex-direction: column;
         align-items: center;
-        padding: 1.25rem;
-        min-width: 280px;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .info_text {
+        padding: 1rem;
+        margin-top: 0.5rem;
     }
 
     .division_properties_description {
         flex-direction: column;
-        min-width: 280px;
-    }
-
-    header {
-        justify-content: center;
-        text-align: center;
-        padding: 1rem;
-        min-width: 280px;
-    }
-
-    section {
-        margin-top: 3rem;
-        padding: 0 1rem;
-        min-width: 280px;
+        padding: 0.5rem 0;
+        gap: 0.5rem;
     }
 
     .division_info {
-        max-width: 100%;
-        min-width: 280px;
+        padding: 0.8rem;
+        min-width: 250px;
     }
 
-    .about_division,
-    .networks_generation {
+    .to_general {
+        margin: 1rem auto;
         width: 100%;
-        min-width: 280px;
+        max-width: 10rem;
+        min-width: 120px;
+        font-size: 0.9rem;
     }
 
+    .reporting_card {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        min-width: 250px;
+        padding: 1rem;
+    }
+
+    .reporting_card h3 {
+        font-size: 2rem;
+    }
+
+    .read_btn {
+        text-align: center;
+    }
+
+    #corruption .reporting_card h3 {
+        font-size: 1.5rem;
+    }
+
+    #corruption .reporting_card {
+        margin: 0;
+        width: 100%;
+    }
+
+    .read_btn {
+        width: 100%;
+        max-width: 12rem;
+        min-width: 120px;
+        font-size: 0.75rem;
+        padding: 1rem;
+    }
+
+    .contact_card {
+        height: 25rem;
+    }
+
+    #documents,
+    #contacts_list {
+        width: 95%;
+    }
+
+    .projects_geography {
+        margin-bottom: 2rem;
+    }
+
+    #diplomas .reporting_card {
+        max-width: 100%;
+    }
+
+    #trust_line {
+        gap: 0.5rem;
+    }
+
+    #trust_line p, #awards p {
+        padding: 0.8rem;
+        min-width: 240px;
+    }
+}
+
+/* Extra small mobile phones */
+@media (max-width: 320px) {
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 0 0.25rem;
+    }
+
+    #page_title {
+        font-size: 1.5rem;
+        padding: 0 0.25rem;
+    }
+
+    .about_title,
+    .steps_title {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #nav_logo {
+        min-width: 80px;
+        max-width: 150px;
+    }
+
+    .info_text,
     .division_step {
-        min-width: 280px;
+        padding: 0.6rem;
     }
 
-    .division_text {
-        min-width: 280px;
+    .division_info {
+        padding: 0.6rem;
+        min-width: 240px;
     }
 
-    .to_general,
-    .to_general:first-of-type {
-        margin-inline: auto;
-        margin-top: 3rem;
+    .reporting_card {
+        min-width: 240px;
+        padding: 0.8rem;
     }
 
+    .to_general {
+        min-width: 100px;
+        font-size: 0.8rem;
+        padding: 0.8rem;
+    }
+
+    .read_btn {
+        min-width: 100px;
+        padding: 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    #trust_line p, #awards p {
+        min-width: 220px;
+        padding: 0.6rem;
+    }
 }

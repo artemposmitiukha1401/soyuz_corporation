@@ -1,5 +1,10 @@
-@import url('../projects.css');
+@import url('./networks.css');
+@import url('../about.css');
 
+
+#title_background, #title_gr {
+    height: 28rem;
+}
 
 #page_title {
     width: 90rem;
@@ -73,6 +78,6 @@
     }
 
     .to_general:first-of-type {
-        margin-top: 5rem;
+        margin-top: 15rem;
     }
 }

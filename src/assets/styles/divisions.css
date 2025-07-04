@@ -1,0 +1,273 @@
+@import './news.css';
+
+#title_background, #title_gr {
+    height: 28rem;
+}
+
+#divisions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5rem;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.division {
+    padding: 1.875rem;
+    display: flex;
+    flex: 1 1 500px;
+    min-width: 300px;
+    max-width: 600px;
+    position: relative;
+    height: 20rem;
+    min-height: 250px;
+    justify-content: flex-end;
+    text-align: right;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: all 0.3s ease-in-out;
+}
+
+.division_title {
+    font-family: var(--font-nunito);
+    max-width: 280px;
+    width: 100%;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.2;
+}
+
+.division:hover > .division_gr {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+}
+
+.division_bg {
+    border-radius: 0.938rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.division_title,
+.division_btn {
+    z-index: 10;
+}
+
+.division_bg,
+.division_gr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 200px;
+}
+
+.division_gr {
+    transition: all 0.2s ease-in-out;
+    background-image: linear-gradient(to left, var(--primary-color), var(--secondary-color));
+    opacity: 0.5;
+    border-radius: 0.938rem;
+}
+
+.division_btn {
+    display: flex;
+    text-decoration: none;
+    padding: 1.25rem;
+    text-transform: uppercase;
+    border: 2px solid var(--white);
+    width: 7.5rem;
+    height: 2.5rem;
+    border-radius: 1.875rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.813rem;
+    transition: all 0.2s ease-in-out;
+    margin-top: 1.25rem;
+    color: white;
+    background-color: transparent;
+}
+
+.division_btn:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    font-weight: 700;
+    transform: scale(1.1);
+}
+
+/* Large screens */
+@media (max-width: 1400px) {
+    #divisions {
+        max-width: 80%;
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+    .division {
+        flex: 1 1 450px;
+        min-width: 280px;
+    }
+
+    .division_title {
+        max-width: 260px;
+        font-size: 1.4rem;
+    }
+}
+
+
+@media (max-width: 992px) {
+    img {
+        max-width: 100%;
+    }
+
+    #divisions {
+        max-width: 85%;
+        margin-top: 4rem;
+        gap: 1.5rem;
+    }
+
+    .division {
+        flex: 1 1 100%;
+        min-width: 300px;
+        padding: 1.5rem;
+        height: 30vh;
+        min-height: 220px;
+    }
+
+    .division_title {
+        max-width: 280px;
+        font-size: 1.3rem;
+    }
+
+    .division_btn {
+        width: 7rem;
+        height: 2.25rem;
+        font-size: 0.75rem;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 25rem;
+    }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+    }
+
+    #divisions {
+        max-width: 85%;
+        margin-top: 2rem;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .division {
+        flex: 1 1 100%;
+        min-width: 250px;
+        padding: 1.5rem;
+        height: 18rem;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+    }
+
+    .division_title {
+        max-width: 250px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .division_btn {
+        width: 6.5rem;
+        height: 3rem;
+        font-size: 0.75rem;
+        padding: 1rem;
+    }
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 480px) {
+    img {
+        max-width: 100%;
+    }
+
+    #divisions {
+        max-width: 90%;
+        width: 90%;
+        margin-top: 3rem;
+        padding: 0 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .division {
+        flex: 1 1 100%;
+        min-width: 250px;
+        padding: 1rem;
+        height: 15rem;
+        min-height: 180px;
+        justify-content: center;
+    }
+
+    .division_title {
+        max-width: 220px;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .division_btn {
+        width: 100%;
+        max-width: 6rem;
+        min-width: 120px;
+        height: 3rem;
+        font-size: 0.7rem;
+        padding: 0.8rem;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 28rem;
+    }
+}
+
+
+/* Extra small mobile phones */
+@media (max-width: 320px) {
+    #divisions {
+        padding: 0 0.25rem;
+        gap: 0.25rem;
+    }
+
+    .division {
+        min-width: 240px;
+        padding: 0.8rem;
+        height: 22rem;
+        min-height: 160px;
+    }
+
+    .division_title {
+        max-width: 200px;
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    .division_btn {
+        min-width: 100px;
+        height: 1.8rem;
+        font-size: 0.65rem;
+        padding: 0.6rem;
+    }
+
+}

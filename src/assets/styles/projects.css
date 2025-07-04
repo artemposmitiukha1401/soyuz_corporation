@@ -8,7 +8,6 @@
 
 body {
     overflow-x: hidden;
-
 }
 
 html,
@@ -21,13 +20,11 @@ body {
     overflow-x: hidden;
 }
 
-
 header {
     margin-bottom: 0;
     position: relative;
     display: flex;
     align-items: center;
-
 }
 
 .to_general:first-of-type {
@@ -42,7 +39,7 @@ header {
     max-width: 100%;
     z-index: -2;
     width: 100%;
-    height: 28rem;
+    height: 30rem;
     margin: 0;
     object-fit: cover;
     position: absolute;
@@ -65,7 +62,7 @@ header {
 
 #section_title {
     width: 90%;
-    max-width: 500px;;
+    max-width: 500px;
     color: #005A9C;
     border: none;
 }
@@ -104,9 +101,10 @@ header {
     background-color: #005A9C;
     padding: 1.25rem;
     border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    width: 30rem;
+    max-width: 30rem;
+    justify-content: space-between;
+    margin-inline: auto;
     margin-bottom: 5rem;
 }
 
@@ -116,24 +114,47 @@ header {
     margin-bottom: 1.875rem;
     align-items: center;
     flex-wrap: wrap;
+
+    box-sizing: border-box;
 }
 
 .info_key {
     width: 30%;
     min-width: 100px;
-    font-weight: bold;
+    font-weight: bold !important;
+    font-size: 1.3rem !important;
+    font-family: 'Inter' !important;
+    color: inherit;
+    text-align: left !important;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4 !important;
+    flex-shrink: 0;
 }
 
 .info_value {
     flex: 1;
     min-width: 150px;
+    font-family: 'Inter' !important;
+    font-size: 1.2rem !important;
+    color: inherit;
+    text-align: left !important;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4 !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .info_title {
-    font-weight: bold;
-    font-size: 1.25rem;
+    font-weight: bold !important;
+    font-size: 1.25rem !important;
     margin-bottom: 0.9375rem;
-    font-family: 'Nunito Sans';
+    font-family: 'Nunito Sans' !important;
+    color: inherit;
+    text-align: left !important;
+    padding: 0;
+    line-height: 1.4 !important;
 }
 
 .project_mainimage {
@@ -212,7 +233,8 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 3rem;
+    width: 100%;
     justify-content: center;
 }
 
@@ -257,14 +279,12 @@ header {
         margin: 0;
         height: 20rem;
         width: 100%;
-
     }
 
     .more {
         width: 10rem;
         height: 10rem;
         object-fit: contain;
-
     }
 
     #projects_overview {
@@ -284,6 +304,7 @@ header {
         gap: 2rem;
     }
 
+    /* Mobile-specific info item styling */
     .info_item {
         flex-direction: column;
         align-items: flex-start;
@@ -292,8 +313,15 @@ header {
 
     .info_key {
         width: 100%;
+        min-width: unset;
+        margin-bottom: 0.25rem;
     }
 
+    .info_value {
+        width: 100%;
+        min-width: unset;
+        margin-top: 0;
+    }
 
     .page_selector {
         padding: 0.7rem;
@@ -309,6 +337,4 @@ header {
         margin-inline: auto;
         margin-top: 18rem;
     }
-
-
 }

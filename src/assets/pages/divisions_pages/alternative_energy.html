@@ -28,37 +28,65 @@
         <a class="menu_link" href="../contacts.html">Контакти</a>
     </nav>
 </header>
-<img id="title_background" src="../../images/divisions/division_1.avif" alt="Фонове зображення розділу">
+<img id="title_background" src="../../images/divisions/alternative_energy/ЛЕП%20в%20тумані.jpg"
+     alt="Фонове зображення розділу">
 <div id="title_gr"></div>
 <h1 id="page_title">
     Дивізіон «Альтернативна енергетика»</h1>
 <p id="page_description">ЗДІЙСНЮЄ БУДІВНИЦТВО ОБ’ЄКТІВ АЛЬТЕРНАТИВНОЇ ЕНЕРГЕТИКИ ТА ЕЛЕКТРОСТАНЦІЙ НА БІОМАСІ</p>
 <a class="to_general" href="../../../../index.html">На головну</a>
-<section id="division_properties">
-    <div class="properties_card">
-        <img class="properties_image" src="../../../assets/images/divisions/division_1.avif" alt="">
-        <p class="properties_description">Попереднє опрацювання проектів, що містять ТЕО та обґрунтування
-            інвестицій. </p>
-    </div>
 
-    <div class="properties_card">
-        <img class="properties_image" src="../../../assets/images/divisions/division_1.avif" alt="">
-        <p class="properties_description">Попереднє опрацювання проектів, що містять ТЕО та обґрунтування
-            інвестицій. </p>
-    </div>
+<div id="gallery_wrap">
+    <img id="back_btn" src="../../images/icons/back_btn.svg" alt="">
+    <div class="gallery">
+        <div class="division_peculiarities">
+            <img src="../../images/divisions/alternative_energy/СЕС%20вид%20зверху.jpg" alt="">
+            <h3>ВІДНОВЛЮВАНА ЕНЕРГЕТИКА</h3>
+            <p>Корпорація Союз бере участь в програмах розвитку «зеленої» енергетики:</p>
+            <ul>
+                <li>Розробка ТЕО і основних технічних рішень</li>
+                <li>Розробка схем видачі потужності</li>
+                <li>Розробка проектної документації</li>
+                <li>Підбір та постачання устаткування</li>
+                <li>Будівництво, монтаж та пусконалагодження пристанційних вузлів сонячних і вітрових електростанцій
+                </li>
+                <li>Будівництво ліній приєднання</li>
+            </ul>
 
-    <div class="properties_card">
-        <img class="properties_image" src="../../../assets/images/divisions/division_1.avif" alt="">
-        <p class="properties_description">Попереднє опрацювання проектів, що містять ТЕО та обґрунтування
-            інвестицій. </p>
+        </div>
+        <div class="division_peculiarities">
+            <img src="../../images/divisions/alternative_energy/ФЕС%20Інгулець,%20Миколаївська%20область.PNG" alt="">
+            <h3>СОНЯЧНІ ЕЛЕКТРОСТАНЦІЇ</h3>
+            <p>Корпорація «Союз» забезпечує повний цикл реалізації проєктів у сфері «зеленої» енергетики:
+            </p>
+            <ul>
+                <li>Розробка і проєктування системи</li>
+                <li>Поставка і монтаж обладнання</li>
+                <li>Монтаж фундаментів і будівельні роботи</li>
+                <li>Монтаж опор і панелей</li>
+                <li>Підстанції та мережеві зв’язки (зв’язок з енергосистемою)</li>
+                <li>Проведення випробувань і пуско-налагоджувальні роботи</li>
+                <li>Експлуатація та технічне обслуговування</li>
+            </ul>
+        </div>
+        <div class="division_peculiarities">
+            <img src="../../images/divisions/alternative_energy/Орловська%20ВЕС.jpg" alt="">
+            <h3>ВІТРЯНІ ЕЛЕКТРОСТАНЦІЇ</h3>
+            <p>Корпорація «Союз» виконує повний комплекс робіт для об’єктів відновлюваної енергетики — від підготовки
+                майданчика до монтажу турбін і технічного обслуговування.</p>
+            <ul>
+                <li>Облаштування тимчасових під’їзних доріг</li>
+                <li>Монтаж фундаментів і будівельні роботи</li>
+                <li>Підстанції та кабельне з’єднання</li>
+                <li>Монтаж турбін</li>
+                <li>Проведення випробувань і пуско-налагоджувальні роботи</li>
+                <li>Експлуатація та технічне обслуговування</li>
+            </ul>
+        </div>
     </div>
+    <img id="next_btn" src="../../images/icons/next_btn.svg" alt="">
+</div>
 
-    <div class="properties_card">
-        <img class="properties_image" src="../../../assets/images/divisions/division_1.avif" alt="">
-        <p class="properties_description">Попереднє опрацювання проектів, що містять ТЕО та обґрунтування
-            інвестицій. </p>
-    </div>
-</section>
 <a class="to_general" href="../../../../index.html">На головну</a>
 <footer>
     <img id="footer_logo" src="../../images/logo.png" alt="Логотип компанії">
@@ -76,5 +104,24 @@
     </div>
 </footer>
 <script src="../../scripts/script.js"></script>
+<script>
+    let scroll_container = document.querySelector(".gallery");
+    let back_btn = document.getElementById("back_btn");
+    let next_btn = document.getElementById("next_btn");
+    scroll_container.addEventListener("wheel", (evt) => {
+        evt.preventDefault();
+        const scrollSpeed = Math.abs(evt.deltaY) > 50 ? evt.deltaY * 4 : evt.deltaY;
+        scroll_container.scrollLeft += scrollSpeed;
+        scroll_container.style.scrollBehavior = "smooth";
+    });
+    next_btn.addEventListener("click", () => {
+        scroll_container.style.scrollBehavior = "smooth";
+        scroll_container.scrollLeft += 1200;
+    });
+    back_btn.addEventListener("click", () => {
+        scroll_container.style.scrollBehavior = "smooth";
+        scroll_container.scrollLeft -= 1200;
+    });
+</script>
 </body>
 </html>

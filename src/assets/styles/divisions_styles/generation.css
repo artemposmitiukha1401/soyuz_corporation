@@ -1,126 +1,77 @@
 @import "./alternative_energy.css";
-@import '../project_page_template.css';
 
 .to_general:first-of-type {
-    margin-top: 12rem;
+    margin-top: 18rem;
 }
 
-#gallery_wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 4rem auto;
-    width: 100%;
-    max-width: 70rem;
-}
-
-.gallery {
-    display: flex;
-    width: 90rem;
-    overflow-x: hidden;
-    border-radius: 1rem;
-    gap: 2rem;
-    padding: 2rem;
-    scroll-behavior: smooth;
-}
-
-.gallery::-webkit-scrollbar {
-    display: none;
-}
-
-.gallery div {
-    padding: 0;
-}
-
-.gallery div img {
-    filter: none;
-}
-
-.gallery div img:hover {
-    filter: none;
-    transform: none !important;
-    box-shadow: none !important;
-}
-
-.gallery .division_properties {
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    width: 20rem;
-    min-width: 20rem;
-    height: auto;
-    min-height: 25rem;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.gallery .division_properties:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.gallery .division_img {
-    width: 100%;
-    height: 12rem;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    transition: transform 0.3s ease-in-out;
-    flex-shrink: 0;
-}
-
-.gallery .division_properties_description {
-    padding: 1.5rem;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: var(--text-color);
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    hyphens: auto;
-}
-
-#next_btn:hover {
-    transform: translateX(0.5rem) scale(1.2);
-}
-
-#back_btn:hover {
-    transform: translateX(-0.5rem) scale(1.2);
+#title_background, #title_gr {
+    height: 28rem;
 }
 
 #division_info {
     display: flex;
     flex-direction: column;
-    background-color: var(--primary-color);
-    width: 90%;
-    padding: 2rem;
-    border-radius: 2rem;
     gap: 3rem;
-    align-items: center;
 }
 
-.division_info_block {
+#contracts {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-.division_info_block img {
-    width: 350rem;
-    height: 20rem;
-    object-fit: cover;
+#contracts p {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    border-radius: 10px;
 }
 
-.project_container {
+#contracts div {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
 }
 
-/* Large screens */
+#contracts ul,
+#directions_textbox ul,
+#contracts p,
+#directions_textbox p,
+#directions_textbox div,
+.division_info ul,
+.division_info p {
+    line-height: 1.2;
+    font-size: 0.5rem;
+    font-weight: 200;
+}
+
+#work_directions {
+    display: flex;
+    gap: 1rem;
+}
+
+#directions_textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#directions_textbox p, #directions_textbox div {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+#work_directions img {
+    width: 100%;
+    max-width: 100rem;
+}
+
+#directions_textbox ul {
+    padding: 2rem;
+}
+
+/* Extra large screens */
 @media (min-width: 1400px) {
     #gallery_wrap {
         max-width: 80rem;
@@ -146,129 +97,177 @@
         padding: 2rem;
         font-size: 1rem;
     }
+
+    /* Standardized text for extra large screens */
+    #contracts ul,
+    #directions_textbox ul,
+    #contracts p,
+    #directions_textbox p,
+    #directions_textbox div,
+    .division_info ul,
+    .division_info p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+}
+
+/* Large screens and desktops */
+@media (max-width: 1400px) {
+    .division_peculiarities {
+        width: 25rem;
+        max-width: 80%;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 15rem;
+    }
+
+    /* Standardized text for large screens */
+    #contracts ul,
+    #directions_textbox ul,
+    #contracts p,
+    #directions_textbox p,
+    #directions_textbox div,
+    .division_info ul,
+    .division_info p {
+        font-size: 1.3rem;
+        line-height: 1.5;
+    }
 }
 
 /* Medium-large screens */
 @media (max-width: 1200px) {
-    #gallery_wrap {
-        max-width: 60rem;
+    .to_general:first-of-type {
+        margin-top: 15rem;
     }
 
-    .gallery {
-        width: 60rem;
+    /* Standardized text for medium-large screens */
+    #contracts ul,
+    #directions_textbox ul,
+    #contracts p,
+    #directions_textbox p,
+    #directions_textbox div,
+    .division_info ul,
+    .division_info p {
+        font-size: 1.2rem;
+        line-height: 1.5;
     }
 }
 
 /* Medium screens */
 @media (max-width: 1024px) {
-    #gallery_wrap {
-        max-width: 50rem;
-        margin: 3rem auto;
+    #page_title {
+        width: 100%;
     }
 
-    .gallery {
-        width: 50rem;
-        gap: 1.8rem;
-        padding: 1.8rem;
+    .to_general:first-of-type {
+        margin-top: 11rem;
     }
 
-    .gallery .division_properties {
-        width: 18rem;
-        min-width: 18rem;
-        min-height: 23rem;
+    .division_info {
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .gallery .division_img {
-        height: 11rem;
+    #contracts {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
-    .gallery .division_properties_description {
-        padding: 1.3rem;
-        font-size: 0.85rem;
-        line-height: 1.35;
+    #work_directions {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #work_directions img {
+        max-width: 100%;
+    }
+
+    /* Standardized text for medium screens */
+    #contracts ul,
+    #directions_textbox ul,
+    #contracts p,
+    #directions_textbox p,
+    #directions_textbox div,
+    .division_info ul,
+    .division_info p {
+        font-size: 1.1rem;
+        line-height: 1.5;
     }
 }
 
 /* Tablets and small laptops */
 @media (max-width: 768px) {
-    #gallery_wrap {
-        max-width: 95%;
-        margin: 2.5rem auto;
-        position: relative;
+    #page_title {
+        width: 100%;
     }
 
-    .gallery {
-        width: 95%;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
+    .to_general:first-of-type {
+        margin-top: 19rem;
+    }
+
+    .division_info {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .division_info ul {
+        width: 100%;
+        min-width: 250px;
+    }
+
+    #contracts {
+        flex-direction: column;
         gap: 1.5rem;
-        padding: 1.5rem;
     }
 
-    .gallery .division_properties {
-        width: 16rem;
-        min-width: 16rem;
-        min-height: 22rem;
-        height: auto;
+    #work_directions {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
-    .gallery .division_img {
-        height: 10rem;
-    }
-
-    .gallery .division_properties_description {
-        padding: 1.2rem;
-        font-size: 0.85rem;
-        line-height: 1.35;
-    }
-
-    #back_btn,
-    #next_btn {
+    #next_btn, #back_btn {
         display: none;
     }
 
-    .gallery::before {
-        content: 'Проведіть в сторону щоб подивитись →';
-        position: absolute;
-        top: -1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 0.8rem;
-        color: var(--primary-color);
-        opacity: 0.6;
-        text-align: center;
-        pointer-events: none;
-        z-index: 1;
+    #work_directions img {
+        max-width: 100%;
+    }
+
+    #directions_textbox ul {
+        padding: 1.5rem;
+    }
+
+    /* Standardized text for tablets */
+    #contracts ul,
+    #directions_textbox ul,
+    #contracts p,
+    #directions_textbox p,
+    #directions_textbox div,
+    .division_info ul,
+    .division_info p {
+        font-size: 1rem;
+        line-height: 1.4;
     }
 }
 
 /* Small tablets */
 @media (max-width: 640px) {
-    .gallery {
-        gap: 1.2rem;
+    #directions_textbox ul {
         padding: 1.2rem;
     }
 
-    .gallery .division_properties {
-        width: 15rem;
-        min-width: 15rem;
-        min-height: 20rem;
-    }
-
-    .gallery .division_img {
-        height: 8.5rem;
-    }
-
-    .gallery .division_properties_description {
-        padding: 1rem;
-        font-size: 0.8rem;
-        line-height: 1.35;
-        flex: 1;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin: 0;
+    /* Standardized text for small tablets */
+    #contracts ul,
+    #directions_textbox ul,
+    #contracts p,
+    #directions_textbox p,
+    #directions_textbox div,
+    .division_info ul,
+    .division_info p {
+        font-size: 0.95rem;
+        line-height: 1.4;
     }
 }
 
@@ -276,81 +275,128 @@
 @media (max-width: 480px) {
     #page_title {
         margin-inline: auto;
+        justify-content: center;
+        width: 100%;
     }
 
     .to_general:first-of-type {
-        margin-top: 5rem;
+        margin-top: 18rem;
     }
 
-    #gallery_wrap {
-        margin: 2rem auto;
-    }
-
-    .gallery {
+    .division_info {
         width: 100%;
-        gap: 1rem;
-        padding: 1rem;
+        padding: 1.5rem;
+        gap: 3rem;
     }
 
-    .gallery .division_properties {
-        width: 14rem;
-        min-width: 17rem;
-        min-height: 15rem;
-        height: auto;
+    .division_info ul {
+        width: 100%;
+        min-width: 240px;
     }
 
-    .gallery .division_img {
-        height: 7rem;
-    }
-
-    .gallery .division_properties_description {
-        padding: 1rem;
-        font-size: 0.75rem;
-        line-height: 1.4;
-        text-align: left;
-        width: 40%;
-        flex: 1;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        margin: 0;
-    }
-
-    .division_info_block {
+    #contracts {
         flex-direction: column;
+        gap: 1rem;
     }
 
-    .division_info_block img {
-        width: 100%;
+    #contracts p, #contracts div {
+        padding: 1rem;
+    }
+
+    #work_directions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    #directions_textbox ul, #contracts div ul {
+        padding: 1rem;
+    }
+
+    /* Standardized text for mobile phones */
+    #contracts ul,
+    #directions_textbox ul,
+    #contracts p,
+    #directions_textbox p,
+    #directions_textbox div,
+    .division_info ul,
+    .division_info p {
+        font-size: 0.9rem;
+        line-height: 1.4;
     }
 }
 
-/* Very small screens */
-@media (max-width: 360px) {
+/* Extra small mobile phones */
+@media (max-width: 320px) {
     .gallery {
-        gap: 0.8rem;
-        padding: 0.8rem;
+        gap: 0.6rem;
+        padding: 0.6rem;
     }
 
     .gallery .division_properties {
-        width: 13rem;
-        min-width: 13rem;
-        min-height: 20rem;
+        width: 12rem;
+        min-width: 12rem;
+        min-height: 18rem;
         height: auto;
     }
 
     .gallery .division_img {
-        height: 6.5rem;
+        height: 6rem;
+        min-width: 240px;
+        border-radius: 0.3rem;
     }
 
     .gallery .division_properties_description {
-        padding: 0.8rem;
-        font-size: 0.7rem;
+        padding: 0.6rem;
+        font-size: 0.65rem;
         line-height: 1.3;
-        text-align: left;
-        flex: 1;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
+    }
+
+    .division_peculiarities {
+        width: 100%;
+        max-width: 95%;
+        padding: 0.6rem;
+        gap: 0.6rem;
+    }
+
+    #gallery_wrap {
+        margin: 1rem auto;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 4rem;
+    }
+
+    .division_info {
+        padding: 0.6rem;
+        gap: 0.6rem;
+    }
+
+    .division_info ul {
+        min-width: 200px;
+
+    }
+
+    #contracts p, #contracts div {
+        padding: 0.6rem;
+    }
+
+    #directions_textbox p, #directions_textbox div {
+        padding: 0.6rem;
+    }
+
+    #directions_textbox ul, #contracts ul {
+        padding: 1rem;
+    }
+
+
+    #contracts ul,
+    #directions_textbox ul,
+    #contracts p,
+    #directions_textbox p,
+    #directions_textbox div,
+    .division_info ul,
+    .division_info p {
+        font-size: 0.8rem;
+        line-height: 1.3;
     }
 }
