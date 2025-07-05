@@ -12,9 +12,12 @@
     <link rel="stylesheet" href="./src/assets/styles/normalize.css"/>
     <link rel="stylesheet" href="./src/assets/styles/style.css"/>
     <title>Корпорація "Союз"</title>
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
+
 <div id="background">
     <div id="background_image">
         <img src="src/assets/images/main_background.avif"
@@ -38,6 +41,9 @@
         <a class="menu_link" href="./src/assets/pages/news.html">Новини</a>
         <a class="menu_link" href="./src/assets/pages/contacts.html">Контакти</a>
         <a class="menu_link" href="./src/assets/pages/career.html">Карʼєра</a>
+        <div id="google_translate_element"></div>
+        <button id="original_lang_btn" onclick="switchToOriginal()" title="Повернутися до української мови">🇺🇦 УКР
+        </button>
     </nav>
 </header>
 
@@ -65,7 +71,7 @@
 <section id="company_info">
     <img src="./src/assets/images/about/about_mainimages/about_mainimage_1.jpg" alt="">
     <p>Корпорація «Союз» — українська інженерно-будівельна компанія, заснована у 1991 році, що
-        спеціалізується на комплексному проєктуванні, будівництві, модернізації та реконструкції об’єктів електро-,
+        спеціалізується на комплексному проєктуванні, будівництві, модернізації та реконструкції об'єктів електро-,
         тепло-
         та відновлюваної енергетики.
 
@@ -108,102 +114,6 @@
     </div>
 </section>
 
-<!--    <div id="divisions">-->
-<!--        <div class="division">-->
-<!--            <img class="division_bg" src="src/assets/images/divisions/division_1.avif"-->
-<!--                 alt="Зображення альтернативної енергетики"/>-->
-<!--            <div class="division_gr"></div>-->
-<!--            <h2 class="division_title">Бізнес-дивізіон «Альтернативна енергетика»</h2>-->
-<!--            <a class="division_btn" href="./src/assets/pages/divisions_pages/alternative_energy.html">Детальніше</a>-->
-<!--        </div>-->
-
-<!--        <div class="division">-->
-<!--            <img class="division_bg" src="src/assets/images/divisions/division_2.avif"-->
-<!--                 alt="Зображення генераційних потужностей"/>-->
-<!--            <div class="division_gr"></div>-->
-<!--            <h2 class="division_title">Бізнес-дивізіон «Генерація»</h2>-->
-<!--            <a class="division_btn" href="./src/assets/pages/divisions_pages/generation.html">Детальніше</a>-->
-<!--        </div>-->
-
-<!--        <div class="division">-->
-<!--            <img class="division_bg" src="src/assets/images/divisions/division_3.avif"-->
-<!--                 alt="Зображення електромереж"/>-->
-<!--            <div class="division_gr"></div>-->
-<!--            <h2 class="division_title">Бізнес-дивізіон «Мережі»</h2>-->
-<!--            <a class="division_btn" href="./src/assets/pages/divisions_pages/networks.html">Детальніше</a>-->
-<!--        </div>-->
-
-<!--        <div class="division">-->
-<!--            <img class="division_bg" src="src/assets/images/divisions/division_4.avif"-->
-<!--                 alt="Зображення технічного проєктування"/>-->
-<!--            <div class="division_gr"></div>-->
-<!--            <h2 class="division_title">Проектування</h2>-->
-<!--            <a class="division_btn" href="./src/assets/pages/divisions_pages/engineering.html">Детальніше</a>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</section>-->
-
-<!--<h2 class="section_title">Проєкти</h2>-->
-
-<!--<section id="projects">-->
-<!--    <div class="project_side">-->
-<!--        <a href="">-->
-<!--            <div class="project_card sidecard">-->
-<!--                <img class="project_image" src="src/assets/images/projects/project_2.avif"-->
-<!--                     alt="Проєкт АВР на ПЛ 330 кВ Миколаївська–Херсонська"/>-->
-<!--                <h2 class="project_title sidetitle">АВР на ПЛ 330 кВ «Миколаївська–Херсонська»</h2>-->
-<!--            </div>-->
-<!--        </a>-->
-
-<!--        <a href="">-->
-<!--            <div class="project_card sidecard">-->
-<!--                <img class="project_image" src="src/assets/images/projects/project_3.avif"-->
-<!--                     alt="Проєкт Аджалик – Трихати"/>-->
-<!--                <h2 class="project_title sidetitle">Реконструкція ПЛ 330 кВ «Аджалик – Трихати»</h2>-->
-<!--            </div>-->
-<!--        </a>-->
-<!--    </div>-->
-
-<!--    <div id="project_center">-->
-<!--        <a href="">-->
-<!--            <div class="project_card centercard">-->
-<!--                <img class="project_image" src="src/assets/images/projects/project_1.avif"-->
-<!--                     alt="Проєкт ХАЕС–Жешув"/>-->
-<!--                <h2 class="project_title main">Реконструкція ПЛ 750 кВ ХАЕС–Жешув</h2>-->
-<!--                <p class="project_description">-->
-<!--                    Комплекс робіт з реконструкції ПЛ 750 кВ ХАЕС–Жешув з переводом на напругу 400 кВ і-->
-<!--                    реконструкцією-->
-<!--                    ВРП 750 кВ ВП «ХАЕС» та встановленням АТ 750/400 кВ.-->
-<!--                </p>-->
-<!--            </div>-->
-<!--        </a>-->
-
-<!--        <div class="project_card centercard">-->
-<!--            <a class="project_title allprojects" href="">Всі проєкти</a>-->
-
-<!--        </div>-->
-<!--    </div>-->
-
-<!--    <div class="project_side">-->
-<!--        <a href="">-->
-<!--            <div class="project_card sidecard">-->
-<!--                <img class="project_image" src="src/assets/images/projects/project_2.avif"-->
-<!--                     alt="Дубль проєкту Миколаївська–Херсонська"/>-->
-<!--                <h2 class="project_title sidetitle">АВР на ПЛ 330 кВ «Миколаївська–Херсонська»</h2>-->
-<!--            </div>-->
-<!--        </a>-->
-
-<!--        <a href="">-->
-<!--            <div class="project_card sidecard">-->
-<!--                <img class="project_image" src="src/assets/images/projects/project_4.avif"-->
-<!--                     alt="Підстанції Шепетівка та Кам’янець-Подільська"/>-->
-<!--                <h2 class="project_title sidetitle">Реконструкція ПС 330 кВ «Шепетівка» та «Кам’янець-Подільська»-->
-<!--                </h2>-->
-<!--            </div>-->
-<!--        </a>-->
-<!--    </div>-->
-<!--</section>-->
-
 <footer>
     <img id="footer_logo" src="src/assets/images/logo.png" alt="Логотип компанії у футері"/>
     <div id="links">
@@ -220,7 +130,8 @@
     </div>
 </footer>
 
-<script src="src/assets/scripts/script.js"></script>
+<script src="./src/assets/scripts/script.js"></script>
+
 </body>
 
 </html>
