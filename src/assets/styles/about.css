@@ -19,9 +19,9 @@ img {
     border-radius: 10px;
     width: 1000px;
     max-width: 100%;
-    min-width: 200px;
-    height: auto;
-    display: flex;
+    /*min-width: 200px;*/
+    /*height: auto;*/
+    /*display: flex;*/
     margin: 0 auto;
     object-fit: cover;
 }
@@ -53,10 +53,13 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-color);
-    padding: 2%;
     width: 100%;
     max-width: 100%;
     min-width: 280px;
+}
+
+.toggle2 {
+    margin-top: 1em;
 }
 
 #nav_logo {
@@ -419,6 +422,10 @@ header {
     min-width: 280px;
 }
 
+.contact_card {
+    width: 28rem;
+}
+
 .to_general:first-of-type {
     margin-top: 25rem;
 }
@@ -474,6 +481,14 @@ header {
     .contact_card {
         width: 100%;
     }
+
+    #in_memory img {
+        justify-content: center;
+        display: flex;
+        margin-inline: auto;
+    }
+
+
 }
 
 /* Tablets */
@@ -541,9 +556,15 @@ header {
         flex-direction: column;
     }
 
+    #in_memory img {
+        justify-content: center;
+        display: flex;
+        margin-inline: auto;
+    }
+
 }
 
-/* Small tablets and large phones */
+
 @media (max-width: 768px) {
     section {
         margin-top: 2rem;
@@ -664,9 +685,14 @@ header {
     .division_step {
         padding: 1rem;
     }
+
+    #in_memory img {
+        justify-content: center;
+        display: flex;
+        margin-inline: auto;
+    }
 }
 
-/* Mobile phones */
 @media only screen and (max-width: 480px) {
     .to_general:first-of-type {
         margin-top: 18rem;
@@ -782,8 +808,14 @@ header {
         padding: 1rem;
     }
 
+    #in_memory img {
+        justify-content: center;
+        display: flex;
+        margin-inline: auto;
+    }
+
     .contact_card {
-        height: 25rem;
+        height: 20rem;
     }
 
     #documents,
@@ -801,6 +833,10 @@ header {
 
     #trust_line {
         gap: 0.5rem;
+    }
+
+    .toggle2 {
+        margin-top: 0.5vw;
     }
 
     #trust_line p, #awards p {

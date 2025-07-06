@@ -79,6 +79,7 @@ header {
     width: 40%;
     max-width: 400px;
     min-width: 200px;
+    margin-top: 1.5rem;
 }
 
 #map {
@@ -133,6 +134,7 @@ header {
 .toggle2 {
     margin-left: auto;
     margin-right: 4rem;
+    margin-top: 2.5rem;
     width: 3.75rem;
     height: 3.75rem;
     cursor: pointer;
@@ -182,6 +184,8 @@ header {
 
 #checkbox2:checked + .toggle2 {
     transform: rotate(180deg);
+    position: fixed;
+    right: 0;
 }
 
 .menu_link {
@@ -202,7 +206,7 @@ header {
     position: fixed;
     top: 0;
     right: -300px;
-    width: 200px;
+    width: 250px;
     height: 100%;
     background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
     padding: 10rem 2rem 0 0;
@@ -715,7 +719,7 @@ footer {
     }
 
     .toggle2 {
-        margin-top: 0.8em;
+        margin-top: 1.6em;
         margin-right: 1rem;
         width: 3.5rem;
         height: 10rem;
