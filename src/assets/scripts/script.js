@@ -317,18 +317,12 @@ function waitForTranslateWidget() {
 
 function switchToOriginal() {
     try {
-        console.log('Switching to original language and disabling translation...');
+        console.log('Switching to original language...');
 
-        // Close mobile menu if it exists
-        const menuCheckbox = document.querySelector('#menu-checkbox');
-        if (menuCheckbox && menuCheckbox.checked) {
-            if (typeof enableScroll === 'function') {
-                enableScroll();
-            }
-            menuCheckbox.checked = false;
-        }
+        // REMOVED: Mobile menu closing logic
+        // The mobile menu should remain open and functional
 
-        // Complete translation cleanup and disable
+        // Only disable translation, keep the language selection menu available
         disableGoogleTranslate();
 
         return true;
@@ -637,13 +631,8 @@ window.addEventListener('pageshow', (event) => {
     console.log('Page show event - Resetting state');
     setupBannerRemoval();
 
-    const menuCheckbox = document.querySelector('#menu-checkbox');
-    if (menuCheckbox && menuCheckbox.checked) {
-        if (typeof enableScroll === 'function') {
-            enableScroll();
-        }
-        menuCheckbox.checked = false;
-    }
+    // REMOVED: Mobile menu closing logic
+    // The mobile menu should remain open and functional
 
     // Reapply styles on page show
     if (translateInitialized) {
