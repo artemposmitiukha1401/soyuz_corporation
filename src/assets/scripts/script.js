@@ -166,7 +166,7 @@ function applyGoogleTranslateStyles() {
         }
         .VIpgJd-ZVi9od-xl07Ob-lTBxed > span:nth-child(5), .VIpgJd-ZVi9od-xl07Ob-lTBxed > span:nth-child(3) {
             display: none !important;
-}
+        }
 
         @keyframes slideIn {
             from {
@@ -227,6 +227,12 @@ function applyGoogleTranslateStyles() {
 
 function googleTranslateElementInit() {
     try {
+        // Check if translation is disabled
+        if (window.translateDisabled) {
+            console.log('Translation is disabled, skipping initialization');
+            return;
+        }
+
         console.log('Initializing Google Translate...');
         const targetElement = document.getElementById('google_translate_element');
         if (!targetElement) {
@@ -311,63 +317,208 @@ function waitForTranslateWidget() {
 
 function switchToOriginal() {
     try {
-        console.log('Switching to original language...');
+        console.log('Switching to original language and disabling translation...');
 
-        // Method 1: Try select element
-        const selectElement = document.querySelector('.goog-te-combo');
-        if (selectElement) {
-            selectElement.value = '';
-            selectElement.dispatchEvent(new Event('change'));
-
-            if (menuCheckbox && menuCheckbox.checked) {
-                enableScroll();
-                menuCheckbox.checked = false;
-            }
-            console.log('Language switched via select element');
-            return;
-        }
-
-        // Method 2: Try clicking original option
-        const originalOption = document.querySelector('.goog-te-menu-item:first-child');
-        if (originalOption) {
-            originalOption.click();
-
-            if (menuCheckbox && menuCheckbox.checked) {
-                enableScroll();
-                menuCheckbox.checked = false;
-            }
-            console.log('Language switched via menu item click');
-            return;
-        }
-
-        // Method 3: URL manipulation
-        if (window.location.href.includes('googtrans')) {
-            const cleanUrl = window.location.href.split('#')[0].split('?')[0];
-
-            if (menuCheckbox && menuCheckbox.checked) {
-                enableScroll();
-                menuCheckbox.checked = false;
-            }
-
-            window.location.href = cleanUrl;
-            console.log('Language switched via URL manipulation');
-            return;
-        }
-
-        // Method 4: Clear cookie and reload
-        document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-
+        // Close mobile menu if it exists
+        const menuCheckbox = document.querySelector('#menu-checkbox');
         if (menuCheckbox && menuCheckbox.checked) {
-            enableScroll();
+            if (typeof enableScroll === 'function') {
+                enableScroll();
+            }
             menuCheckbox.checked = false;
         }
 
-        console.log('Clearing cookie and reloading...');
-        window.location.reload();
+        // Complete translation cleanup and disable
+        disableGoogleTranslate();
+
+        return true;
 
     } catch (error) {
         console.error('Error switching to original language:', error);
+
+        // Emergency fallback - force reload
+        console.log('Emergency fallback: Force reload');
+        window.location.reload();
+        return false;
     }
+}
+
+function disableGoogleTranslate() {
+    try {
+        console.log('Disabling Google Translate completely...');
+
+        // Step 1: Clear all Google Translate cookies
+        const cookieNames = [
+            'googtrans',
+            'googtrans(2)',
+            'googtrans/',
+            'googtrans(2)/',
+            '__googletts__',
+            '__googlettss__',
+            'googtrans=' + window.location.hostname
+        ];
+
+        cookieNames.forEach(name => {
+            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=${window.location.hostname};`;
+            document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.${window.location.hostname};`;
+        });
+
+        // Step 2: Remove translation classes from body
+        document.body.classList.remove('translated-ltr', 'translated-rtl', 'translated');
+        document.documentElement.classList.remove('translated-ltr', 'translated-rtl', 'translated');
+
+        // Step 3: Reset select element if it exists
+        const selectElement = document.querySelector('.goog-te-combo');
+        if (selectElement) {
+            selectElement.value = '';
+            selectElement.selectedIndex = 0;
+        }
+
+        // Step 4: Remove all Google Translate elements and restore original content
+        const translatedElements = document.querySelectorAll('[class*="goog-"], [id*="goog-"], .skiptranslate');
+        translatedElements.forEach(element => {
+            // Don't remove the main translate element
+            if (element.id !== 'google_translate_element') {
+                element.remove();
+            }
+        });
+
+        // Step 5: Reset any translated text nodes (restore original content)
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            null,
+            false
+        );
+
+        let node;
+        while (node = walker.nextNode()) {
+            if (node.parentNode && node.parentNode.classList) {
+                node.parentNode.classList.remove('translated');
+            }
+        }
+
+        // Step 6: Remove URL parameters and hash
+        let cleanUrl = window.location.href;
+        if (cleanUrl.includes('#googtrans')) {
+            cleanUrl = cleanUrl.split('#googtrans')[0];
+        }
+        if (cleanUrl.includes('?googtrans')) {
+            cleanUrl = cleanUrl.split('?googtrans')[0];
+        }
+
+        // Step 7: Reset the translate widget to original state
+        const widget = document.querySelector('.goog-te-gadget-simple');
+        if (widget) {
+            const menuValue = widget.querySelector('.goog-te-menu-value');
+            if (menuValue) {
+                // Find the original language text
+                const originalText = menuValue.textContent.split(':')[0] || 'Select Language';
+                menuValue.innerHTML = `<span>${originalText}</span><span style="border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 4px solid #ffffff; margin-left: 8px; width: 0; height: 0; display: inline-block; vertical-align: middle;"></span>`;
+            }
+        }
+
+        // Step 8: Force page reload to ensure clean state
+        if (cleanUrl !== window.location.href) {
+            console.log('Redirecting to clean URL...');
+            window.location.href = cleanUrl;
+        } else {
+            console.log('Reloading page to ensure clean state...');
+            window.location.reload();
+        }
+
+    } catch (error) {
+        console.error('Error disabling Google Translate:', error);
+        // Force reload as fallback
+        window.location.reload();
+    }
+}
+
+// Alternative function that forces a more aggressive reset
+function forceOriginalLanguage() {
+    try {
+        console.log('Force switching to original language and completely disabling translation...');
+
+        // Use the same disable function
+        disableGoogleTranslate();
+
+    } catch (error) {
+        console.error('Error in forceOriginalLanguage:', error);
+        window.location.reload();
+    }
+}
+
+// Function to completely disable Google Translate and prevent future translations
+function permanentlyDisableTranslation() {
+    try {
+        console.log('Permanently disabling Google Translate...');
+
+        // Disable translation
+        disableGoogleTranslate();
+
+        // Remove the translate widget entirely
+        const translateElement = document.getElementById('google_translate_element');
+        if (translateElement) {
+            translateElement.style.display = 'none';
+            translateElement.innerHTML = '';
+        }
+
+        // Set flag to prevent re-initialization
+        window.translateDisabled = true;
+
+        // Remove Google Translate script
+        const scripts = document.querySelectorAll('script[src*="translate.google"]');
+        scripts.forEach(script => script.remove());
+
+        console.log('Google Translate permanently disabled');
+
+    } catch (error) {
+        console.error('Error permanently disabling translation:', error);
+    }
+}
+
+// Function to re-enable translation if needed
+function enableTranslation() {
+    try {
+        console.log('Re-enabling Google Translate...');
+
+        window.translateDisabled = false;
+
+        const translateElement = document.getElementById('google_translate_element');
+        if (translateElement) {
+            translateElement.style.display = 'block';
+        }
+
+        // Reinitialize if needed
+        if (!translateInitialized) {
+            resetGoogleTranslateWidget();
+        }
+
+        console.log('Google Translate re-enabled');
+
+    } catch (error) {
+        console.error('Error re-enabling translation:', error);
+    }
+}
+
+// Debug function to check current state
+function debugTranslateState() {
+    console.log('=== Translation State Debug ===');
+    console.log('Current URL:', window.location.href);
+    console.log('Current cookies:', document.cookie);
+    console.log('Select element:', document.querySelector('.goog-te-combo'));
+    console.log('Widget element:', document.querySelector('.goog-te-gadget-simple'));
+    console.log('Menu items:', document.querySelectorAll('.goog-te-menu-item'));
+    console.log('Current page language:', document.documentElement.lang);
+
+    // Check if page is currently translated
+    const isTranslated = document.body.classList.contains('translated-ltr') ||
+        document.body.classList.contains('translated-rtl') ||
+        window.location.href.includes('googtrans') ||
+        document.cookie.includes('googtrans');
+
+    console.log('Page is translated:', isTranslated);
 }
 
 function removeBanner() {
@@ -486,8 +637,11 @@ window.addEventListener('pageshow', (event) => {
     console.log('Page show event - Resetting state');
     setupBannerRemoval();
 
+    const menuCheckbox = document.querySelector('#menu-checkbox');
     if (menuCheckbox && menuCheckbox.checked) {
-        enableScroll();
+        if (typeof enableScroll === 'function') {
+            enableScroll();
+        }
         menuCheckbox.checked = false;
     }
 
@@ -508,7 +662,12 @@ document.addEventListener('DOMNodeInserted', function (event) {
 // Global function assignments
 window.googleTranslateElementInit = googleTranslateElementInit;
 window.switchToOriginal = switchToOriginal;
+window.forceOriginalLanguage = forceOriginalLanguage;
+window.disableGoogleTranslate = disableGoogleTranslate;
+window.permanentlyDisableTranslation = permanentlyDisableTranslation;
+window.enableTranslation = enableTranslation;
 window.resetGoogleTranslateWidget = resetGoogleTranslateWidget;
+window.debugTranslateState = debugTranslateState;
 
 // Debug function for troubleshooting
 window.debugGoogleTranslate = function () {
