@@ -18,7 +18,7 @@
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: white;
     font-size: 16px;
     overflow-x: hidden;
     min-width: 280px;
@@ -206,7 +206,7 @@ header {
     position: fixed;
     top: 0;
     right: -300px;
-    width: 250px;
+    width: 300px;
     height: 100%;
     background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
     padding: 10rem 2rem 0 0;
@@ -236,7 +236,7 @@ header {
 }
 
 #short_info div {
-    width: 30rem;
+    width: 50%;
     max-width: 100%;
     min-width: 280px;
     display: flex;
@@ -266,7 +266,7 @@ header {
 }
 
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .section_title {
@@ -519,6 +519,11 @@ footer {
         font-size: 1.1rem;
         line-height: 1.6rem;
     }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -658,6 +663,13 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+
+    #checkbox2:checked + .toggle2 {
+        transform: rotate(180deg);
+        position: fixed;
+        right: 2rem;
+    }
+
     #background, #background_image, #gradient {
         height: 34rem;
     }
@@ -731,8 +743,8 @@ footer {
     }
 
     #menu_list {
-        width: 200px;
-        right: -200px;
+        width: 300px;
+        right: -300px;
         padding: 8rem 1rem 0 0;
         gap: 2rem;
     }

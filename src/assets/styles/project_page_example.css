@@ -1,0 +1,274 @@
+@import "./about.css";
+
+/* Unify all text elements with the same styling as p element */
+p, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+    line-height: 1.5;
+    font-size: 1.3rem;
+    min-width: 200px;
+}
+
+.to_general:first-of-type {
+    margin-top: 2rem;
+}
+
+#project_info {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    flex-direction: column;
+    max-width: 70%;
+}
+
+#images_gallery {
+    display: flex;
+    max-width: 80%;
+    gap: 2rem;
+    justify-content: center;
+    height: fit-content;
+    padding: 1rem;
+    margin-inline: auto;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.gallery_img {
+    width: 30rem;
+    object-fit: cover;
+    margin: 0;
+    height: 20rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#project_info ul {
+    padding: 2rem;
+}
+
+.gallery_img:hover {
+    transform: scale(1.1);
+}
+
+#project_info h2 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    text-transform: uppercase;
+    max-width: 90%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#project_info h3 {
+    min-width: 25rem;
+    width: 25rem;
+    max-width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#project_description, .project_description, ul, h3 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    width: 90%;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+@media (max-width: 1450px) {
+    #project_info {
+        max-width: 80%;
+        gap: 2.5rem;
+    }
+
+    #images_gallery {
+        max-width: 85%;
+        gap: 1.5rem;
+    }
+
+    .gallery_img {
+        width: 25rem;
+        height: 18rem;
+    }
+
+
+    #project_info h2 {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        max-width: 95%;
+    }
+
+    #project_description {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    #project_info {
+        max-width: 85%;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    #images_gallery {
+        max-width: 100%;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .gallery_img {
+        width: 22rem;
+        height: 16rem;
+    }
+
+    #project_info h2 {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        margin-top: 1.5rem;
+        max-width: 100%;
+    }
+
+    #project_description {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 780px) {
+    #project_info {
+        max-width: 90%;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    #images_gallery {
+        max-width: 100%;
+        gap: 1rem;
+        padding: 0.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery_img {
+        width: 100%;
+        max-width: 30rem;
+        height: 15rem;
+        min-width: 250px;
+    }
+
+    #project_info h2 {
+        font-size: 1.4rem;
+        line-height: 1.7rem;
+        margin-top: 1rem;
+        max-width: 100%;
+    }
+
+    #project_description {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 1rem;
+    }
+}
+
+/* Mobile portrait */
+@media only screen and (max-width: 480px) {
+    #project_info {
+        max-width: 90%;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    #images_gallery {
+        max-width: 80%;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .gallery_img {
+        width: 100%;
+        max-width: 100%;
+        height: 12rem;
+        min-width: 250px;
+    }
+
+    .gallery_img:hover {
+        transform: scale(1.02);
+    }
+
+    #project_info h2 {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        margin-top: 1rem;
+        max-width: 100%;
+        padding: 0.8rem;
+    }
+
+    #project_description {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 1rem;
+    }
+}
+
+/* Extra small mobile phones */
+@media (max-width: 320px) {
+    #project_info {
+        max-width: 95%;
+        gap: 0.8rem;
+        margin-top: 0.5rem;
+    }
+
+    #images_gallery {
+        max-width: 100%;
+        gap: 0.5rem;
+        padding: 0.25rem;
+        margin-top: 0.5rem;
+    }
+
+    .gallery_img {
+        width: 100%;
+        max-width: 100%;
+        height: 10rem;
+        min-width: 240px;
+    }
+
+    .gallery_img:hover {
+        transform: scale(1.01);
+    }
+
+    #project_info h2 {
+        font-size: 1.1rem;
+        line-height: 1.4rem;
+        margin-top: 0.8rem;
+        max-width: 100%;
+        padding: 0.6rem;
+    }
+
+    #project_description {
+        max-width: 100%;
+        padding: 0.6rem;
+    }
+
+    .to_general:first-of-type {
+        margin-top: 0.8rem;
+    }
+}
