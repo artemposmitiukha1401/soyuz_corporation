@@ -1,12 +1,5 @@
 @import "./alternative_energy.css";
 
-.to_general:first-of-type {
-    margin-top: 18rem;
-}
-
-#title_background, #title_gr {
-    height: 28rem;
-}
 
 #division_info {
     display: flex;

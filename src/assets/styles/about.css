@@ -2,6 +2,10 @@
 @import url('./style.css');
 @import url('./divisions.css');
 
+#title_background, #title_gr {
+    border-radius: 0px;
+}
+
 * {
     font-family: var(--font-inter);
     margin: 0;
@@ -42,7 +46,6 @@ a {
 }
 
 section {
-
     padding: 0 2rem;
     max-width: 60%;
     min-width: 280px;
@@ -59,6 +62,10 @@ header {
     min-width: 280px;
 }
 
+h1 {
+    margin: 0;
+}
+
 .toggle2 {
     margin-top: 1em;
 }
@@ -73,9 +80,9 @@ header {
 
 #page_title {
     font-family: var(--font-nunito);
-    font-size: 4.375rem;
+    font-size: 5rem;
+    padding: 2rem;
     text-align: center;
-    margin-top: 3rem;
     margin-inline: auto;
     text-transform: uppercase;
     max-width: 800px;
@@ -162,20 +169,6 @@ header {
     min-width: 200px;
 }
 
-.about_title {
-    text-transform: uppercase;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    padding: 1rem;
-    font-family: var(--font-nunito);
-    font-size: 3rem;
-    text-align: center;
-    margin-inline: auto;
-    margin-top: 5rem;
-    margin-bottom: 4rem;
-    max-width: 65rem;
-    min-width: 200px;
-}
 
 #details {
     gap: 2.5rem;
@@ -208,6 +201,21 @@ header {
     max-width: 90%;
     min-width: 280px;
     border-radius: 0.625rem;
+}
+
+.about_title {
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 1rem;
+    font-family: var(--font-nunito);
+    font-size: 3rem;
+    text-align: center;
+    margin-inline: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 65rem;
+    min-width: 200px;
 }
 
 .division_properties_description {
@@ -303,6 +311,7 @@ header {
     padding: 1rem;
     display: flex;
     width: 10rem;
+    margin-top: 2rem;
     min-width: 120px;
     max-width: 15rem;
     text-align: center;
@@ -311,8 +320,17 @@ header {
     transition: all 0.2s ease-in-out;
 }
 
+
 .to_general:hover {
     transform: scale(1.1);
+}
+
+.to_general:first-of-type {
+    margin-top: 2rem;
+}
+
+.to_general {
+    width: 12rem;
 }
 
 .reporting_card {
@@ -324,11 +342,12 @@ header {
     width: 18rem;
     min-width: 200px;
     flex-direction: column;
-    transition: transform 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .reporting_card:hover {
     transform: scale(1.02) translateY(-0.5rem);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 #reportings_list {
@@ -452,20 +471,23 @@ header {
     width: 28rem;
 }
 
-.to_general:first-of-type {
-    margin-top: 25rem;
+#background {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 25rem;
+    max-height: 30rem !important;
 }
 
-/*.division:nth-child(1) {*/
-/*    width: 100%;*/
-/*    max-width: 100%;*/
-/*}*/
 
-/*#divisions {*/
-/*    width: 100%;*/
-/*    gap: 3rem;*/
-/*}*/
-
+#title_background, #title_gr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
 
 #divisions {
     align-items: center;
@@ -479,6 +501,7 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 .division {
     padding: 1.875rem;
@@ -565,8 +588,9 @@ header {
     }
 
     #info > .info_image:nth-of-type(2) {
-        width: 100%;
-        max-width: 100% !important;
+        width: 50%;
+        max-width: 50% !important;
+        height: 100%;
     }
 
     .info_image {
@@ -575,6 +599,16 @@ header {
 
     .about_title {
         font-size: 2.5rem;
+    }
+
+    #info_description {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    #info_description .info_text {
+        height: 100%;
+        margin-top: 0;
     }
 
     img {
@@ -608,7 +642,6 @@ header {
 
 }
 
-/* Tablets */
 @media (max-width: 992px) {
     section {
 
@@ -659,9 +692,6 @@ header {
         min-width: 10rem;
     }
 
-    .to_general:first-of-type {
-        margin-top: 25rem;
-    }
 
     #documents,
     #contacts_list {
@@ -680,6 +710,11 @@ header {
         justify-content: center;
         display: flex;
         margin-inline: auto;
+    }
+
+    #info_description {
+        flex-direction: column;
+        gap: 1rem;
     }
 
 }
@@ -789,10 +824,6 @@ header {
         max-width: 12rem;
     }
 
-    .to_general:first-of-type {
-        margin-top: 25rem;
-    }
-
     #diplomas {
         flex-direction: column;
         align-items: center;
@@ -824,9 +855,7 @@ header {
 }
 
 @media only screen and (max-width: 480px) {
-    .to_general:first-of-type {
-        margin-top: 28rem;
-    }
+
 
     section {
         margin-top: 3rem;
@@ -863,7 +892,7 @@ header {
         flex-direction: row;
         align-items: center;
         gap: 1rem;
-        padding: 1rem 0.5rem;
+        padding: 1rem 1rem;
     }
 
     .about_title,
@@ -871,6 +900,13 @@ header {
         font-size: 1.5rem;
         margin-top: 1.5rem;
         margin-bottom: 1rem;
+    }
+
+    #checkbox2:checked + .toggle2 {
+        transform: rotate(180deg);
+        position: fixed;
+        right: 1rem;
+
     }
 
     #info {
@@ -969,6 +1005,11 @@ header {
         text-align: center;
     }
 
+    #background {
+        min-height: 20rem;
+        height: 20rem;
+    }
+
     .division .division_title {
         transform-origin: center;
     }
@@ -982,7 +1023,8 @@ header {
     }
 
     .toggle2 {
-        margin-top: 0.5vw;
+        margin-top: 0.5rem;
+
     }
 
     #trust_line p, #awards p {
@@ -991,7 +1033,6 @@ header {
     }
 }
 
-/* Extra small mobile phones */
 @media (max-width: 320px) {
     body {
         font-size: 14px;

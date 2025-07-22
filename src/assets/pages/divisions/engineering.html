@@ -9,7 +9,7 @@
           rel="stylesheet">
     <link rel="stylesheet" href="./../../styles/normalize.css">
     <link rel="stylesheet" href="../../../assets/styles/divisions_styles/engineering.css">
-    <title>Бізнес-дивізіон "Мережі"</title>
+    <title>Проєктування"</title>
 </head>
 <body>
 <header>
@@ -23,21 +23,25 @@
     <nav id="menu_list">
         <a class="menu_link" href="../about.html">Про компанію</a>
         <a class="menu_link" href="../divisions.html">Послуги</a>
-        <a class="menu_link" href="../projects/projects.html">Проекти</a>
-        <a class="menu_link" href="../media.html">Новини</a>
+        <a class="menu_link" href="../projects/projects.html">Проєкти</a>
+        <a class="menu_link" href="../media.html">Медія</a>
         <a class="menu_link" href="../contacts.html">Контакти</a>
         <a class="menu_link" href="../career.html">Карʼєра</a>
         <div id="google_translate_element"></div>
+        <button id="to_ukrainian" type="button">Українська</button>
     </nav>
 </header>
-<img id="title_background"
-     src="../../images/divisions/engineering/photo-1542621334-a254cf47733d.avif"
-     alt="Фонове зображення розділу">
-<div id="title_gr"></div>
-<h1 id="page_title">
-    Проектування</h1>
 
-<a class="to_general" href="../../../../index.html">На головну</a>
+<div id="background">
+    <img id="title_background"
+         src="../../images/divisions/engineering/photo-1542621334-a254cf47733d.avif"
+         alt="Фонове зображення розділу">
+    <div id="title_gr"></div>
+    <h1 id="page_title">
+        Проєктування</h1>
+</div>
+
+<a class="to_general" href="../divisions.html">Послуги</a>
 
 <section id="engineering_info">
     <p id="engineering_description">
@@ -61,16 +65,17 @@
     </p>
 </section>
 
-<a class="to_general" href="../../../../index.html">На головну</a>
+<a class="to_general" href="../divisions.html">Послуги</a>
 
 <footer>
     <img id="footer_logo" src="../../images/logo.png" alt="Логотип компанії">
     <div id="links">
         <a class="footer_links" href="../about.html">Про компанію</a>
-        <a class="footer_links" href="../media.html">Новини</a>
-        <a class="footer_links" href="../contacts.html">Контакти</a>
+        <a class="footer_links" href="../divisions.html">Послуги</a>
         <a class="footer_links" href="../projects/projects.html">Проєкти</a>
-        <a class="menu_link" href="../career.html">Карʼєра</a>
+        <a class="footer_links" href="../media">Медія</a>
+        <a class="footer_links" href="../contacts.html">Контакти</a>
+        <a class="footer_links" href="../career.html">Карʼєра</a>
     </div>
     <div id="contacts">
         <address>м. Одеса, пр-т. Шевченка 1</address>
@@ -82,25 +87,6 @@
 <script src="../../scripts/script.js"></script>
 <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script>
-    let scroll_container = document.querySelector(".gallery");
-    let back_btn = document.getElementById("back_btn");
-    let next_btn = document.getElementById("next_btn");
-    scroll_container.addEventListener("wheel", (evt) => {
-        evt.preventDefault();
-        const scrollSpeed = Math.abs(evt.deltaY) > 50 ? evt.deltaY * 4 : evt.deltaY;
-        scroll_container.scrollLeft += scrollSpeed;
-        scroll_container.style.scrollBehavior = "smooth";
-    });
-    next_btn.addEventListener("click", () => {
-        scroll_container.style.scrollBehavior = "smooth";
-        scroll_container.scrollLeft += 1200;
-    });
-    back_btn.addEventListener("click", () => {
-        scroll_container.style.scrollBehavior = "smooth";
-        scroll_container.scrollLeft -= 1200;
-    });
-</script>
 
 </body>
 </html>

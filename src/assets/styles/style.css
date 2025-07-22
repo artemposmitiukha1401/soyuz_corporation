@@ -42,6 +42,10 @@ p {
     width: 100%;
 }
 
+.VIpgJd-ZVi9od-xl07Ob-lTBxed > span:nth-child(3), .VIpgJd-ZVi9od-xl07Ob-lTBxed > span:nth-child(5) {
+    display: none;
+}
+
 #background {
     height: 90vh;
     min-height: 40vh;
@@ -82,17 +86,11 @@ header {
     margin-top: 1.5rem;
 }
 
-#map {
-    width: 25%;
-    max-width: 250px;
-    display: flex;
-    margin: 4% 3% 0 auto;
-}
 
 .welcome {
     display: flex;
-    margin-top: 5%;
-    margin-left: 5%;
+    margin-top: 2rem;
+    padding-left: 5rem;
     flex-direction: column;
     height: 500px;
     max-width: 100%;
@@ -100,14 +98,15 @@ header {
 }
 
 #welcome_title {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-family: var(--font-nunito);
     text-transform: uppercase;
-    max-width: 800px;
+    max-width: 1000px;
     min-width: 200px;
 }
 
 #welcome_textbox {
+    margin-top: 1.5rem;
     font-family: var(--font-nunito);
     display: flex;
     flex-direction: column;
@@ -191,14 +190,28 @@ header {
 .menu_link {
     font-weight: 400;
     font-size: 1.125rem;
-    transition: 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    padding: 0.3rem;
     transform-origin: right;
     min-width: fit-content;
+    border-radius: 10px;
+    will-change: transform;
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    border: 1px solid transparent;
 }
 
 .menu_link:hover {
-    font-weight: 700;
-    transform: scale(1.2);
+    /*font-weight: 700;*/
+    /*transform: scale(1.1);*/
+    background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.2));
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
 #menu_list {
@@ -304,13 +317,12 @@ footer {
     flex-direction: column;
     gap: 1.25rem;
     width: fit-content;
-    min-width: 200px;
 }
 
 .footer_links {
     font-size: 1rem;
     text-decoration: none;
-    transition: transform 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;;
     transform-origin: center;
 }
 
@@ -392,19 +404,43 @@ footer {
     min-width: 200px;
 }
 
+#europe_integration {
+    display: flex;
+    border-radius: 10px;
+    width: 15rem;
+    opacity: 0.8;
+}
+
+#map {
+    width: 20rem;
+    max-width: 250px;
+
+}
+
+#flags {
+    display: flex;
+    margin-top: 3rem;
+    width: 100%;
+    padding-right: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
 @media (max-width: 1400px) {
     #short_info {
         width: 80%;
     }
 
-    #company_info {
-        flex-direction: column;
+    #company_info p {
+        width: 60%;
+
     }
 
     #company_info img {
-        width: 100%;
-        max-width: 100%;
+        width: 30rem;
+        max-width: 40rem;
     }
+
 
     #contacts_list,
     #company_info {
@@ -412,15 +448,15 @@ footer {
     }
 
     .welcome {
-        margin-left: 3%;
+        padding-left: 4rem;
     }
 
     #welcome_title {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .welcome_slogan {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 
     .section_title {
@@ -431,11 +467,70 @@ footer {
         width: 100%;
         max-width: 25rem;
     }
+
+    #background {
+        height: 100rem;
+    }
 }
 
-@media (max-width: 992px) {
+
+#to_ukrainian {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    color: #e2e8f0 !important;
+    padding: 14px 20px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.25s ease !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    position: relative !important;
+    overflow: hidden !important;
+    min-width: 140px !important;
+    text-align: center !important;
+}
+
+#to_ukrainian::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8)) !important;
+    transition: left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    z-index: -1 !important;
+}
+
+#to_ukrainian:hover::before {
+    left: 0 !important;
+}
+
+#to_ukrainian:hover {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    color: #fff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), inset 3px 0 0 #3b82f6 !important;
+}
+
+#to_ukrainian:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+#to_ukrainian {
+    animation: fadeInUp 0.3s ease-out !important;
+}
+
+
+@media (max-width: 1200px) {
     #background, #background_image, #gradient {
-        height: 35rem;
+        height: 38rem;
     }
 
     header {
@@ -456,17 +551,23 @@ footer {
     }
 
     .welcome {
-        margin-top: 3%;
-        margin-left: 3%;
+        margin-top: 2rem;
+        padding-left: 2rem;
         height: 400px;
     }
 
     #welcome_title {
-        font-size: 3.5rem;
+        width: fit-content;
+        max-width: 50rem;
+        font-size: 2.5rem;
+    }
+
+    #europe_integration {
+        width: 10rem;
     }
 
     .welcome_slogan {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .section_title {
@@ -495,6 +596,10 @@ footer {
     #contacts_list,
     #company_info {
         width: 85%;
+    }
+
+    #company_info p {
+        width: 100%;
     }
 
 
@@ -528,7 +633,7 @@ footer {
 
 @media (max-width: 768px) {
     #background, #background_image, #gradient {
-        height: 34rem;
+        height: 38rem;
     }
 
     header {
@@ -540,6 +645,7 @@ footer {
         width: 60%;
         max-width: 250px;
         min-width: 120px;
+        margin-left: 2rem;
     }
 
     #map {
@@ -549,13 +655,13 @@ footer {
     }
 
     .welcome {
-        margin-top: 2%;
+        margin-top: 2rem;
         margin-left: 2%;
         height: 350px;
     }
 
     #welcome_title {
-        font-size: 2.8rem;
+        font-size: 2rem;
     }
 
     .welcome_slogan {
@@ -683,6 +789,7 @@ footer {
 
     #logo {
         width: 100%;
+        margin-left: 0;
         max-width: 250px;
         min-width: 100px;
     }
@@ -694,17 +801,21 @@ footer {
     }
 
     .welcome {
-        margin-top: 5rem;
-        margin-left: 2rem;
+        margin-top: 2rem;
+        margin-left: 0;
         height: 280px;
     }
 
     #welcome_title {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .welcome_slogan {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    #europe_integration {
+        width: 8rem;
     }
 
     .section_title {
@@ -715,7 +826,7 @@ footer {
 
     #short_info {
         width: 95%;
-        margin-top: 8rem;
+        margin-top: 12rem;
         gap: 1rem;
     }
 
@@ -750,7 +861,7 @@ footer {
     }
 
     .menu_link {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     #contacts_list,

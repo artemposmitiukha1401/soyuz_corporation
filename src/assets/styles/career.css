@@ -1,8 +1,5 @@
 @import "./about.css";
 
-#title_background, #title_gr {
-    height: 28rem;
-}
 
 #career_info {
     background-color: var(--primary-color);
@@ -34,9 +31,7 @@ h3 {
 
 
 @media (max-width: 1400px) {
-    #title_background, #title_gr {
-        height: 25rem;
-    }
+
 
     #career_info {
         max-width: 80%;
@@ -58,9 +53,6 @@ h3 {
 
 
 @media (max-width: 992px) {
-    #title_background, #title_gr {
-        height: 22rem;
-    }
 
     #career_info {
         max-width: 85%;
@@ -84,9 +76,7 @@ h3 {
 
 
 @media (max-width: 768px) {
-    #title_background, #title_gr {
-        height: 20rem;
-    }
+
 
     #career_info {
         max-width: 85%;
@@ -114,9 +104,6 @@ h3 {
 
 
 @media only screen and (max-width: 480px) {
-    #title_background, #title_gr {
-        height: 18rem;
-    }
 
     #career_info {
         max-width: 90%;
@@ -145,10 +132,7 @@ h3 {
 
 
 @media (max-width: 320px) {
-    #title_background, #title_gr {
-        height: 15rem;
-    }
-
+   
     #career_info {
         max-width: 95%;
         width: 95%;

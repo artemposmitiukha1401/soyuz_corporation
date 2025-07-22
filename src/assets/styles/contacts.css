@@ -42,7 +42,6 @@ body {
     gap: 5rem;
 }
 
-/* Large screens - following main CSS structure */
 @media (max-width: 1450px) {
     .contact_card {
         width: 18rem;
@@ -59,7 +58,6 @@ body {
     }
 }
 
-/* Tablets - following main CSS structure */
 @media (max-width: 992px) {
     .contact_card {
         width: 100%;
@@ -77,15 +75,8 @@ body {
         align-items: center;
     }
 
-    .to_general:first-of-type {
-        margin-top: 25rem;
-        margin-left: 1rem;
-        width: 10rem;
-        min-width: 10rem;
-    }
 }
 
-/* Mobile landscape - following main CSS structure */
 @media (max-width: 768px) {
     .contact_card {
         width: 100%;
@@ -104,15 +95,10 @@ body {
         align-items: center;
     }
 
-    .to_general:first-of-type {
-        margin-top: 25rem;
-        margin-inline: auto;
-        width: 100%;
-        max-width: 12rem;
-    }
+
 }
 
-/* Mobile portrait - following main CSS structure */
+
 @media only screen and (max-width: 480px) {
     .contact_card {
         flex-direction: column;
@@ -142,12 +128,10 @@ body {
         font-size: 0.9rem;
     }
 
-    .to_general:first-of-type {
-        margin-top: 20rem;
-    }
+
 }
 
-/* Extra small mobile phones - following main CSS structure */
+
 @media (max-width: 320px) {
     .contact_card {
         padding: 1rem;
