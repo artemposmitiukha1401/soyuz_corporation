@@ -2,7 +2,8 @@
 @import url('./style.css');
 @import url('./divisions.css');
 
-#title_background, #title_gr {
+#title_background,
+#title_gr {
     border-radius: 0px;
 }
 
@@ -151,7 +152,7 @@ h1 {
     padding: 2rem;
 }
 
-#info > .info_text {
+#info>.info_text {
     max-width: 100%;
     min-width: 280px;
 }
@@ -418,7 +419,8 @@ h1 {
 }
 
 
-#trust_line p, #awards p {
+#trust_line p,
+#awards p {
     background-color: var(--primary-color);
     border-radius: 10px;
     padding: 1rem;
@@ -447,7 +449,7 @@ h1 {
     width: 15rem;
     min-width: 120px;
     height: 2.5rem;
-    border-radius: 1.875rem;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
     font-size: 0.813rem;
@@ -482,7 +484,8 @@ h1 {
 }
 
 
-#title_background, #title_gr {
+#title_background,
+#title_gr {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -548,7 +551,8 @@ h1 {
 }
 
 
-#protecting_and_restoring_info div, #protecting_and_restoring_info p {
+#protecting_and_restoring_info div,
+#protecting_and_restoring_info p {
     background-color: var(--primary-color);
     padding: 1rem;
     border-radius: 10px;
@@ -583,11 +587,11 @@ h1 {
         max-width: 100%;
     }
 
-    #info > .info_image:nth-of-type(1) {
+    #info>.info_image:nth-of-type(1) {
         display: none;
     }
 
-    #info > .info_image:nth-of-type(2) {
+    #info>.info_image:nth-of-type(2) {
         width: 50%;
         max-width: 50% !important;
         height: 100%;
@@ -660,7 +664,8 @@ h1 {
         margin-bottom: 2rem;
     }
 
-    p, #protecting_and_restoring_info ul {
+    p,
+    #protecting_and_restoring_info ul {
         font-size: 1.2rem;
     }
 
@@ -728,7 +733,8 @@ h1 {
         max-width: 85%;
     }
 
-    p, #protecting_and_restoring_info ul {
+    p,
+    #protecting_and_restoring_info ul {
         font-size: 1.1rem;
     }
 
@@ -793,7 +799,8 @@ h1 {
         gap: 0.5rem;
     }
 
-    #trust_line p, #awards p {
+    #trust_line p,
+    #awards p {
         width: 100%;
         margin-bottom: 0.5rem;
         min-width: 250px;
@@ -833,7 +840,8 @@ h1 {
         width: 100%;
     }
 
-    #diplomas .reporting_card, #corruption .reporting_card,
+    #diplomas .reporting_card,
+    #corruption .reporting_card,
     #reportings .reporting_card {
         max-width: 100%;
     }
@@ -863,7 +871,8 @@ h1 {
         width: 90% !important;
     }
 
-    p, #protecting_and_restoring_info ul {
+    p,
+    #protecting_and_restoring_info ul {
         font-size: 1rem;
         line-height: 1.4;
     }
@@ -902,7 +911,7 @@ h1 {
         margin-bottom: 1rem;
     }
 
-    #checkbox2:checked + .toggle2 {
+    #checkbox2:checked+.toggle2 {
         transform: rotate(180deg);
         position: fixed;
         right: 1rem;
@@ -1027,7 +1036,8 @@ h1 {
 
     }
 
-    #trust_line p, #awards p {
+    #trust_line p,
+    #awards p {
         padding: 0.8rem;
         min-width: 240px;
     }
@@ -1052,7 +1062,8 @@ h1 {
         font-size: 1.3rem;
     }
 
-    p, #protecting_and_restoring_info ul {
+    p,
+    #protecting_and_restoring_info ul {
         font-size: 0.9rem;
     }
 
@@ -1088,7 +1099,8 @@ h1 {
         font-size: 0.7rem;
     }
 
-    #trust_line p, #awards p {
+    #trust_line p,
+    #awards p {
         min-width: 220px;
         padding: 0.6rem;
     }

@@ -1,7 +1,8 @@
 @import "./alternative_energy.css";
 @import "./generation.css";
 
-#title_background, #title_gr {
+#title_background,
+#title_gr {
     height: 100%;
 }
 
@@ -56,7 +57,7 @@
     min-width: 10rem;
 }
 
-#properties > div:nth-child(1) {
+#properties>div:nth-child(1) {
     width: 35rem;
     flex-direction: column;
     height: 60rem;
@@ -109,10 +110,11 @@
         width: 30% !important;
         max-width: 30% !important;
         height: 50rem;
+        flex-direction: column;
         min-width: 280px !important;
     }
 
-    #properties > div:nth-child(1) {
+    #properties>div:nth-child(1) {
         width: 30% !important;
         max-width: 30% !important;
         height: 50rem;
@@ -132,17 +134,18 @@
     }
 
     .properties_card {
-        width: 100% !important;;
+        width: 100% !important;
+        ;
         height: 30rem;
         align-items: flex-start;
         justify-content: flex-start;
         max-width: 100% !important;
     }
 
-    #properties > div:nth-child(1) {
+    #properties>div:nth-child(1) {
         width: 100% !important;
         max-width: 100% !important;
-        height: 30rem;
+        height: 35rem;
     }
 
     #page_title {
@@ -195,6 +198,7 @@
 }
 
 @media (max-width: 768px) {
+
     .division_info ul,
     .division_info p,
     .division_info li {
@@ -203,6 +207,7 @@
 }
 
 @media only screen and (max-width: 480px) {
+
     #page_title {
         margin-inline: auto;
         justify-content: center;
@@ -237,6 +242,10 @@
 
     #properties {
         width: 90% !important;
+    }
+
+    .properties_card {
+        height: 30rem !important;
     }
 
 }
