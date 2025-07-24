@@ -98,7 +98,6 @@ h3 {
 
 @media (max-width: 1450px) {
   #project_info {
-    max-width: 80%;
     gap: 2.5rem;
   }
 
@@ -119,13 +118,28 @@ h3 {
   }
 
   #project_description {
-    max-width: 95%;
+    max-width: 100%;
+    width: 100% !important;
   }
 }
 
 @media (max-width: 992px) {
+  p,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.2rem;
+  }
+
   #project_info {
-    max-width: 85%;
+    max-width: 100% !important;
+    width: 90% !important;
     gap: 2rem;
     margin-top: 2rem;
   }
@@ -159,6 +173,19 @@ h3 {
 }
 
 @media (max-width: 780px) {
+  p,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.1rem;
+  }
+
   #project_info {
     max-width: 90%;
     gap: 1.5rem;
@@ -197,8 +224,21 @@ h3 {
   }
 }
 
-/* Mobile portrait */
 @media only screen and (max-width: 480px) {
+  p,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
   #project_info {
     max-width: 90%;
     gap: 1rem;
@@ -241,8 +281,20 @@ h3 {
   }
 }
 
-/* Extra small mobile phones */
 @media (max-width: 320px) {
+  p,
+  ul,
+  ol,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 0.9rem;
+  }
+
   #project_info {
     max-width: 95%;
     gap: 0.8rem;

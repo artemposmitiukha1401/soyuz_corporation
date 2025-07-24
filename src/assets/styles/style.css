@@ -1,1020 +1,1052 @@
-@import url('./language_menu.css');
+@import url("./language_menu.css");
 
 :root {
-    --primary-color: #005A9C;
-    --secondary-color: #002e4e;
-    --background-color: #d3dce4;
-    --white: white;
-    --font-inter: 'Inter', sans-serif;
-    --font-nunito: 'Nunito Sans', sans-serif;
+  --primary-color: #005a9c;
+  --secondary-color: #002e4e;
+  --background-color: #d3dce4;
+  --white: white;
+  --font-inter: "Inter", sans-serif;
+  --font-nunito: "Nunito Sans", sans-serif;
 }
 
 * {
-    color: var(--white);
-    font-family: var(--font-inter);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  color: var(--white);
+  font-family: var(--font-inter);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: white;
-    font-size: 16px;
-    overflow-x: hidden;
-    min-width: 280px;
+  background-color: white;
+  font-size: 16px;
+  overflow-x: hidden;
+  min-width: 280px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 p {
-    font-weight: 200;
-    line-height: 1.4;
+  font-weight: 200;
+  line-height: 1.5;
+  font-size: 1.3rem;
+  min-width: 200px;
 }
 
 #background,
 #background_image,
 #gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-.VIpgJd-ZVi9od-xl07Ob-lTBxed > span:nth-child(3), .VIpgJd-ZVi9od-xl07Ob-lTBxed > span:nth-child(5) {
-    display: none;
+.VIpgJd-ZVi9od-xl07Ob-lTBxed > span:nth-child(3),
+.VIpgJd-ZVi9od-xl07Ob-lTBxed > span:nth-child(5) {
+  display: none;
 }
 
 #background {
-    height: 90vh;
-    min-height: 40vh;
-    z-index: -100;
-    pointer-events: none;
+  height: 90vh;
+  min-height: 40vh;
+  z-index: -100;
+  pointer-events: none;
 }
 
 #background_image,
 #gradient {
-    height: 900px;
+  height: 900px;
 }
 
 #background_image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 #gradient {
-    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    opacity: 0.5;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  opacity: 0.5;
 }
 
 header {
-    height: 10rem;
-    display: flex;
-    align-items: center;
-    padding: 3% 0 5% 5%;
-    max-width: 100%;
-    min-width: 280px;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  padding: 3% 0 5% 5%;
+  max-width: 100%;
+  min-width: 280px;
 }
 
 #logo {
-    width: 40%;
-    max-width: 400px;
-    min-width: 200px;
-    margin-top: 1.5rem;
+  width: 40%;
+  max-width: 400px;
+  min-width: 200px;
+  margin-top: 1.5rem;
 }
 
-
 .welcome {
-    display: flex;
-    margin-top: 2rem;
-    padding-left: 5rem;
-    flex-direction: column;
-    height: 500px;
-    max-width: 100%;
-    min-width: 280px;
+  display: flex;
+  margin-top: 2rem;
+  padding-left: 5rem;
+  flex-direction: column;
+  height: 500px;
+  max-width: 100%;
+  min-width: 280px;
 }
 
 #welcome_title {
-    font-size: 3.5rem;
-    font-family: var(--font-nunito);
-    text-transform: uppercase;
-    max-width: 1000px;
-    min-width: 200px;
+  font-size: 3.5rem;
+  font-family: var(--font-nunito);
+  text-transform: uppercase;
+  max-width: 1000px;
+  min-width: 200px;
 }
 
 #welcome_textbox {
-    margin-top: 1.5rem;
-    font-family: var(--font-nunito);
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    min-width: 280px;
+  margin-top: 1.5rem;
+  font-family: var(--font-nunito);
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  min-width: 280px;
 }
 
 .welcome_slogan {
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 3rem;
-    max-width: 800px;
-    min-width: 200px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 3rem;
+  max-width: 800px;
+  min-width: 200px;
 }
 
 .welcome_slogan:nth-child(2) {
-    font-weight: 200;
+  font-weight: 200;
 }
 
 #checkbox2 {
-    display: none;
+  display: none;
 }
 
 .toggle2 {
-    margin-left: auto;
-    margin-right: 4rem;
-    margin-top: 2.5rem;
-    width: 3.75rem;
-    height: 3.75rem;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.85rem;
-    transition: 0.5s;
-    z-index: 1000;
+  margin-left: auto;
+  margin-right: 4rem;
+  margin-top: 2.5rem;
+  width: 3.75rem;
+  height: 3.75rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  transition: 0.5s;
+  z-index: 1000;
 }
 
 .bars {
-    width: 100%;
-    height: 0.375rem;
-    background-color: var(--white);
-    border-radius: 10px;
+  width: 100%;
+  height: 0.375rem;
+  background-color: var(--white);
+  border-radius: 10px;
 }
 
 #bar4,
 #bar6 {
-    width: 80%;
+  width: 80%;
 }
 
 #bar5 {
-    transition: 0.8s;
+  transition: 0.8s;
 }
 
 #checkbox2:checked + .toggle2 .bars {
-    position: absolute;
-    transition: 0.5s;
+  position: absolute;
+  transition: 0.5s;
 }
 
 #checkbox2:checked + .toggle2 #bar5 {
-    transform: scaleX(0);
+  transform: scaleX(0);
 }
 
 #checkbox2:checked + .toggle2 #bar4 {
-    width: 100%;
-    transform: rotate(45deg);
+  width: 100%;
+  transform: rotate(45deg);
 }
 
 #checkbox2:checked + .toggle2 #bar6 {
-    width: 100%;
-    transform: rotate(-45deg);
+  width: 100%;
+  transform: rotate(-45deg);
 }
 
 #checkbox2:checked + .toggle2 {
-    transform: rotate(180deg);
-    position: fixed;
-    right: 0;
+  transform: rotate(180deg);
+  position: fixed;
+  right: 0;
 }
 
 .menu_link {
-    font-weight: 400;
-    font-size: 1.125rem;
-    transition: all 0.2s ease-in-out;
-    padding: 0.3rem;
-    transform-origin: right;
-    min-width: fit-content;
-    border-radius: 10px;
-    will-change: transform;
-    display: inline-block;
-    z-index: 1;
-    position: relative;
-    border: 1px solid transparent;
+  font-weight: 400;
+  font-size: 1.125rem;
+  transition: all 0.2s ease-in-out;
+  padding: 0.3rem;
+  transform-origin: right;
+  min-width: fit-content;
+  border-radius: 10px;
+  will-change: transform;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+  border: 1px solid transparent;
 }
 
 .menu_link:hover {
-    /*font-weight: 700;*/
-    /*transform: scale(1.1);*/
-    background: linear-gradient(135deg,
+  /*font-weight: 700;*/
+  /*transform: scale(1.1);*/
+  background: linear-gradient(
+    135deg,
     rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.2));
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    rgba(255, 255, 255, 0.2)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 #menu_list {
-    align-items: end;
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
-    padding: 10rem 2rem 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    text-align: right;
-    z-index: 999;
-    transition: right 0.5s ease-in-out;
+  align-items: end;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  padding: 10rem 2rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: right;
+  z-index: 999;
+  transition: right 0.5s ease-in-out;
 }
 
 #checkbox2:checked ~ #menu_list {
-    right: 0;
+  right: 0;
 }
 
 #short_info {
-    display: flex;
-    flex-direction: row;
-    margin-top: 15rem;
-    width: 70%;
-    max-width: 1400px;
-    min-width: 280px;
-    justify-content: space-between;
-    gap: 1rem;
-    margin-inline: auto;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15rem;
+  width: 70%;
+  max-width: 1400px;
+  min-width: 280px;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-inline: auto;
+  align-items: center;
 }
 
 #short_info div {
-    width: 50%;
-    max-width: 100%;
-    min-width: 280px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  width: 50%;
+  max-width: 100%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .short_info_button {
-    height: 7rem;
-    display: flex;
-    width: 100%;
-    min-width: 100px;
-    max-width: 100%;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    padding: 2rem;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1rem;
+  height: 7rem;
+  display: flex;
+  width: 100%;
+  min-width: 100px;
+  max-width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .btn {
-    transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .section_title {
-    font-family: var(--font-nunito);
-    color: var(--primary-color);
-    text-transform: uppercase;
-    display: flex;
-    margin: auto;
-    margin-top: 10rem;
-    justify-content: center;
-    font-size: 3.125rem;
-    width: fit-content;
-    padding: 0 1rem;
-    max-width: 800px;
-    min-width: 200px;
+  font-family: var(--font-nunito);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  display: flex;
+  margin: auto;
+  margin-top: 10rem;
+  justify-content: center;
+  font-size: 3.125rem;
+  width: fit-content;
+  padding: 0 1rem;
+  max-width: 800px;
+  min-width: 200px;
 }
 
 footer {
-    flex-wrap: wrap;
-    padding: 2%;
-    gap: 2.5rem;
-    margin-top: 6.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-image: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
-    max-width: 100%;
-    min-width: 280px;
+  flex-wrap: wrap;
+  padding: 2%;
+  gap: 2.5rem;
+  margin-top: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  max-width: 100%;
+  min-width: 280px;
 }
 
 #links {
-    margin-right: 1.25rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    width: fit-content;
+  margin-right: 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  width: fit-content;
 }
 
 .footer_links {
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;;
-    transform-origin: center;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  transform-origin: center;
 }
 
 .footer_links:hover {
-    font-weight: 700;
-    transform: scale(1.2);
+  font-weight: 700;
+  transform: scale(1.2);
 }
 
 #contacts {
-    margin: 2.5rem 1.875rem 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.938rem;
-    min-width: 280px;
+  margin: 2.5rem 1.875rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.938rem;
+  min-width: 280px;
 }
 
 #footer_logo {
-    max-width: 300px;
-    min-width: 120px;
-    border-radius: 0;
-    width: 100%;
+  max-width: 300px;
+  min-width: 120px;
+  border-radius: 0;
+  width: 100%;
 }
 
 .contact_card {
-    justify-content: left;
-    align-items: flex-start;
-    display: flex;
-    background-color: var(--primary-color);
-    padding: 2rem;
-    width: 30rem;
-    min-width: 280px;
-    max-width: 100%;
-    border-radius: 0.625rem;
-    flex-direction: column;
-    gap: 1rem;
-    min-height: 20rem !important;
-    height: 20rem;
-    transition: all 0.2s ease-in-out;
+  justify-content: left;
+  align-items: flex-start;
+  display: flex;
+  background-color: var(--primary-color);
+  padding: 2rem;
+  width: 30rem;
+  min-width: 280px;
+  max-width: 100%;
+  border-radius: 0.625rem;
+  flex-direction: column;
+  gap: 1rem;
+  min-height: 20rem !important;
+  height: 20rem;
+  transition: all 0.2s ease-in-out;
 }
 
 #contacts_list {
-    width: 70%;
-    max-width: 1400px;
-    min-width: 280px;
-    display: flex;
-    align-items: center;
-    margin-top: 5rem;
-    margin-inline: auto;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  width: 70%;
+  max-width: 1400px;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+  margin-inline: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #company_info {
-    width: 70%;
-    max-width: 1400px;
-    min-width: 280px;
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    justify-content: center;
-    margin-inline: auto;
-    padding: 1rem;
+  width: 70%;
+  max-width: 1400px;
+  min-width: 280px;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  justify-content: center;
+  margin-inline: auto;
+  padding: 1rem;
 }
 
 #company_info img {
-    object-fit: cover;
-    border-radius: 10px;
-    width: 500rem;
-    max-width: 500rem;
-    min-width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  width: 500rem;
+  max-width: 500rem;
+  min-width: 200px;
 }
 
 #company_info p {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    min-width: 200px;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  min-width: 200px;
 }
 
 #europe_integration {
-    display: flex;
-    border-radius: 10px;
-    width: 15rem;
-    opacity: 0.8;
+  display: flex;
+  border-radius: 10px;
+  width: 15rem;
+  opacity: 0.8;
 }
 
 #map {
-    width: 20rem;
-    max-width: 250px;
-
+  width: 20rem;
+  max-width: 250px;
 }
 
 #flags {
-    display: flex;
-    margin-top: 3rem;
-    width: 100%;
-    padding-right: 2rem;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  margin-top: 3rem;
+  width: 100%;
+  padding-right: 2rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
 @media (max-width: 1400px) {
-    #short_info {
-        width: 80%;
-    }
+  #short_info {
+    width: 80%;
+  }
 
-    #company_info p {
-        width: 60%;
+  #company_info p {
+    width: 60%;
+  }
 
-    }
+  #company_info img {
+    width: 30rem;
+    max-width: 40rem;
+  }
 
-    #company_info img {
-        width: 30rem;
-        max-width: 40rem;
-    }
+  #contacts_list,
+  #company_info {
+    width: 80%;
+  }
 
+  .welcome {
+    padding-left: 4rem;
+  }
 
-    #contacts_list,
-    #company_info {
-        width: 80%;
-    }
+  #welcome_title {
+    font-size: 3rem;
+  }
 
-    .welcome {
-        padding-left: 4rem;
-    }
+  .welcome_slogan {
+    font-size: 2.5rem;
+  }
 
-    #welcome_title {
-        font-size: 3rem;
-    }
+  .section_title {
+    font-size: 2.8rem;
+  }
 
-    .welcome_slogan {
-        font-size: 2.5rem;
-    }
+  .contact_card {
+    width: 100%;
+    max-width: 25rem;
+  }
 
-    .section_title {
-        font-size: 2.8rem;
-    }
-
-    .contact_card {
-        width: 100%;
-        max-width: 25rem;
-    }
-
-    #background {
-        height: 100rem;
-    }
+  #background {
+    height: 100rem;
+  }
 }
 
-
 #to_ukrainian {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    font-family: 'Inter', sans-serif !important;
-    font-size: 15px !important;
-    font-weight: 500 !important;
-    color: #e2e8f0 !important;
-    padding: 14px 20px !important;
-    border-radius: 8px !important;
-    cursor: pointer !important;
-    backdrop-filter: blur(10px) !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
-    transition: all 0.25s ease !important;
-    display: inline-block !important;
-    white-space: nowrap !important;
-    position: relative !important;
-    overflow: hidden !important;
-    min-width: 140px !important;
-    text-align: center !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.1)
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  font-family: "Inter", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #e2e8f0 !important;
+  padding: 14px 20px !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.25s ease !important;
+  display: inline-block !important;
+  white-space: nowrap !important;
+  position: relative !important;
+  overflow: hidden !important;
+  min-width: 140px !important;
+  text-align: center !important;
 }
 
 #to_ukrainian::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: -100% !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8)) !important;
-    transition: left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-    z-index: -1 !important;
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.8),
+    rgba(37, 99, 235, 0.8)
+  ) !important;
+  transition: left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  z-index: -1 !important;
 }
 
 #to_ukrainian:hover::before {
-    left: 0 !important;
+  left: 0 !important;
 }
 
 #to_ukrainian:hover {
-    border-color: rgba(255, 255, 255, 0.4) !important;
-    color: #fff !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), inset 3px 0 0 #3b82f6 !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #fff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), inset 3px 0 0 #3b82f6 !important;
 }
 
 #to_ukrainian:active {
-    transform: translateY(0) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 #to_ukrainian {
-    animation: fadeInUp 0.3s ease-out !important;
+  animation: fadeInUp 0.3s ease-out !important;
 }
 
-
 @media (max-width: 1200px) {
-    #background, #background_image, #gradient {
-        height: 38rem;
-    }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
 
-    header {
-        height: 8rem;
-        padding: 2% 0 3% 3%;
-    }
+  #company_info p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    width: 100%;
+    text-align: left;
+  }
 
-    #logo {
-        width: 50%;
-        max-width: 320px;
-        min-width: 150px;
-    }
+  #background,
+  #background_image,
+  #gradient {
+    height: 38rem;
+  }
 
-    #map {
-        width: 30%;
-        max-width: 200px;
-        margin: 2% 2% 0 auto;
-    }
+  header {
+    height: 8rem;
+    padding: 2% 0 3% 3%;
+  }
 
-    .welcome {
-        margin-top: 2rem;
-        padding-left: 2rem;
-        height: 400px;
-    }
+  #logo {
+    width: 50%;
+    max-width: 320px;
+    min-width: 150px;
+  }
 
-    #welcome_title {
-        width: fit-content;
-        max-width: 50rem;
-        font-size: 2.5rem;
-    }
+  #map {
+    width: 30%;
+    max-width: 200px;
+    margin: 2% 2% 0 auto;
+  }
 
-    #europe_integration {
-        width: 10rem;
-    }
+  .welcome {
+    margin-top: 2rem;
+    padding-left: 2rem;
+    height: 400px;
+  }
 
-    .welcome_slogan {
-        font-size: 2rem;
-    }
+  #welcome_title {
+    width: fit-content;
+    max-width: 50rem;
+    font-size: 2.5rem;
+  }
 
-    .section_title {
-        font-size: 2.5rem;
-        margin-top: 8rem;
-    }
+  #europe_integration {
+    width: 10rem;
+  }
 
-    #short_info {
-        width: 85%;
-        margin-top: 4rem;
-        gap: 1rem;
-    }
+  .welcome_slogan {
+    font-size: 2rem;
+  }
 
-    .short_info_button {
-        height: 6rem;
-        padding: 1.5rem;
-        font-size: 0.9rem;
-    }
+  .section_title {
+    font-size: 2.5rem;
+    margin-top: 8rem;
+  }
 
-    .toggle2 {
-        margin-right: 2rem;
-        width: 4rem;
-        height: 10rem;
-    }
+  #short_info {
+    width: 85%;
+    margin-top: 4rem;
+    gap: 1rem;
+  }
 
-    #contacts_list,
-    #company_info {
-        width: 85%;
-    }
+  .short_info_button {
+    height: 6rem;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
 
-    #company_info p {
-        width: 100%;
-    }
+  .toggle2 {
+    margin-right: 2rem;
+    width: 4rem;
+    height: 10rem;
+  }
 
+  #contacts_list,
+  #company_info {
+    width: 85%;
+  }
 
-    .contact_card {
-        width: 100%;
-        max-width: 20rem;
-        padding: 1.5rem;
-    }
+  .contact_card {
+    width: 100%;
+    max-width: 20rem;
+    padding: 1.5rem;
+  }
 
-    #company_info {
-        flex-direction: column;
-        text-align: center;
-    }
+  #company_info {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    #company_info img {
-        width: 100%;
-        max-width: 100%;
-    }
+  #company_info img {
+    width: 100%;
+    max-width: 100%;
+  }
 
-    #company_info p {
-        text-align: left;
-        font-size: 1.1rem;
-        line-height: 1.6rem;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
-    #background, #background_image, #gradient {
-        height: 38rem;
-    }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
 
-    header {
-        height: 6rem;
-        padding: 2% 0 2% 2%;
-    }
+  #company_info p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-    #logo {
-        width: 60%;
-        max-width: 250px;
-        min-width: 120px;
-        margin-left: 2rem;
-    }
+  #background,
+  #background_image,
+  #gradient {
+    height: 38rem;
+  }
 
-    #map {
-        width: 35%;
-        max-width: 150px;
-        margin: 1% 1% 0 auto;
-    }
+  header {
+    height: 6rem;
+    padding: 2% 0 2% 2%;
+  }
 
-    .welcome {
-        margin-top: 2rem;
-        margin-left: 2%;
-        height: 350px;
-    }
+  #logo {
+    width: 60%;
+    max-width: 250px;
+    min-width: 120px;
+    margin-left: 2rem;
+  }
 
-    #welcome_title {
-        font-size: 2rem;
-    }
+  #map {
+    width: 35%;
+    max-width: 150px;
+    margin: 1% 1% 0 auto;
+  }
 
-    .welcome_slogan {
-        font-size: 2rem;
-    }
+  .welcome {
+    margin-top: 2rem;
+    margin-left: 2%;
+    height: 350px;
+  }
 
-    .section_title {
-        font-size: 2rem;
-        margin-top: 6rem;
-    }
+  #welcome_title {
+    font-size: 2rem;
+  }
 
-    #short_info {
-        width: 100%;
-        margin-top: 10rem;
-        flex-direction: column;
-        align-items: center;
-    }
+  .welcome_slogan {
+    font-size: 2rem;
+  }
 
-    #short_info div {
-        width: 100%;
-        max-width: 90%;
-    }
+  .section_title {
+    font-size: 2rem;
+    margin-top: 6rem;
+  }
 
-    .short_info_button {
-        height: 5rem;
-        padding: 1rem;
-        font-size: 0.85rem;
-        width: 100%;
-    }
+  #short_info {
+    width: 100%;
+    margin-top: 10rem;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .toggle2 {
-        margin-right: 1.5rem;
-        width: 4rem;
-        height: 10rem;
-        gap: 0.8rem;
-    }
+  #short_info div {
+    width: 100%;
+    max-width: 90%;
+  }
 
-    .bars {
-        height: 0.3rem;
-    }
+  .short_info_button {
+    height: 5rem;
+    padding: 1rem;
+    font-size: 0.85rem;
+    width: 100%;
+  }
 
-    #menu_list {
-        width: 200px;
-        right: -250px;
-        padding: 8rem 1.5rem 0 0;
-        gap: 1.5rem;
-    }
+  .toggle2 {
+    margin-right: 1.5rem;
+    width: 4rem;
+    height: 10rem;
+    gap: 0.8rem;
+  }
 
-    .menu_link {
-        font-size: 1rem;
-    }
+  .bars {
+    height: 0.3rem;
+  }
 
-    #company_info {
-        justify-content: center;
-        text-align: left;
-    }
+  #menu_list {
+    width: 200px;
+    right: -250px;
+    padding: 8rem 1.5rem 0 0;
+    gap: 1.5rem;
+  }
 
+  .menu_link {
+    font-size: 1rem;
+  }
 
-    #company_info img {
-        width: 100%;
-        max-width: 100%;
-    }
+  #company_info {
+    justify-content: center;
+    text-align: left;
+  }
 
-    #contacts_list,
-    #company_info {
-        width: 90%;
-    }
+  #company_info img {
+    width: 100%;
+    max-width: 100%;
+  }
 
-    #contacts_list {
-        gap: 1rem;
-    }
+  #contacts_list,
+  #company_info {
+    width: 90%;
+  }
+  #company_info p {
+    width: 100%;
+  }
 
-    .contact_card {
-        width: 100%;
-        max-width: 100%;
-        padding: 1.2rem;
+  #contacts_list {
+    gap: 1rem;
+  }
 
-        height: 15rem;
-    }
+  .contact_card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1.2rem;
+    height: 15rem;
+  }
 
-    #company_info p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
+  footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
 
-    footer {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-    }
+  #links {
+    margin-right: 0;
+    width: 100%;
+  }
 
-    #links {
-        margin-right: 0;
-        width: 100%;
-    }
+  #contacts {
+    margin: 0;
+    width: 100%;
+  }
 
-    #contacts {
-        margin: 0;
-        width: 100%;
-    }
-
-    #footer_logo {
-        max-width: 250px;
-    }
+  #footer_logo {
+    max-width: 250px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
+  p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
 
-    #checkbox2:checked + .toggle2 {
-        transform: rotate(180deg);
-        position: fixed;
-        right: 2rem;
-    }
+  #company_info p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: left;
+    width: 100%;
+  }
 
-    #background, #background_image, #gradient {
-        height: 34rem;
-    }
+  .footer_links {
+    font-size: 0.9rem;
+  }
 
-    header {
-        height: 5rem;
-        padding-inline: 2rem;
-        flex-direction: row;
-        align-items: center;
-    }
+  #checkbox2:checked + .toggle2 {
+    transform: rotate(180deg);
+    position: fixed;
+    right: 2rem;
+  }
 
-    #logo {
-        width: 100%;
-        margin-left: 0;
-        max-width: 250px;
-        min-width: 100px;
-    }
+  #background,
+  #background_image,
+  #gradient {
+    height: 34rem;
+  }
 
-    #map {
-        width: 100%;
-        max-width: 150px;
-        margin: 0 2rem 0 auto;
-    }
+  header {
+    height: 5rem;
+    padding-inline: 2rem;
+    flex-direction: row;
+    align-items: center;
+  }
 
-    .welcome {
-        margin-top: 2rem;
-        margin-left: 0;
-        height: 280px;
-    }
+  #logo {
+    width: 100%;
+    margin-left: 0;
+    max-width: 250px;
+    min-width: 100px;
+  }
 
-    #welcome_title {
-        font-size: 2rem;
-    }
+  #map {
+    width: 100%;
+    max-width: 150px;
+    margin: 0 2rem 0 auto;
+  }
 
-    .welcome_slogan {
-        font-size: 1.5rem;
-    }
+  .welcome {
+    margin-top: 2rem;
+    margin-left: 0;
+    height: 280px;
+  }
 
-    #europe_integration {
-        width: 8rem;
-    }
+  #welcome_title {
+    font-size: 2rem;
+  }
 
-    .section_title {
-        font-size: 1.5rem;
-        margin-top: 4rem;
-        padding: 0 0.5rem;
-    }
+  .welcome_slogan {
+    font-size: 1.5rem;
+  }
 
-    #short_info {
-        width: 95%;
-        margin-top: 12rem;
-        gap: 1rem;
-    }
+  #europe_integration {
+    width: 8rem;
+  }
 
-    #short_info div {
-        width: 100%;
-        max-width: 100%;
-    }
+  .section_title {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    padding: 0 0.5rem;
+  }
 
-    .short_info_button {
-        height: 4rem;
-        padding: 0.8rem;
-        font-size: 0.8rem;
-    }
+  #short_info {
+    width: 95%;
+    margin-top: 12rem;
+    gap: 1rem;
+  }
 
-    .toggle2 {
-        margin-top: 1.6em;
-        margin-right: 1rem;
-        width: 3.5rem;
-        height: 10rem;
-        gap: 0.8rem;
-    }
+  #short_info div {
+    width: 100%;
+    max-width: 100%;
+  }
 
-    .bars {
-        height: 0.3rem;
-    }
+  .short_info_button {
+    height: 4rem;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
 
-    #menu_list {
-        width: 300px;
-        right: -300px;
-        padding: 8rem 1rem 0 0;
-        gap: 2rem;
-    }
+  .toggle2 {
+    margin-top: 1.6em;
+    margin-right: 1rem;
+    width: 3.5rem;
+    height: 10rem;
+    gap: 0.8rem;
+  }
 
-    .menu_link {
-        font-size: 1rem;
-    }
+  .bars {
+    height: 0.3rem;
+  }
 
-    #contacts_list,
-    #company_info {
-        width: 95%;
-    }
+  #menu_list {
+    width: 300px;
+    right: -300px;
+    padding: 8rem 1rem 0 0;
+    gap: 2rem;
+  }
 
-    #contacts_list {
-        gap: 1rem;
-    }
+  .menu_link {
+    font-size: 1rem;
+  }
 
-    .contact_card {
-        width: 100%;
-        max-width: 100%;
-        padding: 1rem;
-        height: 16rem;
-    }
+  #contacts_list,
+  #company_info {
+    width: 95%;
+  }
 
-    #company_info {
-        padding: 0.8rem;
-    }
+  #contacts_list {
+    gap: 1rem;
+  }
 
-    #company_info img {
-        width: 100%;
-        max-width: 100%;
-    }
+  .contact_card {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    height: 16rem;
+  }
 
-    #company_info p {
-        text-align: left;
-        font-size: 1.2rem;
-        line-height: 1.5rem;
-    }
+  #company_info {
+    padding: 0.8rem;
+  }
 
-    footer {
-        padding: 1rem;
-        gap: 1rem;
-    }
+  #company_info img {
+    width: 100%;
+    max-width: 100%;
+  }
 
-    #footer_logo {
-        max-width: 200px;
-        min-width: 100px;
-    }
+  footer {
+    padding: 1rem;
+    gap: 1rem;
+  }
 
-    .footer_links {
-        font-size: 0.9rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-        line-height: 1.3;
-    }
+  #footer_logo {
+    max-width: 200px;
+    min-width: 100px;
+  }
 }
 
 @media (max-width: 320px) {
-    body {
-        font-size: 14px;
-    }
+  body {
+    font-size: 14px;
+  }
 
-    header {
-        height: 4rem;
-        padding: 0.5% 0 0.5% 0.5%;
-    }
+  p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
 
-    #logo {
-        max-width: 150px;
-        min-width: 80px;
-    }
+  #company_info p {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
 
-    #map {
-        max-width: 80px;
-    }
+  .footer_links {
+    font-size: 0.8rem;
+  }
 
-    .welcome {
-        height: 250px;
-    }
+  header {
+    height: 4rem;
+    padding: 0.5% 0 0.5% 0.5%;
+  }
 
-    #welcome_title {
-        font-size: 1.5rem;
-    }
+  #logo {
+    max-width: 150px;
+    min-width: 80px;
+  }
 
-    .welcome_slogan {
-        font-size: 1.2rem;
-    }
+  #map {
+    max-width: 80px;
+  }
 
-    .section_title {
-        font-size: 1.3rem;
-        margin-top: 3rem;
-        padding: 0 0.25rem;
-    }
+  .welcome {
+    height: 250px;
+  }
 
-    #short_info {
-        margin-top: 6rem;
-        gap: 0.5rem;
-    }
+  #welcome_title {
+    font-size: 1.5rem;
+  }
 
-    .short_info_button {
-        height: 3.5rem;
-        padding: 0.6rem;
-        font-size: 0.75rem;
-    }
+  .welcome_slogan {
+    font-size: 1.2rem;
+  }
 
-    .toggle2 {
-        margin-right: 0.5rem;
-        width: 1.5rem;
-        height: 1.5rem;
-        gap: 0.3rem;
-    }
+  .section_title {
+    font-size: 1.3rem;
+    margin-top: 3rem;
+    padding: 0 0.25rem;
+  }
 
-    .bars {
-        height: 0.15rem;
-    }
+  #short_info {
+    margin-top: 6rem;
+    gap: 0.5rem;
+  }
 
-    #menu_list {
-        width: 130px;
-        right: -180px;
-        padding: 5rem 0.5rem 0 0;
-        gap: 0.8rem;
-    }
+  .short_info_button {
+    height: 3.5rem;
+    padding: 0.6rem;
+    font-size: 0.75rem;
+  }
 
-    .menu_link {
-        font-size: 0.8rem;
-    }
+  .toggle2 {
+    margin-right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    gap: 0.3rem;
+  }
 
-    .contact_card {
-        padding: 0.8rem;
-        height: 14rem;
-    }
+  .bars {
+    height: 0.15rem;
+  }
 
-    #company_info {
-        padding: 0.6rem;
-    }
+  #menu_list {
+    width: 130px;
+    right: -180px;
+    padding: 5rem 0.5rem 0 0;
+    gap: 0.8rem;
+  }
 
-    #company_info p {
-        font-size: 0.8rem;
-        line-height: 1.2rem;
-    }
+  .menu_link {
+    font-size: 0.8rem;
+  }
 
-    footer {
-        padding: 0.5rem;
-        gap: 0.5rem;
-    }
+  .contact_card {
+    padding: 0.8rem;
+    height: 14rem;
+  }
 
-    #footer_logo {
-        max-width: 150px;
-        min-width: 80px;
-    }
+  #company_info {
+    padding: 0.6rem;
+  }
 
-    .footer_links {
-        font-size: 0.8rem;
-    }
+  footer {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
 
-    p {
-        font-size: 0.8rem;
-        line-height: 1.2;
-    }
+  #footer_logo {
+    max-width: 150px;
+    min-width: 80px;
+  }
 }
