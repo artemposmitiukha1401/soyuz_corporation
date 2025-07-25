@@ -562,6 +562,9 @@ h1 {
   gap: 1rem;
 }
 
+#diplomas .reporting_card h3{
+    font-size: 2rem;
+  }
 @media (max-width: 1450px) {
   section {
     max-width: 80% !important;
@@ -828,6 +831,7 @@ h1 {
   #reportings .reporting_card {
     max-width: 100%;
   }
+  
 
   .division_step {
     padding: 1rem;

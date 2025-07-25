@@ -287,9 +287,118 @@ function waitForGoogleTranslate(cb, tries = 50) {
     }, 200);
 }
 
+function initializePDFHandler() {
+    const pdfLinks = document.querySelectorAll('a[href$=".pdf"], a[href*=".pdf"]');
+    
+    pdfLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #2a2a2a;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 15px !important;
+            font-weight: 500 !important;
+            color: #e2e8f0 !important;
+            padding: 14px 20px !important;
+            border-radius: 8px !important;
+            cursor: pointer !important;
+            backdrop-filter: blur(10px) !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+            transition: all 0.25s ease !important;
+            display: inline-flex !important;
+            align-items: center;
+            gap: 8px;
+            white-space: nowrap !important;
+            position: fixed !important;
+            overflow: hidden !important;
+            min-width: 120px !important;
+            text-align: center !important;
+            z-index: 1000;
+            animation: fadeInUp 0.3s ease-out !important;
+        }
+        .back-button::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: -100% !important;
+            width: 100% !important;
+            height: 100% !important;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8)) !important;
+            transition: left 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+            z-index: -1 !important;
+        }
+        .back-button:hover::before {
+            left: 0 !important;
+        }
+        .back-button:hover {
+            border-color: rgba(255, 255, 255, 0.4) !important;
+            color: #fff !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), inset 3px 0 0 #3b82f6 !important;
+        }
+        .back-button:active {
+            transform: translateY(0) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .back-arrow {
+            font-size: 18px;
+            line-height: 1;
+        }
+        embed {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.close()">
+        <span class="back-arrow">←</span>
+        <span>Назад</span>
+    </button>
+    <embed src="${this.href}" type="application/pdf">
+</body>
+</html>
+            `);
+            newWindow.document.close();
+        });
+    });
+}
+
 window.addEventListener('load', () => {
     waitForGoogleTranslate(googleTranslateElementInit);
     setTimeout(initializeUkrainianButton, 1000);
+    // Initialize PDF handler after page load
+    setTimeout(initializePDFHandler, 500);
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -315,4 +424,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     initializeUkrainianButton();
+    
+  
+    initializePDFHandler();
 });
