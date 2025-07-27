@@ -223,6 +223,16 @@ function applyGoogleTranslateStyles() {
         transform: translateY(0);
       }
     }
+    @media (max-width: 320px){
+      .goog-te-gadget-simple {
+        width: 7rem !important;
+        font-size: 0.8rem !important;
+        justify-content: center;
+        text-align:center;
+        margin-left: 0 !important;
+      }
+      
+    }
   `;
 
     let style = document.getElementById('google-translate-custom');
@@ -231,6 +241,29 @@ function applyGoogleTranslateStyles() {
     style.id = 'google-translate-custom';
     style.textContent = css;
     document.head.appendChild(style);
+}
+
+// Scroll blocking functionality
+function blockScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollTop}px`;
+    document.body.style.width = '100%';
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+}
+
+function unblockScroll() {
+    const scrollTop = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
+    
+    if (scrollTop) {
+        window.scrollTo(0, parseInt(scrollTop || '0') * -1);
+    }
 }
 
 function resetToUkrainian() {
@@ -383,7 +416,7 @@ function initializePDFHandler() {
 <body>
     <button class="back-button" onclick="window.close()">
         <span class="back-arrow">←</span>
-        <span>Назад</span>
+        <span>Повернутись</span>
     </button>
     <embed src="${this.href}" type="application/pdf">
 </body>
@@ -394,11 +427,28 @@ function initializePDFHandler() {
     });
 }
 
+// Initialize scroll blocking functionality
+function initializeScrollBlock() {
+    const menuCheckbox = document.getElementById('checkbox2');
+    
+    if (menuCheckbox) {
+        menuCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                blockScroll();
+            } else {
+                unblockScroll();
+            }
+        });
+    }
+}
+
 window.addEventListener('load', () => {
     waitForGoogleTranslate(googleTranslateElementInit);
     setTimeout(initializeUkrainianButton, 1000);
     // Initialize PDF handler after page load
     setTimeout(initializePDFHandler, 500);
+    // Initialize scroll blocking
+    initializeScrollBlock();
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -410,21 +460,41 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeMenu() {
         if (menuCheckbox && menuCheckbox.checked) {
             menuCheckbox.checked = false;
+            unblockScroll(); // Unblock scroll when menu is closed
         }
     }
 
+    // Close menu on Escape key
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' || e.keyCode === 27) {
             closeMenu();
         }
     });
 
+    // Close menu on page unload
     window.addEventListener('beforeunload', function () {
         closeMenu();
     });
 
+    // Close menu when clicking on menu links
+    menuLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (menuCheckbox && menuCheckbox.checked) {
+            const isClickInsideMenu = menuList && menuList.contains(e.target);
+            const isClickOnToggle = menuToggle && menuToggle.contains(e.target);
+            const isClickOnCheckbox = e.target === menuCheckbox;
+            
+            if (!isClickInsideMenu && !isClickOnToggle && !isClickOnCheckbox) {
+                closeMenu();
+            }
+        }
+    });
+
     initializeUkrainianButton();
-    
-  
     initializePDFHandler();
+    initializeScrollBlock();
 });

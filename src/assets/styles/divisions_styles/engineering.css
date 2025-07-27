@@ -24,7 +24,6 @@
     line-height: 2rem;
 }
 
-/* Tablet Landscape */
 @media only screen and (max-width: 1024px) {
     #page_title {
         justify-content: center;
@@ -39,7 +38,6 @@
     }
 }
 
-/* Tablet Portrait */
 @media only screen and (max-width: 768px) {
     #page_title {
         justify-content: center;
@@ -59,7 +57,6 @@
     }
 }
 
-/* Mobile */
 @media only screen and (max-width: 480px) {
     #page_title {
         justify-content: center;

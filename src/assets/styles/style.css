@@ -9,6 +9,17 @@
   --font-nunito: "Nunito Sans", sans-serif;
 }
 
+@media (max-width: 480px) {
+   *:not(.toggle):not(.bars):not(#menu_list):not(#bar4):not(#bar5):not(#bar6) {
+  
+    transform: none !important;
+    animation: none !important;
+  }
+  
+  *:not(.toggle):not(.bars):not(#bar4):not(#menu_list):not(#bar5):not(#bar6):hover {
+    transform: none !important;
+  }
+}
 * {
   color: var(--white);
   font-family: var(--font-inter);
@@ -189,8 +200,7 @@ header {
 
 #checkbox2:checked + .toggle2 {
   transform: rotate(180deg);
-  position: fixed;
-  right: 0;
+  
 }
 
 .menu_link {
@@ -209,8 +219,6 @@ header {
 }
 
 .menu_link:hover {
-  /*font-weight: 700;*/
-  /*transform: scale(1.1);*/
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.3),
@@ -294,21 +302,6 @@ header {
   transform: scale(1.05);
 }
 
-.section_title {
-  font-family: var(--font-nunito);
-  color: var(--primary-color);
-  text-transform: uppercase;
-  display: flex;
-  margin: auto;
-  margin-top: 10rem;
-  justify-content: center;
-  font-size: 3.125rem;
-  width: fit-content;
-  padding: 0 1rem;
-  max-width: 800px;
-  min-width: 200px;
-}
-
 footer {
   flex-wrap: wrap;
   padding: 2%;
@@ -362,35 +355,6 @@ footer {
   width: 100%;
 }
 
-.contact_card {
-  justify-content: left;
-  align-items: flex-start;
-  display: flex;
-  background-color: var(--primary-color);
-  padding: 2rem;
-  width: 30rem;
-  min-width: 280px;
-  max-width: 100%;
-  border-radius: 0.625rem;
-  flex-direction: column;
-  gap: 1rem;
-  min-height: 20rem !important;
-  height: 20rem;
-  transition: all 0.2s ease-in-out;
-}
-
-#contacts_list {
-  width: 70%;
-  max-width: 1400px;
-  min-width: 280px;
-  display: flex;
-  align-items: center;
-  margin-top: 5rem;
-  margin-inline: auto;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 #company_info {
   width: 70%;
   max-width: 1400px;
@@ -427,11 +391,6 @@ footer {
   opacity: 0.8;
 }
 
-#map {
-  width: 20rem;
-  max-width: 250px;
-}
-
 #flags {
   display: flex;
   margin-top: 3rem;
@@ -439,51 +398,6 @@ footer {
   padding-right: 2rem;
   align-items: center;
   justify-content: space-between;
-}
-
-@media (max-width: 1400px) {
-  #short_info {
-    width: 80%;
-  }
-
-  #company_info p {
-    width: 60%;
-  }
-
-  #company_info img {
-    width: 30rem;
-    max-width: 40rem;
-  }
-
-  #contacts_list,
-  #company_info {
-    width: 80%;
-  }
-
-  .welcome {
-    padding-left: 4rem;
-  }
-
-  #welcome_title {
-    font-size: 3rem;
-  }
-
-  .welcome_slogan {
-    font-size: 2.5rem;
-  }
-
-  .section_title {
-    font-size: 2.8rem;
-  }
-
-  .contact_card {
-    width: 100%;
-    max-width: 25rem;
-  }
-
-  #background {
-    height: 100rem;
-  }
 }
 
 #to_ukrainian {
@@ -547,6 +461,42 @@ footer {
   animation: fadeInUp 0.3s ease-out !important;
 }
 
+/* Media Queries */
+@media (max-width: 1400px) {
+  #short_info {
+    width: 80%;
+  }
+
+  #company_info p {
+    width: 60%;
+  }
+
+  #company_info img {
+    width: 30rem;
+    max-width: 40rem;
+  }
+
+  #company_info {
+    width: 80%;
+  }
+
+  .welcome {
+    padding-left: 4rem;
+  }
+
+  #welcome_title {
+    font-size: 3rem;
+  }
+
+  .welcome_slogan {
+    font-size: 2.5rem;
+  }
+
+  #background {
+    height: 100rem;
+  }
+}
+
 @media (max-width: 1200px) {
   p {
     font-size: 1.2rem;
@@ -577,12 +527,6 @@ footer {
     min-width: 150px;
   }
 
-  #map {
-    width: 30%;
-    max-width: 200px;
-    margin: 2% 2% 0 auto;
-  }
-
   .welcome {
     margin-top: 2rem;
     padding-left: 2rem;
@@ -603,11 +547,6 @@ footer {
     font-size: 2rem;
   }
 
-  .section_title {
-    font-size: 2.5rem;
-    margin-top: 8rem;
-  }
-
   #short_info {
     width: 85%;
     margin-top: 4rem;
@@ -626,18 +565,8 @@ footer {
     height: 10rem;
   }
 
-  #contacts_list,
   #company_info {
     width: 85%;
-  }
-
-  .contact_card {
-    width: 100%;
-    max-width: 20rem;
-    padding: 1.5rem;
-  }
-
-  #company_info {
     flex-direction: column;
     text-align: center;
   }
@@ -682,12 +611,6 @@ footer {
     margin-left: 2rem;
   }
 
-  #map {
-    width: 35%;
-    max-width: 150px;
-    margin: 1% 1% 0 auto;
-  }
-
   .welcome {
     margin-top: 2rem;
     margin-left: 2%;
@@ -696,15 +619,11 @@ footer {
 
   #welcome_title {
     font-size: 2rem;
+    max-width: 80%;
   }
 
   .welcome_slogan {
     font-size: 2rem;
-  }
-
-  .section_title {
-    font-size: 2rem;
-    margin-top: 6rem;
   }
 
   #short_info {
@@ -751,6 +670,7 @@ footer {
   #company_info {
     justify-content: center;
     text-align: left;
+    width: 90%;
   }
 
   #company_info img {
@@ -758,23 +678,8 @@ footer {
     max-width: 100%;
   }
 
-  #contacts_list,
-  #company_info {
-    width: 90%;
-  }
   #company_info p {
     width: 100%;
-  }
-
-  #contacts_list {
-    gap: 1rem;
-  }
-
-  .contact_card {
-    width: 100%;
-    max-width: 100%;
-    padding: 1.2rem;
-    height: 15rem;
   }
 
   footer {
@@ -841,12 +746,6 @@ footer {
     min-width: 100px;
   }
 
-  #map {
-    width: 100%;
-    max-width: 150px;
-    margin: 0 2rem 0 auto;
-  }
-
   .welcome {
     margin-top: 2rem;
     margin-left: 0;
@@ -863,12 +762,6 @@ footer {
 
   #europe_integration {
     width: 8rem;
-  }
-
-  .section_title {
-    font-size: 1.5rem;
-    margin-top: 4rem;
-    padding: 0 0.5rem;
   }
 
   #short_info {
@@ -911,23 +804,8 @@ footer {
     font-size: 1rem;
   }
 
-  #contacts_list,
   #company_info {
     width: 95%;
-  }
-
-  #contacts_list {
-    gap: 1rem;
-  }
-
-  .contact_card {
-    width: 100%;
-    max-width: 100%;
-    padding: 1rem;
-    height: 16rem;
-  }
-
-  #company_info {
     padding: 0.8rem;
   }
 
@@ -938,7 +816,7 @@ footer {
 
   footer {
     padding: 1rem;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   #footer_logo {
@@ -948,6 +826,22 @@ footer {
 }
 
 @media (max-width: 320px) {
+  .toggle2 {
+    width: 4rem;
+    height: 4rem;
+    gap: 0.6rem;
+  }
+
+  .bars {
+    height: 0.4rem;
+  }
+  
+  #to_ukrainian{
+    width: 8rem !important;
+    font-size: 1rem !important;
+    min-width: 1rem !important;
+  }
+  
   body {
     font-size: 14px;
   }
@@ -968,16 +862,11 @@ footer {
 
   header {
     height: 4rem;
-    padding: 0.5% 0 0.5% 0.5%;
   }
 
   #logo {
     max-width: 150px;
     min-width: 80px;
-  }
-
-  #map {
-    max-width: 80px;
   }
 
   .welcome {
@@ -992,14 +881,12 @@ footer {
     font-size: 1.2rem;
   }
 
-  .section_title {
-    font-size: 1.3rem;
-    margin-top: 3rem;
-    padding: 0 0.25rem;
+  #background_image, #gradient{
+    height: 30rem;
   }
-
+  
   #short_info {
-    margin-top: 6rem;
+    margin-top: 10rem;
     gap: 0.5rem;
   }
 
@@ -1010,30 +897,27 @@ footer {
   }
 
   .toggle2 {
-    margin-right: 0.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    gap: 0.3rem;
+    width: 2.3rem;
+    height: 2rem;
+    gap: 0.5rem;
+    margin-right: 0;
+  
   }
 
   .bars {
-    height: 0.15rem;
+    height: 0.2rem;
   }
-
+  
   #menu_list {
-    width: 130px;
-    right: -180px;
+    width: 180px;
+    right: -200px;
     padding: 5rem 0.5rem 0 0;
+    padding-right: 1rem;
     gap: 0.8rem;
   }
 
   .menu_link {
-    font-size: 0.8rem;
-  }
-
-  .contact_card {
-    padding: 0.8rem;
-    height: 14rem;
+    font-size: 1rem;
   }
 
   #company_info {
@@ -1042,7 +926,7 @@ footer {
 
   footer {
     padding: 0.5rem;
-    gap: 0.5rem;
+    gap:1rem;
   }
 
   #footer_logo {

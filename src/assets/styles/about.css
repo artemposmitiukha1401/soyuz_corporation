@@ -152,9 +152,9 @@ h1 {
 
 #info > .info_text {
   max-width: 100%;
-  min-width: 280px;
-}
 
+}
+/* 
 .section_title:nth-child(2) {
   width: 100%;
   max-width: 31.25rem;
@@ -165,8 +165,13 @@ h1 {
 
 .section_title {
   margin-top: 2rem;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  width: fit-content;
+  padding: 1rem;
+  text-transform: uppercase;
   min-width: 200px;
-}
+} */
 
 #details {
   gap: 2.5rem;
@@ -877,7 +882,7 @@ h1 {
   }
 
   #page_title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     margin-top: 1rem;
     padding: 0 0.5rem;
   }
@@ -1027,12 +1032,44 @@ h1 {
 }
 
 @media (max-width: 320px) {
+  #background{
+    height: 10rem;
+    min-height: 10rem;
+  }
+  section{
+    max-width: 85% !important;
+  }
+  .projects_geography{
+    max-width: 80%;
+  }
+  #info_description{
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  #info_text{
+    max-width: 100% !important;
+  }
+  
+  header{
+    height: 5rem;
+  }
+  .toggle2{
+    margin-bottom: 1rem;
+  }
   body {
     font-size: 14px;
   }
-
-  section {
-    padding: 0 0.25rem;
+  .division{
+    height: 2rem;
+  }
+  .division_title{
+    font-size: 1.5rem;
+  }
+  .division_btn{
+    font-size: 1rem;
+    height: 3rem;
+    width: 8rem;
+    max-width: 10rem;
   }
 
   #page_title {
@@ -1055,10 +1092,7 @@ h1 {
     max-width: 150px;
   }
 
-  .info_text,
-  .division_step {
-    padding: 0.6rem;
-  }
+
 
   .division_info {
     padding: 0.6rem;

@@ -104,18 +104,15 @@
     }
 }
 
-/* Large screens and desktops */
 @media (max-width: 1400px) {
     .division_peculiarities {
         width: 25rem;
         max-width: 80%;
     }
 
-    .to_general:first-of-type {
-        margin-top: 15rem;
-    }
+   
 
-    /* Standardized text for large screens */
+
     #contracts ul,
     #directions_textbox ul,
     #contracts p,
@@ -128,13 +125,9 @@
     }
 }
 
-/* Medium-large screens */
 @media (max-width: 1200px) {
-    .to_general:first-of-type {
-        margin-top: 15rem;
-    }
+ 
 
-    /* Standardized text for medium-large screens */
     #contracts ul,
     #directions_textbox ul,
     #contracts p,
@@ -147,15 +140,12 @@
     }
 }
 
-/* Medium screens */
 @media (max-width: 1024px) {
     #page_title {
         width: 100%;
     }
 
-    .to_general:first-of-type {
-        margin-top: 11rem;
-    }
+
 
     .division_info {
         padding: 1rem;
@@ -177,7 +167,7 @@
         max-width: 100%;
     }
 
-    /* Standardized text for medium screens */
+
     #contracts ul,
     #directions_textbox ul,
     #contracts p,
@@ -190,15 +180,12 @@
     }
 }
 
-/* Tablets and small laptops */
 @media (max-width: 768px) {
     #page_title {
         width: 100%;
     }
 
-    .to_general:first-of-type {
-        margin-top: 19rem;
-    }
+
 
     .division_info {
         width: 100%;
@@ -232,7 +219,6 @@
         padding: 1.5rem;
     }
 
-    /* Standardized text for tablets */
     #contracts ul,
     #directions_textbox ul,
     #contracts p,
@@ -245,13 +231,12 @@
     }
 }
 
-/* Small tablets */
 @media (max-width: 640px) {
     #directions_textbox ul {
         padding: 1.2rem;
     }
 
-    /* Standardized text for small tablets */
+    
     #contracts ul,
     #directions_textbox ul,
     #contracts p,
@@ -264,7 +249,7 @@
     }
 }
 
-/* Mobile phones */
+
 @media (max-width: 480px) {
     #page_title {
         margin-inline: auto;
@@ -272,10 +257,7 @@
         width: 100%;
     }
 
-    .to_general:first-of-type {
-        margin-top: 18rem;
-    }
-
+   
     .division_info {
         width: 100%;
         padding: 1.5rem;
@@ -305,7 +287,7 @@
         padding: 1rem;
     }
 
-    /* Standardized text for mobile phones */
+    
     #contracts ul,
     #directions_textbox ul,
     #contracts p,
@@ -318,8 +300,13 @@
     }
 }
 
-/* Extra small mobile phones */
 @media (max-width: 320px) {
+    #page_description{
+        display: none;
+    }
+    img{
+        min-width: 100px;
+    }
     .gallery {
         gap: 0.6rem;
         padding: 0.6rem;
@@ -355,9 +342,7 @@
         margin: 1rem auto;
     }
 
-    .to_general:first-of-type {
-        margin-top: 4rem;
-    }
+  
 
     .division_info {
         padding: 0.6rem;

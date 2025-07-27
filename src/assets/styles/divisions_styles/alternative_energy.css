@@ -208,7 +208,7 @@
         width: 100%;
         max-width: 100%;
         flex-direction: column;
-        height: 55rem !important;
+        height: 50rem !important;
     }
 
     #secondary_properties {
@@ -294,6 +294,7 @@
         min-width: 250px;
         padding: 1rem;
         gap: 1rem;
+        height: 40rem !important;
     }
 
     .to_general {
@@ -305,6 +306,9 @@
 }
 
 @media only screen and (max-width: 480px) {
+    #page_description{
+        display: none;
+    }
 
     #properties {
         margin-top: 3rem;
@@ -375,6 +379,9 @@
 }
 
 @media (max-width: 320px) {
+    #page_description{
+        display: none;
+    }
     #properties {
         padding: 0 0.25rem;
     }
@@ -406,6 +413,7 @@
     .properties_card {
         padding: 0.8rem;
         min-width: 240px;
+        height: 40rem !important;
     }
 
     .to_general {

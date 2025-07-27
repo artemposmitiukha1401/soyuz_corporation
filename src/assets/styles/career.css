@@ -108,7 +108,7 @@ h3 {
     #career_info {
         max-width: 90%;
         width: 90%;
-        margin: 0 auto;
+        margin: auto;
         padding: 1rem;
         gap: 0.5rem;
     }
@@ -132,12 +132,14 @@ h3 {
 
 
 @media (max-width: 320px) {
-   
+   section{
+    padding: 0;
+   }
     #career_info {
         max-width: 95%;
-        width: 95%;
-        margin: 0 auto;
-        padding: 0.8rem;
+        width: 90%;
+ 
+        padding: 1rem;
         gap: 0.5rem;
     }
 
