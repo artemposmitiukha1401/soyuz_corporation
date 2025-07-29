@@ -10,13 +10,13 @@
 }
 
 @media (max-width: 480px) {
-   *:not(.toggle):not(.bars):not(#menu_list):not(#bar4):not(#bar5):not(#bar6) {
+   *:not(.toggle):not(.bars):not(#menu_list):not(#bar4):not(#bar5):not(#bar6):not(.more_link) {
   
     transform: none !important;
     animation: none !important;
   }
   
-  *:not(.toggle):not(.bars):not(#bar4):not(#menu_list):not(#bar5):not(#bar6):hover {
+  *:not(.toggle):not(.bars):not(#bar4):not(#menu_list):not(#bar5):not(#bar6):hover:not(.more_link):hover {
     transform: none !important;
   }
 }

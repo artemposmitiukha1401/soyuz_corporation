@@ -301,10 +301,11 @@ header {
 #projects_pages {
     display: flex;
     width: auto;
-    gap: 3%;
+    gap: 2rem;
     justify-content: center;
     flex-direction: row;
     margin-top: 3rem;
+    margin-bottom: 3rem;
     flex-wrap: wrap;
 }
 
@@ -405,7 +406,7 @@ header {
     }
 
     #projects_pages {
-        gap: 2%;
+        gap: 1rem;
     }
 }
 
@@ -556,12 +557,14 @@ header {
     }
 
     .more_link {
-        width: 2rem;
+        width: 50%;
+        min-width: 60px;
     }
+    
     .more {
-        width: 2rem;
+        width: 6rem;
+        max-width: 80px;
     }
-
 
     #projects_filter a {
         width: 5rem;
@@ -577,13 +580,13 @@ header {
 
     #projects_pages {
         flex-wrap: wrap;
-        gap: 0.5rem;
+        gap: 1rem;
         margin-top: 2rem;
     }
 
     .page_selector {
-        width: 2.5rem;
-        padding: 0.6rem;
+        width: 3rem;
+        padding: 1rem;
         font-size: 0.9rem;
     }
 
@@ -597,6 +600,7 @@ header {
         margin-bottom: 1rem;
     }
 }
+
 @media (max-width: 480px) {
     .section_title{
         font-size: 1.5rem;
@@ -661,40 +665,48 @@ header {
     #projects_filter {
         align-items: center;
         justify-content: space-between;
-        gap: 0.5rem;
+        gap: 1rem;
+        width: 100%;
         margin-top: 1.25rem;
     }
-    .filter{
-        min-width: 1rem;
+    #projects_filter a{
+        width: 100%;
     }
 
-    .filter {
-        width: 92%;
-        max-width: 190px;
+        .filter {
+        width: 100%;
+        margin: 0;
+        max-width: 100%;
         min-width: 170px;
-        font-size: 0.75rem;
+        height: 3rem;
+        font-size: 0.8rem;
         padding: 0.9rem 0.7rem;
     }
 
     #projects_pages {
         flex-wrap: wrap;
-        gap: 0.5rem;
+        gap: 0.8rem;
         margin-top: 2rem;
+        max-width: 90%;
+        margin-inline: auto;
     }
 
     .page_selector {
-        width: 2.25rem;
-        padding: 0.55rem;
+        width:3rem;
+        padding: 1rem;
         font-size: 0.85rem;
+        margin-bottom: 2rem;
+    }
+
+    .more_link {
+        width: 50%;
+        min-width: 50px;
     }
 
     .more {
-
+        width: 5rem;
+        max-width: 70px;
         max-height: 10rem;
-    }
-    .more_link{
-        width: 1rem;
-        max-width: 1rem;
     }
 
     .info_item {
@@ -707,11 +719,10 @@ header {
     }
 }
 
-
 @media (max-width: 320px) {
     #projects_overview {
         padding: 0 0.25rem;
-        max-width: 95%;
+        max-width: 90%;
     }
 
     #projects_list {
@@ -755,7 +766,8 @@ header {
     }
 
     #projects_filter{
-        max-width: 100%;
+        max-width: 90%;
+        margin-inline: auto;
         width: 100%;
         gap: 1.2rem;
     }
@@ -768,12 +780,17 @@ header {
         font-size: 0.7rem;
         padding: 0.8rem 0.6rem;
     }
+    #projects_pages{
+
+        margin-bottom: 2rem;
+    }
 
     .page_selector {
-        width: 2rem;
-        padding: 0.5rem;
-        font-size: 0.8rem;
+        width: 3rem;
+        padding: 1rem;
+        font-size:0.8rem;
     }
+    
     .project_mainimage{
         min-width: 200px;
     }
@@ -781,9 +798,15 @@ header {
         
         width: 100%;
     }
+    
+    .more_link {
+        width: 50%;
+        min-width: 45px;
+    }
 
     .more {
-        width: 5rem;
+        width: 4rem;
+        max-width: 60px;
     }
 
     .info_item {
