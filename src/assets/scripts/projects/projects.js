@@ -91,7 +91,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PS_750kV_Vinnytska/20210803_150642.jpg",
             "../../images/projects_images/Rekonstruktsiya_PS_750kV_Vinnytska/TS_2.jpg",
         ],
-        categoryPath: "../../pages/projects/projects_2.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 8,
@@ -109,7 +109,7 @@ const projects_info = [
             "../../images/projects_images/Tekhnichne_pereosnashchennya_PS_330kV_Novokyivska/20210520_100416.jpg",
             "../../images/projects_images/Tekhnichne_pereosnashchennya_PS_330kV_Novokyivska/20210520_100511.jpg",
         ],
-        categoryPath: "../../pages/projects/projects_2.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 9,
@@ -119,7 +119,7 @@ const projects_info = [
         images: [
             "../../images/projects_images/Rekonstruktsiya_PL_110kV_Adzhalyk_Berehova/support_type_PB-110-8.jpg"
         ],
-        categoryPath: "../../pages/projects/projects_2.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 10,
@@ -133,7 +133,7 @@ const projects_info = [
             "../../images/projects_images/Budivnytstvo_PL_750kV_Rivnenska_AES_PS_750kV_Kyivska/wire.jpg",
             "../../images/projects_images/Budivnytstvo_PL_750kV_Rivnenska_AES_PS_750kV_Kyivska/20150409_101711.jpg"
         ],
-        categoryPath: "../../pages/projects/projects_2.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 11,
@@ -147,7 +147,7 @@ const projects_info = [
             "../../images/projects_images/Budivnytstvo_KNS_6B_KNS_7A_Odesa/IMG_1947.JPG",
             "../../images/projects_images/Budivnytstvo_KNS_6B_KNS_7A_Odesa/IMG_1811.JPG",
         ],
-        categoryPath: "../../pages/projects/projects_2.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 12,
@@ -159,7 +159,7 @@ const projects_info = [
             "../../images/projects_images/Demontazh_budivel_PS_750kV_Kakhovska/SAM_3014.JPG",
             "../../images/projects_images/Demontazh_budivel_PS_750kV_Kakhovska/demontazh_budivel_ PS_750kV_Kakhovska.JPG"            
         ],
-        categoryPath: "../../pages/projects/projects_2.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 13,
@@ -191,7 +191,7 @@ const projects_info = [
             "../../images/projects_images/VRP_110KV_PS_330kV_Usatove_proektuvannya/13photo.JPG",
             "../../images/projects_images/VRP_110KV_PS_330kV_Usatove_proektuvannya/24photo.JPG",
         ],
-        categoryPath: "../../pages/projects/projects_3.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 15,
@@ -205,7 +205,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PS_330kV_VRP_110kV_Usatove/3photo.JPG",
             "../../images/projects_images/Rekonstruktsiya_PS_330kV_VRP_110kV_Usatove/7photo.JPG",
         ],
-        categoryPath: "../../pages/projects/projects_3.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 16,
@@ -229,7 +229,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_TGV-200_Burshtynska_TES/Vyd_Burshtynskoi_TES.JPG",
             
         ],
-        categoryPath: "../../pages/projects/projects_3.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 17,
@@ -261,7 +261,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_elektrotekhnichnoho_oblad_Burshtynska_TES/TRDN_25000_35A.JPG",
             "../../images/projects_images/Rekonstruktsiya_elektrotekhnichnoho_oblad_Burshtynska_TES/VRP_220KV.JPG",
         ],
-        categoryPath: "../../pages/projects/projects_3.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 18,
@@ -276,7 +276,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PL_330kV_Adzhalyk_Usatove/events.jpg",
             "../../images/projects_images/Rekonstruktsiya_PL_330kV_Adzhalyk_Usatove/VL_330_Adzhalyk_2_Usatovo_MoldGRES_Usatovo.JPG",
         ],
-        categoryPath: "../../pages/projects/projects_3.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 19,
@@ -289,7 +289,7 @@ const projects_info = [
             "../../images/projects_images/PL_110KV_Sonyachna_Artsyza/Montazh_oborudovaniya_Artsyzz-Solnechnaya.jpg",
             "../../images/projects_images/PL_110KV_Sonyachna_Artsyza/Zobrazhennya0824.jpg",
         ],
-        categoryPath: "../../pages/projects/projects_4.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 20,
@@ -305,7 +305,7 @@ const projects_info = [
             "../../images/projects_images/PL_110KV_Sonyachna_Kiliya/0829.jpg",
             
         ],
-        categoryPath: "../../pages/projects/projects_4.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 21,
@@ -320,7 +320,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PS_330kV_Usatove/events_13.jpg",
             
         ],
-        categoryPath: "../../pages/projects/projects_4.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 22,
@@ -332,7 +332,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PL_220kV_Centrolit_Kominternove/P8100031.JPG", 
             
         ],
-        categoryPath: "../../pages/projects/projects_4.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 23,
@@ -346,7 +346,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PS_220kV_Centrolit/P8100039.JPG", 
             
         ],
-        categoryPath: "../../pages/projects/projects_4.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 24,
@@ -357,7 +357,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PL_330kV_Kryvorizka_TES_Trykhati/PL_330_Kryvorizka_TES_Trykhaty.JPG",  
             "../../images/projects_images/Rekonstruktsiya_PL_330kV_Kryvorizka_TES_Trykhati/PL_330kV_Kryvorizka_TES_Trykhaty.JPG",  
         ],
-        categoryPath: "../../pages/projects/projects_4.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 25,
@@ -369,7 +369,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PL_330kV_Kryvorizka_TES_Trykhati/PL_330_Kryvorizka_TES_Trykhaty.JPG",  
             "../../images/projects_images/Rekonstruktsiya_PL_330kV_Kryvorizka_TES_Trykhati/PL_330kV_Kryvorizka_TES_Trykhaty.JPG",  
         ],
-        categoryPath: "../../pages/projects/projects_5.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 26,
@@ -386,7 +386,7 @@ const projects_info = [
      images: [
             "../../images/projects_images/Rekonstruktsiya_Energoblok7_Burshtynska_TES/turbine_N7.jpg",  
         ],
-        categoryPath: "../../pages/projects/projects_5.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 27,
@@ -399,7 +399,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PL_110kV_Usatove_Centrolit/P8100008.JPG",  
             "../../images/projects_images/Rekonstruktsiya_PL_110kV_Usatove_Centrolit/P8100012.JPG",  
         ],
-        categoryPath: "../../pages/projects/projects_5.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {
         id: 28,
@@ -410,7 +410,7 @@ const projects_info = [
             "../../images/projects_images/Zamina_Vymykachiv_PS_330kV_Trykhati/PS_330kV_Trykhaty.JPG",    
             "../../images/projects_images/Zamina_Vymykachiv_PS_330kV_Trykhati/PS_330_Trykhaty.JPG",    
         ],
-        categoryPath: "../../pages/projects/projects_5.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {   
         id: 29,
@@ -421,7 +421,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PS_330kV_VRP_110kV_Usatove/3photo.JPG", 
             "../../images/projects_images/Rekonstruktsiya_PS_330kV_VRP_110kV_Usatove/7photo.JPG", 
         ],
-        categoryPath: "../../pages/projects/projects_5.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {   
         id: 30,
@@ -433,7 +433,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PL_110kV_Usatove_Chumka/PL_110KV_Usatove_Chumka_OTEC_Chumka.jpg.JPG", 
             "../../images/projects_images/Rekonstruktsiya_PL_110kV_Usatove_Chumka/PL_110_Usatove_Chumka_OTEC_Chumka.jpg.JPG", 
         ],
-        categoryPath: "../../pages/projects/projects_5.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {   
         id: 31,
@@ -443,7 +443,7 @@ const projects_info = [
      images: [
             "../../images/projects_images/Demontazh_PL_330kV_Adzhalyk_Usatove/SAM_3028.JPG",
         ],
-        categoryPath: "../../pages/projects/projects_6.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {   
         id: 32,
@@ -454,7 +454,7 @@ const projects_info = [
      images: [
             "../../images/projects_images/Kapitalnyi_remont_PL_400kV_Moldavska_DRES_Vulkaneshty/mold_vulkaneshti.JPG",
         ],
-        categoryPath: "../../pages/projects/projects_6.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {   
         id: 33,
@@ -474,7 +474,7 @@ const projects_info = [
             "../../images/projects_images/Budivnytstvo_Orlivska_VES/Ustanovka_metallokonstruktsiy_pod_zdanie_OPU.jpg",
             "../../images/projects_images/Budivnytstvo_Orlivska_VES/Ustanovka_opalubki_anker_klet_fundamenta_VEU.jpg",
         ],
-        categoryPath: "../../pages/projects/projects_6.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {   
         id: 34,
@@ -489,7 +489,7 @@ const projects_info = [
             "../../images/projects_images/Rekonstruktsiya_PS_220_35_10_Berezan/00328.01_06_45_16.Still084.jpg",
 
         ],
-        categoryPath: "../../pages/projects/projects_6.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {   
         id: 35,
@@ -512,7 +512,7 @@ const projects_info = [
             "../../images/projects_images/Biomasa_Elektrostantsiya_Pereyaslav_Khmelnytskyi/DSC02057.jpg",
 
         ],
-        categoryPath: "../../pages/projects/projects_6.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {   
         id: 36,
@@ -547,7 +547,7 @@ const projects_info = [
             "../../images/projects_images/Biopalivo_Elektrostantsiya_Koryukivka/Tsentr_korpus.jpg",
             "../../images/projects_images/Biopalivo_Elektrostantsiya_Koryukivka/Vyd_zverhu.jpg",
         ],
-        categoryPath: "../../pages/projects/projects_6.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {   
         id: 37,
@@ -560,7 +560,7 @@ const projects_info = [
             "../../images/projects_images/Postachannya_ROU_PL_750kV_ZAES_Kakhovska/ORU_750_28.18.jpg", 
             "../../images/projects_images/Postachannya_ROU_PL_750kV_ZAES_Kakhovska/Pantohrafnyi_rozjednuvach_NARAM.jpg", 
         ],
-        categoryPath: "../../pages/projects/projects_7.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
     {   
         id: 38,
@@ -576,7 +576,7 @@ const projects_info = [
       "../../images/news_images/rekonstruktsiya_pl_110kv_starokozache_kanal/1729839991931.jpg",
       "../../images/news_images/rekonstruktsiya_pl_110kv_starokozache_kanal/1729840881662.jpg",
         ],
-        categoryPath: "../../pages/projects/projects_7.html"
+        categoryPath: "../../pages/projects/projects.html"
     },
 ];
 

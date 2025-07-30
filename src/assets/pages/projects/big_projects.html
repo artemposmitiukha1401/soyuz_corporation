@@ -45,10 +45,14 @@
     <a class="to_general" href="../../../../index.html">На головну</a>
 
     <section id="projects_overview">
-    
         <div id="projects_filter">
-            <a class="filter" href="./projects.html" style="background-color: #002e4e">Усі проєкти</a>
-            <a class="filter" href="./projects_filters/big_projects.html">Великі проєкти</a>
+            <a class="filter" href="./projects.html">Усі проєкти</a>
+            <a class="filter" href="./big_projects.html" style="background-color: #002e4e"">Великі проєкти</a>
+        </div>
+        
+        <!-- Информация о текущей странице -->
+        <div id="page_info" style="text-align: center; margin: 20px 0; color: #666;">
+            <span id="current_page_info"></span>
         </div>
     </section>
 
@@ -86,17 +90,6 @@
             </div>
         </template>
     </section>
-
-    <div id="projects_pages">
-        <a class="page_selector" href="./projects.html">1</a>
-        <a class="page_selector" href="./projects_2.html">2</a>
-        <a class="page_selector" href="./projects_3.html">3</a>
-        <a class="page_selector" href="./projects_4.html">4</a>
-        <a class="page_selector" href="./projects_5.html">5</a>
-        <a class="page_selector" href="./projects_6.html">6</a>
-        <a class="page_selector" href="./projects_7.html" style="background-color: #002e4e">7</a>
-    </div>
-
     <a class="to_general" href="../../../../index.html">На головну</a>
 
     <footer>
@@ -118,37 +111,9 @@
 
     <script src="../../scripts/script.js"></script>
     <script src="../../scripts/projects/projects_list.js"></script>
-    <script src="../../scripts/projects/projects.js"></script>
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
-<script>
-    const projects = [
-        {
-            image:
-                "../../images/projects_images/Postachannya_ROU_PL_750kV_ZAES_Kakhovska/ORU_750_28.18.jpg",
-            link: "../../pages/projects/project_page_example.html?id=37",
-            title:
-                "ПОСТАЧАННЯ РОЗ’ЄДНУВАЧІВ НА НАПРУГУ 750 кВ ДЛЯ ПІДКЛЮЧЕННЯ ПЛ 750 кВ «ЗАПОРІЗЬКА АЕС-КАХОВСЬКА»",
-            client: "ДП НЕК «Укренерго»",
-            contract: "Постачання роз’єднувачів на напругу 750 кВ для підключення ПЛ 750 кВ «Запорізька АЕС-Каховська»",
-            sector: "Електроенергетика",
-            region: "Україна, Київська обл.",
-            period: "2018",
-        },
-        {
-            image:
-                "../../images/news_images/rekonstruktsiya_pl_110kv_starokozache_kanal/1729839991889.jpg",
-            link: "../../pages/projects/project_page_example.html?id=38",
-            title:
-                "Реконструкція повітряної лінії 110 кВ «Старокозаче – Канал",
-            client: "НЕК «Укренерго»",
-            contract: "Постачання роз’єднувачів на напругу 750 кВ для підключення ПЛ 750 кВ «Запорізька АЕС-Каховська»",
-            sector: "Електроенергетика",
-            region: "Україна, Одеська обл.",
-            period: "2023",
-        },
-    ];
-</script>
 
 </html>

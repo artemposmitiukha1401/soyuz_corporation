@@ -46,8 +46,13 @@
 
     <section id="projects_overview">
         <div id="projects_filter">
-            <a class="filter" href="./  projects.html" style="background-color: #002e4e">Усі проєкти</a>
-            <a class="filter" href="./projects_filters/big_projects.html">Великі проєкти</a>
+            <a class="filter" href="./projects.html" style="background-color: #002e4e">Усі проєкти</a>
+            <a class="filter" href="./big_projects.html">Великі проєкти</a>
+        </div>
+        
+        
+        <div id="page_info" style="text-align: center; margin: 20px 0; color: #666;">
+            <span id="current_page_info"></span>
         </div>
     </section>
 
@@ -86,15 +91,8 @@
         </template>
     </section>
 
-    <div id="projects_pages">
-        <a class="page_selector" href="./projects.html" style="background-color: #002e4e">1</a>
-        <a class="page_selector" href="./projects_2.html">2</a>
-        <a class="page_selector" href="./projects_3.html">3</a>
-        <a class="page_selector" href="./projects_4.html">4</a>
-        <a class="page_selector" href="./projects_5.html">5</a>
-        <a class="page_selector" href="./projects_6.html">6</a>
-        <a class="page_selector" href="./projects_7.html">7</a>
-    </div>
+    
+    <div id="projects_pages"></div>
 
     <a class="to_general" href="../../../../index.html">На головну</a>
 
@@ -117,82 +115,24 @@
 
     <script src="../../scripts/script.js"></script>
     <script src="../../scripts/projects/projects_list.js"></script>
-    <script src="../../scripts/projects/projects.js"></script>
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        // Дополнительный функционал для отображения информации о странице
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentPage = getCurrentPage();
+            const totalPages = getTotalPages();
+            const totalProjects = allProjects.length;
+            const startProject = (currentPage - 1) * PROJECTS_PER_PAGE + 1;
+            const endProject = Math.min(currentPage * PROJECTS_PER_PAGE, totalProjects);
+            
+            const pageInfoElement = document.getElementById('current_page_info');
+            if (pageInfoElement) {
+                pageInfoElement.textContent = `Страница ${currentPage} из ${totalPages} (проекты ${startProject}-${endProject} из ${totalProjects})`;
+            }
+        });
+    </script>
 </body>
-<script>
-    const projects = [
-        {
-            image:
-                "../../images/projects_images/Budivnytstvo_PS_750kV_Kakhovska/Kakhovskaya_oktyabr_2016_1.jpg",
-            link: "../../pages/projects/project_page_example.html?id=1",
-            title:
-                "БУДІВНИЦТВО ПС 750/330 кВ «КАХОВСЬКА»",
-            client: "ПрАТ «НЕК «Укренерго»",
-            contract: "Будівництво ПС 750/330 кВ «Каховська», постачання та монтаж АТ 2 1000 МВА, автоматизованої системи управління технологічними процесами, системи релейного захисту та автоматики, а також спорудження спорідненої інфраструктури.",
-            sector: "Електроенергетика",
-            region: " Україна, Херсонська область",
-            period: "2014-2016",
-        },
-        {
-            image:
-                "../../images/projects_images/AVR_PL_330KV_Mykolaivska_Khersonska/damaged_support.jpg",
-            link: "../../pages/projects/project_page_example.html?id=2",
-            title: "ВИКОНАННЯ авр НА пЛ 330 кв «МИКОЛАЇВСЬКА-ХЕРСОНСЬКА»",
-            client: "НЕК «Укренерго»",
-            contract:
-                " Виконання аварійно-відновлювальних робіт на ПЛ 330 кВ «Миколаївська- Херсонська» ",
-            sector: "Електроенергетика",
-            region: "Миколаївська обл., Херсонська обл., Україна",
-            period: "2022",
-        },
-        {
-            image:
-                "../../images/projects_images/Rekonstruktsiya_PL_330kV_Adzhalyk_Trykhati/lep_and_sky.JPG",
-            link: "../../pages/projects/project_page_example.html?id=3",
-            title: "РЕКОНСТРУКЦІЯ ПЛ 330 КВ «АДЖАЛИК – ТРИХАТИ»",
-            client: "ПрАТ «НЕК «Укренерго»",
-            contract:
-                "Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ «Тилігул».",
-            sector: "Електроенергетика",
-            region: "Україні",
-            period: "2021-2025",
-        },
-        {
-            image:
-                "../../images/projects_images/Rekonstruktsiya_PS_330kV_Shepetivka_Kamyanets/shepetivka_ps_330kv_roboty_vykonuyutsya.jpg",
-            link: "../../pages/projects/project_page_example.html?id=4",
-            title: "РЕКОНСТРУКЦІЯ ПС 330 КВ «ШЕПЕТІВКА» ТА «КАМ’ЯНЕЦЬ-ПОДІЛЬСЬКА»",
-            client: "ПрАТ «НЕК «Укренерго»",
-            contract:
-                "Реконструкція ПС 330 кВ «Шепетівка» та «Кам’янець-Подільська»  ",
-            sector: "Електроенергетика",
-            region: " Хмельницька обл., Україна",
-            period: "2020-2022",
-        },
-        {
-            image: "../../images/projects_images/Budivnytstvo_FES_Inhulets/3-1.jpg",
-            link: "../../pages/projects/project_page_example.html?id=5",
-            title: "БУДІВНИЦТВО ФОТОГАЛЬВАНІЧНОЇ ЕЛЕКТРОСТАНЦІЇ «ІНГУЛЕЦЬ»",
-            client: "ТОВ «Інгулець енерго-2»",
-            contract: "Будівництво Фотогальванічної  електростанції",
-            sector: "Альтернативна енергетика",
-            region: "Україна, Миколаївська обл",
-            period: "2018-2019",
-        },
-        {
-            image:
-                "../../images/projects_images/Rekonstruktsiya_PL_150kV_GPP_Nova_Kakhovka_Dudchyno/00328.00_32_53_05.Still038.jpg",
-            link: "../../pages/projects/project_page_example.html?id=6",
-            title: "РЕКОНСТРУКЦІЯ ПЛ 150 кВ «ГПП НОВА КАХОВКА- ДУДЧИНО»",
-            client: "Публічне акціонерне товариство «Херсонобленерго»",
-            contract: "Реконструкція ПЛ 150 кВ «ГПП Нова Каховка-Дудчино»",
-            sector: "Електроенергетика",
-            region: "Україна, Херсонська обл.",
-            period: "2016-2019",
-        },
-    ];
-</script>
 
 </html>
