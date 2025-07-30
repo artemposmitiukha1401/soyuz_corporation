@@ -43,6 +43,6 @@ function renderProjects() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM загружен, начинаем рендеринг проектов');
+    console.log('Починаю завантаження проєктів');
     renderProjects();
 });
