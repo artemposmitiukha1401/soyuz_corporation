@@ -427,7 +427,7 @@ function initializePDFHandler() {
     });
 }
 
-// Initialize scroll blocking functionality
+
 function initializeScrollBlock() {
     const menuCheckbox = document.getElementById('checkbox2');
     
