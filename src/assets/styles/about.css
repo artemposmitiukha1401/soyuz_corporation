@@ -77,6 +77,11 @@ h1 {
   margin-right: 0;
   border-radius: 0;
   margin-left: 2%;
+  transition: transform 0.2s ease-in-out;
+}
+#nav_logo:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 #page_title {
@@ -303,6 +308,11 @@ h1 {
 #footer_logo {
   margin-inline: 0;
   min-width: 120px;
+  transition: transform 0.2s ease-in-out;
+}
+#footer_logo:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .to_general {

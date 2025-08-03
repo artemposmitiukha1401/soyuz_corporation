@@ -497,4 +497,26 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeUkrainianButton();
     initializePDFHandler();
     initializeScrollBlock();
+    initializeLogoNavigation();
+    
 });
+function initializeLogoNavigation() {
+    const navLogo = document.getElementById('nav_logo');
+    const footerLogo = document.getElementById('footer_logo');
+    
+    function navigateToHome() {
+        const baseUrl = window.location.origin;
+        window.location.href = baseUrl + '/index.html';
+    }
+    
+    if (navLogo) {
+        navLogo.addEventListener('click', navigateToHome);
+        
+    }
+    
+    if (footerLogo) {
+        footerLogo.addEventListener('click', navigateToHome);
+        
+        
+    }
+}
