@@ -44,6 +44,18 @@ time {
   min-width: fit-content;
 }
 
+
+#news_pages {
+    display: flex;
+    width: auto;
+    gap: 2rem;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
 .news_card {
   padding: 1rem;
   display: flex;

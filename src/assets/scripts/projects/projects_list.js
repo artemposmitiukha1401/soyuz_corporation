@@ -1,15 +1,27 @@
 const allProjects = [
      {
-        image: "../../images/news_images/rekonstruktsiya_pl_110kv_starokozache_kanal/1729839991889.jpg",
+        image: "../../images/news_images/rekonstruktsiya_pl_110kv_starokozache_kanal/1729839991916.jpg",
         link: "../../pages/projects/project_page_example.html?id=38",
         title: "Реконструкція повітряної лінії 110 кВ «Старокозаче – Канал",
         client: "НЕК «Укренерго»",
-        contract: "Постачання роз'єднувачів на напругу 750 кВ для підключення ПЛ 750 кВ «Запорізька АЕС-Каховська»",
+        contract: "Реконструкція ПЛ-110 кВ Старокозаче – Канал на ділянці опор №№ 88-126 для будівництва ПЛ 330 кВ Новоодеська-Арциз. Одеська область, одеський район",
         sector: "Електроенергетика",
         region: "Україна, Одеська обл.",
         period: "2026",
         filter: "big_projects",
     },
+     {
+        image: "../../images/projects_images/Rekonstruktsiya_PL_750kV_KHAES_Zheshuv/xaec_1.jpg",
+        link: "../../pages/projects/project_page_example.html?id=1",
+        title: "ВИКОНАННЯ КОМПЛЕКСУ РОБІТ З РЕКОНСТРУКЦІЇ ПЛ 750 КВ ХАЕС-ЖЕШУВ З ПЕРЕВОДОМ НА НАПРУГУ 400 КВ ІЗ РЕКОНСТРУКЦІЄЮ ВРП 750 КВ ВП «ХАЕС» ТА ВСТАНОВЛЕННЯМ АТ 750/400 КВ",
+        client: "НЕК «Укренерго»",
+        contract: "Виконання комплексу робіт з реконструкції ПЛ 750 кВ ХАЕС-Жешув",
+        sector: "Електроенергетика",
+        region: "Хмельницька область, Україна",
+        period: "2022-2023",
+        filter: "big_projects",
+    },
+ 
     {
         image: "../../images/projects_images/Rekonstruktsiya_PS_750kV_Vinnytska/TS_2.jpg",
         link: "../../pages/projects/project_page_example.html?id=7",
