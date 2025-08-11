@@ -159,25 +159,6 @@ h1 {
   max-width: 100%;
 
 }
-/* 
-.section_title:nth-child(2) {
-  width: 100%;
-  max-width: 31.25rem;
-  min-width: 200px;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-}
-
-.section_title {
-  margin-top: 2rem;
-  background-color: var(--primary-color);
-  border-radius: 10px;
-  width: fit-content;
-  padding: 1rem;
-  text-transform: uppercase;
-  min-width: 200px;
-} */
-
 #details {
   gap: 2.5rem;
   display: flex;
@@ -296,7 +277,34 @@ h1 {
   min-width: 280px;
   margin-inline: auto;
 }
+#iso{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
 
+#iso .reporting_card .reporting_year{
+  font-size: 1.2rem;
+}
+#iso .reporting_card {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(50% - 0.5rem);
+  min-width: 200px;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+  flex-grow: 1; 
+  flex-basis: calc(50% - 0.5rem);
+  max-width: calc(50% - 0.5rem);
+   
+}
 .projects_geography {
   margin-bottom: 50px;
   max-width: 1200px;
@@ -691,6 +699,7 @@ h1 {
     padding: 1.5rem;
     width: 100%;
   }
+ 
 
   .division_properties_description {
     gap: 1.5rem;
@@ -785,6 +794,10 @@ h1 {
     padding: 1.5rem;
   }
 
+  #iso .reporting_card{
+    width: 100%;
+    max-width: 100%;
+  }
   #reportings_list {
     flex-direction: column;
     align-items: center;

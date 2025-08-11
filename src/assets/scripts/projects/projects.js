@@ -56,8 +56,10 @@ const projects_info = [
             "<br>Загальна пікова потужність Фотогальванічної електростанції «Інгулець» - 57, 552 МВт * пік." +
             "<br> <strong>На даний час, після розкрадання станції загарбниками із рф та деокупації Миколаївської області, на ФЕС «Інгулець» здійснюються роботи з відновлення.</strong>",
         images: [
-            "../../images/projects_images/Rekonstruktsiya_PS_330kV_Shepetivka_Kamyanets/shepetivka_ps_330kv_roboty_vykonuyutsya.jpg",
-            "../../images/projects_images/Rekonstruktsiya_PS_330kV_Shepetivka_Kamyanets/shepetivka_zaminene_obladnannya.jpg"
+            "../../images/projects_images/  ",
+            "../../images/projects_images/Budivnytstvo_FES_Inhulets/3.jpg",
+            "../../images/projects_images/Budivnytstvo_FES_Inhulets/12.jpg",
+            "../../images/projects_images/Budivnytstvo_FES_Inhulets/14.jpg",
         ],
         categoryPath: "../../pages/projects/projects.html"
     },
@@ -70,8 +72,10 @@ const projects_info = [
             "<br>Роботи виконані в повному обсязі та на належному рівні." +
             "<br> <strong>На даний час ПЛ 150 кВ «ГПП Нова Каховка- Дудчино» знаходиться на тимчасово окупованій загарбниками із рф територіі.</strong>",
         images: [
-            "../../images/projects_images/Rekonstruktsiya_PS_330kV_Shepetivka_Kamyanets/shepetivka_ps_330kv_roboty_vykonuyutsya.jpg",
-            "../../images/projects_images/Rekonstruktsiya_PS_330kV_Shepetivka_Kamyanets/shepetivka_zaminene_obladnannya.jpg"
+            "../../images/projects_images/Rekonstruktsiya_PL_150kV_GPP_Nova_Kakhovka_Dudchyno/00328.00_32_53_05.Still038.jpg",
+            "../../images/projects_images/Rekonstruktsiya_PL_150kV_GPP_Nova_Kakhovka_Dudchyno/20160912_075050.jpg",
+            "../../images/projects_images/Rekonstruktsiya_PL_150kV_GPP_Nova_Kakhovka_Dudchyno/IMG_5937.JPG",
+            "../../images/projects_images/Rekonstruktsiya_PL_150kV_GPP_Nova_Kakhovka_Dudchyno/IMG_5938.JPG",
         ],
         categoryPath: "../../pages/projects/projects.html"
     },
