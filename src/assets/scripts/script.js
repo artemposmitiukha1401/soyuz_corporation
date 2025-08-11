@@ -445,9 +445,9 @@ function initializeScrollBlock() {
 window.addEventListener('load', () => {
     waitForGoogleTranslate(googleTranslateElementInit);
     setTimeout(initializeUkrainianButton, 1000);
-    // Initialize PDF handler after page load
+    
     setTimeout(initializePDFHandler, 500);
-    // Initialize scroll blocking
+    
     initializeScrollBlock();
 });
 
@@ -460,28 +460,28 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeMenu() {
         if (menuCheckbox && menuCheckbox.checked) {
             menuCheckbox.checked = false;
-            unblockScroll(); // Unblock scroll when menu is closed
+            unblockScroll(); 
         }
     }
 
-    // Close menu on Escape key
+
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' || e.keyCode === 27) {
             closeMenu();
         }
     });
 
-    // Close menu on page unload
+    
     window.addEventListener('beforeunload', function () {
         closeMenu();
     });
 
-    // Close menu when clicking on menu links
+    
     menuLinks.forEach(link => {
         link.addEventListener('click', closeMenu);
     });
 
-    // Close menu when clicking outside
+
     document.addEventListener('click', function(e) {
         if (menuCheckbox && menuCheckbox.checked) {
             const isClickInsideMenu = menuList && menuList.contains(e.target);
