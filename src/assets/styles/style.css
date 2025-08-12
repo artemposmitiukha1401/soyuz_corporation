@@ -393,7 +393,7 @@ footer {
 
 #flags {
   display: flex;
-  margin-top: 3rem;
+
   width: 100%;
   padding-right: 2rem;
   align-items: center;
@@ -757,6 +757,7 @@ footer {
 
   #europe_integration {
     width: 8rem;
+    margin-top: 2rem;
   }
 
   #short_info {
