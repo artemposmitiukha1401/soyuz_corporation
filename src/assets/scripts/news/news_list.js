@@ -18,6 +18,14 @@ function getTotalNewsPages() {
     return Math.ceil(filteredNews.length / NEWS_PER_PAGE);
 }
 
+function sortNewsByDate(newsArray) {
+    return newsArray.sort((a, b) => {
+        const dateA = new Date(a.date);
+        const dateB = new Date(b.date);
+        return dateB - dateA; 
+    });
+}
+
 function renderNews() {
     const container = document.getElementById("news_list");
     const template = document.getElementById("news-template");
@@ -67,7 +75,6 @@ function renderNewsPagination() {
     const totalPages = getTotalNewsPages();
 
     paginationContainer.innerHTML = '';
-
 
     if (totalPages <= 1) {
         console.log('Пагінація не потрібна - всього одна сторінка');
@@ -121,12 +128,12 @@ function formatDate(dateStr) {
     return `${day}.${month}.${year}`;
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
     fetch("./news.json")
         .then((response) => response.json())
         .then((newsArray) => {
-            allNews = newsArray;
+            
+            allNews = sortNewsByDate(newsArray);
             filteredNews = [...allNews]; 
 
             console.log(`Загальна кількість новин: ${filteredNews.length}`);

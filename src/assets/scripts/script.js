@@ -169,40 +169,6 @@ function applyGoogleTranslateStyles() {
   display: none !important;
 }
 
-    //
-    // #to_ukrainian {
-    //   background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) !important;
-    //   border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    //   font-family: 'Inter', sans-serif !important;
-    //   font-size: 15px !important;
-    //   font-weight: 500 !important;
-    //   color: #e2e8f0 !important;
-    //   padding: 14px 20px !important;
-    //   border-radius: 8px !important;
-    //   cursor: pointer !important;
-    //   backdrop-filter: blur(10px) !important;
-    //   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
-    //   transition: all 0.25s ease !important;
-    //   display: inline-block !important;
-    //   white-space: nowrap !important;
-    //   position: relative !important;
-    //   overflow: hidden !important;
-    //   min-width: 140px !important;
-    //   text-align: center !important;
-    //   animation: fadeInUp 0.3s ease-out !important;
-    // }
-    // #to_ukrainian:hover {
-    //   background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8)) !important;
-    //   border-color: rgba(255, 255, 255, 0.4) !important;
-    //   color: #fff !important;
-    //   transform: translateY(-2px) !important;
-    //   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2), inset 3px 0 0 #3b82f6 !important;
-    // }
-    //
-    // #to_ukrainian:active {
-    //   transform: translateY(0) !important;
-    //   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
-    // }
     @keyframes slideIn {
       from {
         opacity: 0;

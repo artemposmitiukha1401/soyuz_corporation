@@ -386,6 +386,7 @@ footer {
 
 #europe_integration {
   display: flex;
+  margin-top: 2rem;
   border-radius: 10px;
   width: 15rem;
   opacity: 0.8;

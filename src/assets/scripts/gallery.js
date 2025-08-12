@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (galleries.length === 0) {
-        console.warn('No gallery containers found with id or class "images_gallery"');
+        console.warn('Не знайшлось "images_gallery"');
         return;
     }
 
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const images = gallery.querySelectorAll('.gallery_img');
 
         if (images.length === 0) {
-            console.warn('No images with class "gallery_img" found in gallery');
+            console.warn('Не знайшлось "gallery_img" в галереї');
             return;
         }
 
