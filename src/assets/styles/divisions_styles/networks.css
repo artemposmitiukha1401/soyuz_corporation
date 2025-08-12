@@ -224,67 +224,78 @@
         font-size: 1.1rem;
     }
 }
-
 @media only screen and (max-width: 480px) {
+   
+    section,
+    .division_info,
+    #images_gallery,
+    #properties {
+        width: 90% !important;
+        max-width: 90% !important;
+        margin-inline: auto;
+    }
+
     #page_title {
         margin-inline: auto;
         justify-content: center;
-        width: 100%;
+        width: 90%;
     }
 
     #images_gallery {
-        width: 100%;
-        max-width: 95%;
         gap: 1.5rem;
     }
 
     .gallery_img {
         height: 15rem;
-        min-width: 240px;
+        width: 100%;
         max-width: 100%;
+        min-width: auto;
     }
 
-    /* Disable hover effects on touch devices */
+   
     .gallery_img:hover {
         transform: none;
     }
 
     .division_info {
-        width: 100%;
         padding: 1.5rem;
         margin-top: 2rem;
         gap: 0.8rem;
-        min-width: 250px;
+        min-width: auto;
     }
 
     .division_info ul,
     .division_info p,
     .division_info li {
         width: 100%;
-        min-width: 240px;
+        min-width: auto;
         font-size: 1rem;
         line-height: 1.4;
-    }
-
-    #properties {
-        width: 95% !important;
-        max-width: 95% !important;
     }
 
     .properties_card {
         height: auto !important;
         min-height: 400px;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: auto;
+    }
+
+    #properties>div:nth-child(1) {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }
 
 @media (max-width: 320px) {
 
     section,
-    #images_gallery,
     .division_info,
+    #images_gallery,
     #properties {
         width: 90% !important;
         max-width: 90% !important;
+        margin-inline: auto;
     }
 
     #images_gallery {
@@ -294,22 +305,23 @@
 
     .gallery_img {
         height: 12rem;
-        min-width: 240px;
+        width: 100%;
         max-width: 100%;
+        min-width: auto;
     }
 
     .division_info {
         padding: 0.8rem;
         gap: 0.6rem;
         margin-top: 1.5rem;
-        min-width: 240px;
+        min-width: auto;
         justify-content: center;
     }
 
     .division_info ul,
     .division_info p,
     .division_info li {
-        min-width: 220px;
+        min-width: auto;
         font-size: 0.9rem;
         line-height: 1.3;
         width: 100%;
@@ -318,11 +330,17 @@
     .properties_card {
         height: auto !important;
         min-height: 350px;
-        min-width: 240px;
-        width: 100%;
+        min-width: auto;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     #properties {
         justify-content: center;
+    }
+
+    #properties>div:nth-child(1) {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 }

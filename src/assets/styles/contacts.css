@@ -20,12 +20,12 @@ p{
 }
 
 .contact_card {
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   display: flex;
   background-color: var(--primary-color);
   padding: 2rem;
-  width: 25rem;
+  width: 27rem;
   min-width: 8rem;
   max-width: 30rem;
   border-radius: 0.625rem;
