@@ -79,7 +79,7 @@ h1 {
   margin-left: 2%;
   transition: transform 0.2s ease-in-out;
 }
-#nav_logo:hover{
+#nav_logo:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -157,7 +157,6 @@ h1 {
 
 #info > .info_text {
   max-width: 100%;
-
 }
 #details {
   gap: 2.5rem;
@@ -277,7 +276,7 @@ h1 {
   min-width: 280px;
   margin-inline: auto;
 }
-#iso{
+#iso {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -286,7 +285,7 @@ h1 {
   gap: 1rem;
 }
 
-#iso .reporting_card .reporting_year{
+#iso .reporting_card .reporting_year {
   font-size: 1.2rem;
 }
 #iso .reporting_card {
@@ -300,10 +299,9 @@ h1 {
   min-width: 200px;
   flex-direction: column;
   transition: all 0.3s ease-in-out;
-  flex-grow: 1; 
+  flex-grow: 1;
   flex-basis: calc(50% - 0.5rem);
   max-width: calc(50% - 0.5rem);
-   
 }
 .projects_geography {
   margin-bottom: 50px;
@@ -318,7 +316,7 @@ h1 {
   min-width: 120px;
   transition: transform 0.2s ease-in-out;
 }
-#footer_logo:hover{
+#footer_logo:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -364,7 +362,6 @@ h1 {
   flex-direction: column;
   transition: all 0.3s ease-in-out;
 }
-
 
 .reporting_card:hover {
   transform: scale(1.02) translateY(-0.5rem);
@@ -587,9 +584,9 @@ h1 {
   gap: 1rem;
 }
 
-#diplomas .reporting_card h3{
-    font-size: 2rem;
-  }
+#diplomas .reporting_card h3 {
+  font-size: 2rem;
+}
 @media (max-width: 1500px) {
   section {
     max-width: 80% !important;
@@ -699,7 +696,6 @@ h1 {
     padding: 1.5rem;
     width: 100%;
   }
- 
 
   .division_properties_description {
     gap: 1.5rem;
@@ -794,7 +790,7 @@ h1 {
     padding: 1.5rem;
   }
 
-  #iso .reporting_card{
+  #iso .reporting_card {
     width: 100%;
     max-width: 100%;
   }
@@ -861,7 +857,6 @@ h1 {
   #reportings .reporting_card {
     max-width: 100%;
   }
-  
 
   .division_step {
     padding: 1rem;
@@ -1057,40 +1052,40 @@ h1 {
 }
 
 @media (max-width: 320px) {
-  #background{
+  #background {
     height: 10rem;
     min-height: 10rem;
   }
-  section{
+  section {
     max-width: 85% !important;
   }
-  .projects_geography{
+  .projects_geography {
     max-width: 80%;
   }
-  #info_description{
+  #info_description {
     max-width: 100% !important;
     width: 100% !important;
   }
-  #info_text{
+  #info_text {
     max-width: 100% !important;
   }
-  
-  header{
+
+  header {
     height: 5rem;
   }
-  .toggle2{
+  .toggle2 {
     margin-bottom: 1rem;
   }
   body {
     font-size: 14px;
   }
-  .division{
+  .division {
     height: 2rem;
   }
-  .division_title{
+  .division_title {
     font-size: 1.5rem;
   }
-  .division_btn{
+  .division_btn {
     font-size: 1rem;
     height: 3rem;
     width: 8rem;
@@ -1116,8 +1111,6 @@ h1 {
     min-width: 80px;
     max-width: 150px;
   }
-
-
 
   .division_info {
     padding: 0.6rem;

@@ -2,31 +2,31 @@ let translateInitialized = false;
 let isTranslated = false;
 
 function getCurrentTranslationLanguage() {
-    for (const cookie of document.cookie.split(';')) {
-        const [name, value] = cookie.trim().split('=');
-        if (name === 'googtrans' && value) {
-            const parts = decodeURIComponent(value).split('/');
-            if (parts.length >= 3 && parts[2] !== 'uk') return parts[2];
-        }
+  for (const cookie of document.cookie.split(";")) {
+    const [name, value] = cookie.trim().split("=");
+    if (name === "googtrans" && value) {
+      const parts = decodeURIComponent(value).split("/");
+      if (parts.length >= 3 && parts[2] !== "uk") return parts[2];
     }
-    const sel = document.querySelector('.goog-te-combo');
-    return sel && sel.value && sel.value !== 'uk' ? sel.value : null;
+  }
+  const sel = document.querySelector(".goog-te-combo");
+  return sel && sel.value && sel.value !== "uk" ? sel.value : null;
 }
 
 function observeTranslationChanges() {
-    let lastLang = getCurrentTranslationLanguage();
-    new MutationObserver(() => {
-        const cur = getCurrentTranslationLanguage();
-        if (cur !== lastLang) {
-            lastLang = cur;
-            isTranslated = !!cur;
-            if (translateInitialized) setTimeout(applyGoogleTranslateStyles, 300);
-        }
-    }).observe(document.body, {childList: true, subtree: true, characterData: true});
+  let lastLang = getCurrentTranslationLanguage();
+  new MutationObserver(() => {
+    const cur = getCurrentTranslationLanguage();
+    if (cur !== lastLang) {
+      lastLang = cur;
+      isTranslated = !!cur;
+      if (translateInitialized) setTimeout(applyGoogleTranslateStyles, 300);
+    }
+  }).observe(document.body, { childList: true, subtree: true, characterData: true });
 }
 
 function applyGoogleTranslateStyles() {
-    const css = `
+  const css = `
     goog-te-menu-frame {
   border-radius: 12px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
@@ -197,104 +197,110 @@ function applyGoogleTranslateStyles() {
         text-align:center;
         margin-left: 0 !important;
       }
-      
+
     }
   `;
 
-    let style = document.getElementById('google-translate-custom');
-    if (style) style.remove();
-    style = document.createElement('style');
-    style.id = 'google-translate-custom';
-    style.textContent = css;
-    document.head.appendChild(style);
+  let style = document.getElementById("google-translate-custom");
+  if (style) style.remove();
+  style = document.createElement("style");
+  style.id = "google-translate-custom";
+  style.textContent = css;
+  document.head.appendChild(style);
 }
 
 // Scroll blocking functionality
 function blockScroll() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollTop}px`;
-    document.body.style.width = '100%';
-    document.body.style.overflow = 'hidden';
-    document.documentElement.style.overflow = 'hidden';
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${scrollTop}px`;
+  document.body.style.width = "100%";
+  document.body.style.overflow = "hidden";
+  document.documentElement.style.overflow = "hidden";
 }
 
 function unblockScroll() {
-    const scrollTop = document.body.style.top;
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    document.body.style.overflow = '';
-    document.documentElement.style.overflow = '';
-    
-    if (scrollTop) {
-        window.scrollTo(0, parseInt(scrollTop || '0') * -1);
-    }
+  const scrollTop = document.body.style.top;
+  document.body.style.position = "";
+  document.body.style.top = "";
+  document.body.style.width = "";
+  document.body.style.overflow = "";
+  document.documentElement.style.overflow = "";
+
+  if (scrollTop) {
+    window.scrollTo(0, parseInt(scrollTop || "0") * -1);
+  }
 }
 
 function resetToUkrainian() {
-    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + window.location.hostname;
-    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + window.location.hostname;
-    document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+  document.cookie =
+    "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + window.location.hostname;
+  document.cookie =
+    "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." +
+    window.location.hostname;
+  document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
 
-    const googleTranslateSelect = document.querySelector('.goog-te-combo');
-    if (googleTranslateSelect) {
-        googleTranslateSelect.value = '';
-        const changeEvent = new Event('change', {bubbles: true});
-        googleTranslateSelect.dispatchEvent(changeEvent);
-    }
+  const googleTranslateSelect = document.querySelector(".goog-te-combo");
+  if (googleTranslateSelect) {
+    googleTranslateSelect.value = "";
+    const changeEvent = new Event("change", { bubbles: true });
+    googleTranslateSelect.dispatchEvent(changeEvent);
+  }
 
-    isTranslated = false;
+  isTranslated = false;
 
-    setTimeout(() => {
-        window.location.reload();
-    }, 100);
+  setTimeout(() => {
+    window.location.reload();
+  }, 100);
 }
 
 function initializeUkrainianButton() {
-    const ukrainianButton = document.getElementById('to_ukrainian');
-    if (ukrainianButton) {
-        ukrainianButton.addEventListener('click', resetToUkrainian);
-    }
+  const ukrainianButton = document.getElementById("to_ukrainian");
+  if (ukrainianButton) {
+    ukrainianButton.addEventListener("click", resetToUkrainian);
+  }
 }
 
 function googleTranslateElementInit() {
-    if (window.translateDisabled || translateInitialized) return;
-    const target = document.getElementById('google_translate_element');
-    if (!target) return console.error('translate element missing');
+  if (window.translateDisabled || translateInitialized) return;
+  const target = document.getElementById("google_translate_element");
+  if (!target) return console.error("translate element missing");
 
-    new google.translate.TranslateElement({
-        pageLanguage: 'uk',
-        includedLanguages: 'en,pl,de,fr,es,it',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false
-    }, 'google_translate_element');
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "uk",
+      includedLanguages: "en,pl,de,fr,es,it",
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false,
+    },
+    "google_translate_element"
+  );
 
-    translateInitialized = true;
-    setTimeout(() => {
-        applyGoogleTranslateStyles();
-        observeTranslationChanges();
-    }, 800);
+  translateInitialized = true;
+  setTimeout(() => {
+    applyGoogleTranslateStyles();
+    observeTranslationChanges();
+  }, 800);
 }
 
 function waitForGoogleTranslate(cb, tries = 50) {
-    const id = setInterval(() => {
-        if (window.google && google.translate && google.translate.TranslateElement) {
-            clearInterval(id);
-            cb();
-        } else if (!--tries) clearInterval(id);
-    }, 200);
+  const id = setInterval(() => {
+    if (window.google && google.translate && google.translate.TranslateElement) {
+      clearInterval(id);
+      cb();
+    } else if (!--tries) clearInterval(id);
+  }, 200);
 }
 
 function initializePDFHandler() {
-    const pdfLinks = document.querySelectorAll('a[href$=".pdf"], a[href*=".pdf"]');
-    
-    pdfLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const newWindow = window.open('', '_blank');
-            newWindow.document.write(`
+  const pdfLinks = document.querySelectorAll('a[href$=".pdf"], a[href*=".pdf"]');
+
+  pdfLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const newWindow = window.open("", "_blank");
+      newWindow.document.write(`
 <!DOCTYPE html>
 <html>
 <head>
@@ -388,101 +394,92 @@ function initializePDFHandler() {
 </body>
 </html>
             `);
-            newWindow.document.close();
-        });
+      newWindow.document.close();
     });
+  });
 }
-
 
 function initializeScrollBlock() {
-    const menuCheckbox = document.getElementById('checkbox2');
-    
-    if (menuCheckbox) {
-        menuCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                blockScroll();
-            } else {
-                unblockScroll();
-            }
-        });
-    }
+  const menuCheckbox = document.getElementById("checkbox2");
+
+  if (menuCheckbox) {
+    menuCheckbox.addEventListener("change", function () {
+      if (this.checked) {
+        blockScroll();
+      } else {
+        unblockScroll();
+      }
+    });
+  }
 }
 
-window.addEventListener('load', () => {
-    waitForGoogleTranslate(googleTranslateElementInit);
-    setTimeout(initializeUkrainianButton, 1000);
-    
-    setTimeout(initializePDFHandler, 500);
-    
-    initializeScrollBlock();
+window.addEventListener("load", () => {
+  waitForGoogleTranslate(googleTranslateElementInit);
+  setTimeout(initializeUkrainianButton, 1000);
+
+  setTimeout(initializePDFHandler, 500);
+
+  initializeScrollBlock();
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const menuCheckbox = document.getElementById('checkbox2');
-    const menuList = document.getElementById('menu_list');
-    const menuToggle = document.querySelector('.toggle2');
-    const menuLinks = document.querySelectorAll('.menu_link');
+document.addEventListener("DOMContentLoaded", function () {
+  const menuCheckbox = document.getElementById("checkbox2");
+  const menuList = document.getElementById("menu_list");
+  const menuToggle = document.querySelector(".toggle2");
+  const menuLinks = document.querySelectorAll(".menu_link");
 
-    function closeMenu() {
-        if (menuCheckbox && menuCheckbox.checked) {
-            menuCheckbox.checked = false;
-            unblockScroll(); 
-        }
+  function closeMenu() {
+    if (menuCheckbox && menuCheckbox.checked) {
+      menuCheckbox.checked = false;
+      unblockScroll();
     }
+  }
 
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" || e.keyCode === 27) {
+      closeMenu();
+    }
+  });
 
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' || e.keyCode === 27) {
-            closeMenu();
-        }
-    });
+  window.addEventListener("beforeunload", function () {
+    closeMenu();
+  });
 
-    
-    window.addEventListener('beforeunload', function () {
+  menuLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", function (e) {
+    if (menuCheckbox && menuCheckbox.checked) {
+      const isClickInsideMenu = menuList && menuList.contains(e.target);
+      const isClickOnToggle = menuToggle && menuToggle.contains(e.target);
+      const isClickOnCheckbox = e.target === menuCheckbox;
+
+      if (!isClickInsideMenu && !isClickOnToggle && !isClickOnCheckbox) {
         closeMenu();
-    });
+      }
+    }
+  });
 
-    
-    menuLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
-
-
-    document.addEventListener('click', function(e) {
-        if (menuCheckbox && menuCheckbox.checked) {
-            const isClickInsideMenu = menuList && menuList.contains(e.target);
-            const isClickOnToggle = menuToggle && menuToggle.contains(e.target);
-            const isClickOnCheckbox = e.target === menuCheckbox;
-            
-            if (!isClickInsideMenu && !isClickOnToggle && !isClickOnCheckbox) {
-                closeMenu();
-            }
-        }
-    });
-
-    initializeUkrainianButton();
-    initializePDFHandler();
-    initializeScrollBlock();
-    initializeLogoNavigation();
-    
+  initializeUkrainianButton();
+  initializePDFHandler();
+  initializeScrollBlock();
+  initializeLogoNavigation();
 });
 function initializeLogoNavigation() {
-    const navLogo = document.getElementById('nav_logo');
-    const footerLogo = document.getElementById('footer_logo');
-    
-    function navigateToHome() {
-        const baseUrl = window.location.origin;
-        window.location.href = baseUrl + '/index.html';
-    }
-    
-    if (navLogo) {
-        navLogo.addEventListener('click', navigateToHome);
-        
-    }
-    
-    if (footerLogo) {
-        footerLogo.addEventListener('click', navigateToHome);
-        
-        
-    }
+  const navLogo = document.getElementById("nav_logo");
+  const footerLogo = document.getElementById("footer_logo");
+
+  function navigateToHome() {
+    const baseUrl = window.location.origin;
+    window.location.href = baseUrl + "/index.html";
+  }
+
+  if (navLogo) {
+    navLogo.addEventListener("click", navigateToHome);
+  }
+
+  if (footerLogo) {
+    footerLogo.addEventListener("click", navigateToHome);
+  }
 }

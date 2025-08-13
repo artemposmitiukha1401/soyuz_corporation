@@ -1,85 +1,83 @@
 @import "./networks.css";
 
 .to_general:first-of-type {
-    margin-top: 25rem;
+  margin-top: 25rem;
 }
 
 #engineering_info {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
-    width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 60%;
 }
 
 #engineering_info img {
-    width: 100%;
+  width: 100%;
 }
 
 #engineering_description {
-    background-color: var(--primary-color);
-    border-radius: 10px;
-    padding: 1rem;
-    font-size: 1.25rem;
-    line-height: 2rem;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 
 @media only screen and (max-width: 1024px) {
-    #page_title {
-        justify-content: center;
-    }
+  #page_title {
+    justify-content: center;
+  }
 
-    .to_general:first-of-type {
-        margin-top: 28rem;
-    }
+  .to_general:first-of-type {
+    margin-top: 28rem;
+  }
 
-    #engineering_info {
-        width: 70%;
-    }
+  #engineering_info {
+    width: 70%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    #page_title {
-        justify-content: center;
-    }
+  #page_title {
+    justify-content: center;
+  }
 
-    .to_general:first-of-type {
-        margin-top: 29rem;
-    }
+  .to_general:first-of-type {
+    margin-top: 29rem;
+  }
 
-    #engineering_info {
-        width: 85%;
-    }
+  #engineering_info {
+    width: 85%;
+  }
 
-    #engineering_description {
-        font-size: 1.1rem;
-        line-height: 1.8rem;
-    }
+  #engineering_description {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-  
-    section{
-        max-width: 100% !important;
-        width: 100% !important;
-    }
-    #page_title {
-        justify-content: center;
-    }
+  section {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  #page_title {
+    justify-content: center;
+  }
 
-    .to_general:first-of-type {
-        margin-top: 28rem;
-    }
+  .to_general:first-of-type {
+    margin-top: 28rem;
+  }
 
-    #engineering_info {
-        width: 100%;
-        align-items: center;
-    }
+  #engineering_info {
+    width: 100%;
+    align-items: center;
+  }
 
-    #engineering_description {
-        font-size: 1rem;
-        line-height: 1.6rem;
-        padding: 0.8rem;
-    
-    }
+  #engineering_description {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding: 0.8rem;
+  }
 }

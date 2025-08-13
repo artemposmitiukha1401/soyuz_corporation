@@ -1,190 +1,189 @@
 #google_translate_element {
-    display: inline-block;
-    margin-left: 20px;
+  display: inline-block;
+  margin-left: 20px;
 }
 
 #original_lang_btn {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-left: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 #original_lang_btn:hover {
-    background: linear-gradient(135deg, #FFD700, #FFA500);
-    border-color: rgba(255, 215, 0, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
-    color: #333;
+  background: linear-gradient(135deg, #ffd700, #ffa500);
+  border-color: rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+  color: #333;
 }
 
 .goog-te-gadget {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
 }
 
-
 .goog-te-gadget-simple {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 14px;
-    padding: 10px 15px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .goog-te-gadget-simple:hover {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
-    border-color: rgba(255, 255, 255, 0.4);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .goog-te-gadget-icon {
-    display: none;
+  display: none;
 }
 
 .goog-te-gadget-simple .goog-te-menu-value {
-    color: #ffffff;
-    font-weight: 500;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .goog-te-gadget-simple .goog-te-menu-value span {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .goog-te-gadget-simple .goog-te-menu-value span:first-child {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .goog-te-gadget-simple .goog-te-menu-value span:last-child {
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid #ffffff;
-    margin-left: 8px;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #ffffff;
+  margin-left: 8px;
 }
 
 /* Dark themed dropdown menu */
 .goog-te-menu-frame {
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
-    backdrop-filter: blur(15px);
-    overflow: hidden;
-    min-width: 180px;
-    margin-top: 8px;
-    animation: slideIn 0.3s ease-out;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(145deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  min-width: 180px;
+  margin-top: 8px;
+  animation: slideIn 0.3s ease-out;
 }
 
 .goog-te-menu-frame .goog-te-menu {
-    background: transparent;
-    padding: 8px 0;
+  background: transparent;
+  padding: 8px 0;
 }
 
 .goog-te-menu-frame .goog-te-menu-item {
-    padding: 14px 20px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    color: #e2e8f0;
-    transition: all 0.25s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-    position: relative;
-    background: transparent;
+  padding: 14px 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #e2e8f0;
+  transition: all 0.25s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  position: relative;
+  background: transparent;
 }
 
 .goog-te-menu-frame .goog-te-menu-item:hover {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8));
-    color: #ffffff;
-    transform: translateX(5px);
-    padding-left: 25px;
-    box-shadow: inset 3px 0 0 #3b82f6;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(37, 99, 235, 0.8));
+  color: #ffffff;
+  transform: translateX(5px);
+  padding-left: 25px;
+  box-shadow: inset 3px 0 0 #3b82f6;
 }
 
 .goog-te-menu-frame .goog-te-menu-item:hover::before {
-    content: '→';
-    position: absolute;
-    left: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #ffffff;
-    font-weight: bold;
+  content: "→";
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-weight: bold;
 }
 
 .goog-te-menu-frame .goog-te-menu-item:last-child {
-    border-bottom: none;
-    border-radius: 0 0 12px 12px;
+  border-bottom: none;
+  border-radius: 0 0 12px 12px;
 }
 
 .goog-te-menu-frame .goog-te-menu-item:first-child {
-    border-radius: 12px 12px 0 0;
+  border-radius: 12px 12px 0 0;
 }
 
 .goog-te-menu-frame .goog-te-menu-item-selected {
-    background: linear-gradient(135deg, rgba(34, 197, 94, 0.8), rgba(22, 163, 74, 0.8));
-    color: #ffffff;
-    font-weight: 600;
-    box-shadow: inset 3px 0 0 #22c55e;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.8), rgba(22, 163, 74, 0.8));
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: inset 3px 0 0 #22c55e;
 }
 
 .goog-te-menu-frame .goog-te-menu-item-selected::after {
-    content: '✓';
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #ffffff;
-    font-weight: bold;
+  content: "✓";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  font-weight: bold;
 }
 
 @keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px) scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* Hide Google Translate banner */
 .goog-te-banner-frame {
-    display: none !important;
-    visibility: hidden !important;
-    height: 0 !important;
-    opacity: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .skiptranslate > iframe {
-    height: 0 !important;
-    border-style: none !important;
-    box-shadow: none !important;
-    display: none !important;
+  height: 0 !important;
+  border-style: none !important;
+  box-shadow: none !important;
+  display: none !important;
 }
 
 /* Prevent body positioning issues */
 body {
-    top: 0 !important;
-    position: static !important;
+  top: 0 !important;
+  position: static !important;
 }

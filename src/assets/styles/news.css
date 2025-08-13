@@ -11,7 +11,6 @@
 html,
 body {
   overflow-x: hidden;
-  
 }
 
 body {
@@ -44,16 +43,15 @@ time {
   min-width: fit-content;
 }
 
-
 #news_pages {
-    display: flex;
-    width: auto;
-    gap: 2rem;
-    justify-content: center;
-    flex-direction: row;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
+  display: flex;
+  width: auto;
+  gap: 2rem;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
 .news_card {
@@ -149,11 +147,7 @@ time {
 
 .news_gr {
   transition: all 0.2s ease-in-out;
-  background-image: linear-gradient(
-    to top,
-    var(--primary-color),
-    var(--secondary-color)
-  );
+  background-image: linear-gradient(to top, var(--primary-color), var(--secondary-color));
   opacity: 0.6;
   border-radius: 0.938rem;
 }
@@ -383,41 +377,40 @@ time {
 }
 
 @media (max-width: 320px) {
-
-  #news #news_list{
+  #news #news_list {
     margin-inline: auto;
     min-width: 0;
   }
-  .news_card{
+  .news_card {
     justify-content: center;
     align-items: flex-start;
   }
-  .news_info{
+  .news_info {
     align-items: center;
     justify-content: flex-start;
   }
-  section{
+  section {
     max-width: 80% !important;
   }
-  #divisions{
+  #divisions {
     width: 80% !important;
     max-width: 70% !important;
   }
-  .division:nth-child(1){
+  .division:nth-child(1) {
     flex: none;
     width: 100%;
     max-width: 100%;
     min-width: 300px;
   }
-  .division{
+  .division {
     min-width: 200px;
     height: 10rem;
     width: 100%;
   }
-  .division_title{
+  .division_title {
     font-size: 1.5rem;
   }
-  .division_btn{
+  .division_btn {
     height: 3rem;
     font-size: 0.6rem;
   }
