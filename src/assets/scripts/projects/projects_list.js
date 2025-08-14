@@ -428,16 +428,6 @@ const allProjects = [
     region: "Україна, Херсонська обл.",
     period: "2016-2019",
   },
-  {
-    image: "../../images/projects_images/Назва нової папки/Назва нового зображення",
-    link: "../../pages/projects/project_page_example.html?id=45",
-    title: "Назва проєкту",
-    client: "Замовник",
-    contract: "Предмет контракту",
-    sector: "Галузь проєкту",
-    region: "Місцезнаходження проєкту",
-    period: "Терміни виконання проєкту",
-  },
 ];
 
 const PROJECTS_PER_PAGE = 6;
