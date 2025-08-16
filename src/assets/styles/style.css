@@ -15,9 +15,7 @@
     animation: none !important;
   }
 
-  *:not(.toggle):not(.bars):not(#bar4):not(#menu_list):not(#bar5):not(#bar6):hover:not(
-      .more_link
-    ):hover {
+  *:not(.toggle):not(.bars):not(#bar4):not(#menu_list):not(#bar5):not(#bar6):hover:not(.more_link):hover {
     transform: none !important;
   }
 }
@@ -402,11 +400,7 @@ footer p {
 }
 
 #to_ukrainian {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.1)
-  ) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   font-family: "Inter", sans-serif !important;
   font-size: 15px !important;
