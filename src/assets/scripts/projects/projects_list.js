@@ -508,7 +508,7 @@ function renderPagination() {
     return;
   }
 
-  const isBigProjectsPage = window.location.pathname.includes("big_projects.html");
+  const isBigProjectsPage = window.location.pathname.toLowerCase().includes("big_projects");
   if (isBigProjectsPage) {
     paginationContainer.innerHTML = "";
     console.log("Пагінація вимкнена для сторінки великих проєктів");
@@ -560,7 +560,7 @@ function goToPage(pageNumber) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const isBigProjectsPage = window.location.pathname.includes("big_projects.html");
+  const isBigProjectsPage = window.location.pathname.toLowerCase().includes("big_projects");
 
   const projectsToFilter = isBigProjectsPage ? allProjects.filter((p) => p.filter === "big_projects") : allProjects;
 
