@@ -332,7 +332,7 @@ const allProjects = [
     period: "2018",
   },
   {
-    image: "../../images/projects_images/Biopalivo_Elektrostantsiya_Koryukivka/lyd_zverhu.jpg",
+    image: "../../images/projects_images/Biopalivo_Elektrostantsiya_Koryukivka/Vyd_zverhu.jpg",
     link: "../../pages/projects/project_page_example.html?id=36",
     title: "ТЕПЛОВА ЕЛЕКТРОСТАНЦІЯ НА БІОПАЛИВІ (ВІДХОДИ ДЕРЕВИНИ) ЕЛЕКТРИЧНОЮ ПОТУЖНІСТЮ 4000 КВА",
     client: "ТОВ «КЛІАР ЕНЕРДЖІ»",
