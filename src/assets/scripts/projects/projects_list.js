@@ -1,4 +1,4 @@
-const allProjects = [
+window.allProjects = [
   {
     image: "../../images/projects_images/Rekonstruktsiya_PL_750kV_KHAES_Zheshuv/xaec_1.jpg",
     link: "../../pages/projects/project_page_example.html?id=1",
@@ -404,173 +404,271 @@ const allProjects = [
     period: "2016-2019",
   },
 ];
+class ProjectsManager {
+  constructor() {
+    this.PROJECTS_PER_PAGE = 6;
+    this.filteredProjects = [];
+    this.cachedElements = new Map();
+    this.currentPage = 1;
+    this.totalPages = 1;
+    this.isBigProjectsPage = false;
 
-const PROJECTS_PER_PAGE = 6;
-let filteredProjects = [];
+    this.templateSelectors = {
+      image: '[data-template="image"]',
+      link: '[data-template="link"]',
+      title: '[data-template="title"]',
+      client: '[data-template="client"]',
+      contract: '[data-template="contract"]',
+      sector: '[data-template="sector"]',
+      region: '[data-template="region"]',
+      period: '[data-template="period"]',
+    };
 
-function getCurrentPage() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const page = parseInt(urlParams.get("page")) || 1;
-  return Math.max(1, page);
-}
-
-function getProjectsForPage(page, isBigProjectsPage) {
-  if (isBigProjectsPage) {
-    return filteredProjects;
+    this.init();
   }
 
-  const startIndex = (page - 1) * PROJECTS_PER_PAGE;
-  const endIndex = startIndex + PROJECTS_PER_PAGE;
-  return filteredProjects.slice(startIndex, endIndex);
-}
-
-function getTotalPages(isBigProjectsPage) {
-  return isBigProjectsPage ? 1 : Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE);
-}
-
-function extractYearForSorting(period) {
-  if (!period || typeof period !== "string") {
-    return 0;
+  getElement(id) {
+    if (!this.cachedElements.has(id)) {
+      this.cachedElements.set(id, document.getElementById(id));
+    }
+    return this.cachedElements.get(id);
   }
 
-  const cleanPeriod = period.trim().replace(/[^\d\-]/g, "");
-
-  const years = cleanPeriod.match(/\d{4}/g);
-
-  if (!years || years.length === 0) {
-    return 0;
+  getCurrentPage() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = parseInt(urlParams.get("page")) || 1;
+    return Math.max(1, page);
   }
 
-  const latestYear = Math.max(...years.map((year) => parseInt(year)));
+  getProjectsForPage(page = this.currentPage) {
+    if (this.isBigProjectsPage) {
+      return this.filteredProjects;
+    }
 
-  return latestYear;
-}
-
-function sortProjectsByPeriod(projects) {
-  return projects.sort((a, b) => {
-    const yearA = extractYearForSorting(a.period);
-    const yearB = extractYearForSorting(b.period);
-
-    return yearB - yearA;
-  });
-}
-
-function renderProjects() {
-  const container = document.getElementById("projects_list");
-  const template = document.getElementById("project-template");
-
-  if (!container || !template) {
-    console.error("Не знайдено контейнер або шаблон для проєктів");
-    return;
+    const startIndex = (page - 1) * this.PROJECTS_PER_PAGE;
+    return this.filteredProjects.slice(startIndex, startIndex + this.PROJECTS_PER_PAGE);
   }
 
-  const isBigProjectsPage = window.location.pathname.toLowerCase().includes("big_projects");
-  const currentPage = getCurrentPage();
-  const projectsToRender = getProjectsForPage(currentPage, isBigProjectsPage);
+  calculateTotalPages() {
+    return this.isBigProjectsPage ? 1 : Math.ceil(this.filteredProjects.length / this.PROJECTS_PER_PAGE);
+  }
 
-  container.innerHTML = "";
+  extractYearForSorting(period) {
+    if (!period || typeof period !== "string") return 0;
 
-  projectsToRender.forEach((project, index) => {
-    const clone = template.content.cloneNode(true);
+    const years = period.match(/\d{4}/g);
+    return years?.length ? Math.max(...years.map(Number)) : 0;
+  }
+
+  sortProjectsByPeriod(projects) {
+    return [...projects].sort((a, b) => {
+      return this.extractYearForSorting(b.period) - this.extractYearForSorting(a.period);
+    });
+  }
+
+  populateProjectElement(element, project, selector, property) {
+    const el = element.querySelector(selector);
+    if (!el) return;
+
+    if (selector.includes("image")) {
+      el.src = project[property];
+      el.alt = project.title || "";
+    } else if (selector.includes("link")) {
+      el.href = project[property];
+    } else {
+      el.textContent = project[property];
+    }
+  }
+
+  createProjectElement(project, index) {
+    const template = this.getElement("project-template");
+    if (!template) {
+      console.error("Шаблон проекту не знайдено");
+      return null;
+    }
 
     try {
-      const imageEl = clone.querySelector('[data-template="image"]');
-      const linkEl = clone.querySelector('[data-template="link"]');
-      const titleEl = clone.querySelector('[data-template="title"]');
-      const clientEl = clone.querySelector('[data-template="client"]');
-      const contractEl = clone.querySelector('[data-template="contract"]');
-      const sectorEl = clone.querySelector('[data-template="sector"]');
-      const regionEl = clone.querySelector('[data-template="region"]');
-      const periodEl = clone.querySelector('[data-template="period"]');
+      const clone = template.content.cloneNode(true);
 
-      if (imageEl) imageEl.src = project.image;
-      if (linkEl) linkEl.href = project.link;
-      if (titleEl) titleEl.textContent = project.title;
-      if (clientEl) clientEl.textContent = project.client;
-      if (contractEl) contractEl.textContent = project.contract;
-      if (sectorEl) sectorEl.textContent = project.sector;
-      if (regionEl) regionEl.textContent = project.region;
-      if (periodEl) periodEl.textContent = project.period;
+      Object.entries(this.templateSelectors).forEach(([key, selector]) => {
+        this.populateProjectElement(clone, project, selector, key);
+      });
 
-      container.appendChild(clone);
+      return clone;
     } catch (error) {
-      console.error(`Помилка при рендерингу проєкту №${index + 1}:`, error);
+      console.error(`Помилка створення елементу проекту №${index + 1}:`, error);
+      return null;
     }
-  });
-
-  console.log(`Відображено ${projectsToRender.length} проєктів на сторінці ${currentPage}`);
-}
-
-function renderPagination() {
-  const paginationContainer = document.getElementById("projects_pages");
-  if (!paginationContainer) {
-    console.error("Не знайдено контейнер для пагінації");
-    return;
   }
 
-  const isBigProjectsPage = window.location.pathname.toLowerCase().includes("big_projects");
-  if (isBigProjectsPage) {
-    paginationContainer.innerHTML = "";
-    console.log("Пагінація вимкнена для сторінки великих проєктів");
-    return;
+  renderProjects() {
+    const container = this.getElement("projects_list");
+    if (!container) {
+      console.error("Контейнер проектів не знайдено");
+      return;
+    }
+
+    const projectsToRender = this.getProjectsForPage();
+
+    const fragment = document.createDocumentFragment();
+
+    projectsToRender.forEach((project, index) => {
+      const element = this.createProjectElement(project, index);
+      if (element) {
+        fragment.appendChild(element);
+      }
+    });
+
+    container.innerHTML = "";
+    container.appendChild(fragment);
+
+    console.log(`Відображено ${projectsToRender.length} проектів на сторінці ${this.currentPage}`);
   }
 
-  const currentPage = getCurrentPage();
-  const totalPages = getTotalPages(false);
-
-  paginationContainer.innerHTML = "";
-
-  for (let i = 1; i <= totalPages; i++) {
+  createPageLink(pageNumber) {
     const pageLink = document.createElement("a");
     pageLink.className = "page_selector";
-    pageLink.textContent = i;
+    pageLink.textContent = pageNumber;
 
-    const currentUrl = new URL(window.location);
-    currentUrl.searchParams.set("page", i);
-    pageLink.href = currentUrl.toString();
+    const url = new URL(window.location);
+    url.searchParams.set("page", pageNumber);
+    pageLink.href = url.toString();
 
-    if (i === currentPage) {
-      pageLink.style.backgroundColor = "#002e4e";
-      pageLink.style.color = "white";
+    if (pageNumber === this.currentPage) {
+      Object.assign(pageLink.style, {
+        backgroundColor: "#002e4e",
+        color: "white",
+      });
     }
 
-    paginationContainer.appendChild(pageLink);
+    return pageLink;
   }
 
-  console.log(`Створено ${totalPages} сторінок пагінації`);
-}
-
-function updateFilters() {
-  const filterLinks = document.querySelectorAll(".filter");
-  const currentPage = getCurrentPage();
-
-  filterLinks.forEach((link) => {
-    const url = new URL(link.href);
-    if (currentPage > 1) {
-      url.searchParams.set("page", currentPage);
-      link.href = url.toString();
+  renderPagination() {
+    const container = this.getElement("projects_pages");
+    if (!container) {
+      console.error("Контейнер пагінації не знайдено");
+      return;
     }
-  });
+
+    if (this.isBigProjectsPage) {
+      container.innerHTML = "";
+      return;
+    }
+
+    const fragment = document.createDocumentFragment();
+
+    for (let i = 1; i <= this.totalPages; i++) {
+      fragment.appendChild(this.createPageLink(i));
+    }
+
+    container.innerHTML = "";
+    container.appendChild(fragment);
+
+    console.log(`Створено ${this.totalPages} сторінок пагінації`);
+  }
+
+  updateFilters() {
+    const filterLinks = document.querySelectorAll(".filter");
+
+    filterLinks.forEach((link) => {
+      if (this.currentPage > 1) {
+        const url = new URL(link.href);
+        url.searchParams.set("page", this.currentPage);
+        link.href = url.toString();
+      }
+    });
+  }
+
+  goToPage(pageNumber) {
+    if (pageNumber < 1 || pageNumber > this.totalPages) return;
+
+    const url = new URL(window.location);
+    url.searchParams.set("page", pageNumber);
+    window.location.href = url.toString();
+  }
+
+  filterProjects() {
+    let allProjects = window.allProjects || window.projects || [];
+
+    if (!allProjects.length) {
+      const globalVars = Object.keys(window).filter(
+        (key) => key.toLowerCase().includes("project") && Array.isArray(window[key])
+      );
+
+      if (globalVars.length > 0) {
+        allProjects = window[globalVars[0]];
+        console.log(`Знайдено масив проектів: ${globalVars[0]}`);
+      }
+    }
+
+    if (!allProjects || !Array.isArray(allProjects) || allProjects.length === 0) {
+      console.error("Масив проектів не знайдено. Перевірте чи завантажений файл з проектами.");
+      console.log(
+        "Доступні глобальні змінні:",
+        Object.keys(window).filter((k) => !k.startsWith("webkit"))
+      );
+      return;
+    }
+
+    console.log(`Знайдено ${allProjects.length} проектів`);
+
+    const projectsToFilter = this.isBigProjectsPage
+      ? allProjects.filter((p) => p.filter === "big_projects")
+      : allProjects;
+
+    this.filteredProjects = this.sortProjectsByPeriod(projectsToFilter);
+  }
+
+  updatePageData() {
+    this.currentPage = this.getCurrentPage();
+    this.totalPages = this.calculateTotalPages();
+  }
+
+  render() {
+    this.updatePageData();
+    this.renderProjects();
+    this.renderPagination();
+    this.updateFilters();
+  }
+
+  init() {
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", () => this.setup());
+    } else {
+      this.setup();
+    }
+  }
+
+  setup() {
+    this.isBigProjectsPage = window.location.pathname.toLowerCase().includes("big_projects");
+
+    this.filterProjects();
+
+    if (this.filteredProjects.length === 0) {
+      console.log("Проекти не знайдено, спробуємо ще раз через 100мс...");
+      setTimeout(() => {
+        this.filterProjects();
+        if (this.filteredProjects.length > 0) {
+          this.render();
+        } else {
+          console.error("Проекти так і не завантажилися. Перевірте структуру коду.");
+        }
+      }, 100);
+      return;
+    }
+
+    console.log(`Загальна кількість проектів: ${this.filteredProjects.length}`);
+    console.log(`Активна сторінка: ${this.currentPage}`);
+    console.log("Проекти відсортовано за періодом (від нових до старих)");
+
+    this.render();
+  }
+
+  destroy() {
+    this.cachedElements.clear();
+  }
 }
 
-function goToPage(pageNumber) {
-  const url = new URL(window.location);
-  url.searchParams.set("page", pageNumber);
-  window.location.href = url.toString();
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const isBigProjectsPage = window.location.pathname.toLowerCase().includes("big_projects");
-
-  const projectsToFilter = isBigProjectsPage ? allProjects.filter((p) => p.filter === "big_projects") : allProjects;
-
-  filteredProjects = sortProjectsByPeriod(projectsToFilter);
-
-  console.log(`Загальна кількість проєктів: ${filteredProjects.length}`);
-  console.log(`Активна сторінка: ${getCurrentPage()}`);
-  console.log("Проєкти відсортовано за періодом (від нових до старих)");
-
-  renderProjects();
-  renderPagination();
-  updateFilters();
-});
+const projectsManager = new ProjectsManager();
+window.projectsManager = projectsManager;
