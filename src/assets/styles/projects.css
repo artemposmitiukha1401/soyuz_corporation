@@ -26,6 +26,7 @@ header {
   display: flex;
   align-items: center;
 }
+
 section {
   margin-top: 0;
 }
@@ -229,7 +230,7 @@ section {
   transition: opacity 0.2s ease-in-out;
 }
 
-.image_container:hover > .more_link {
+.image_container:hover>.more_link {
   opacity: 1;
 }
 
@@ -257,7 +258,7 @@ section {
   transition: opacity 0.2s ease-in-out;
 }
 
-.image_container:hover > .project_gr {
+.image_container:hover>.project_gr {
   opacity: 0.9;
 }
 
@@ -590,6 +591,7 @@ section {
   .section_title {
     font-size: 1.5rem;
   }
+
   #projects_overview {
     max-width: 92%;
     width: 92%;
@@ -654,6 +656,7 @@ section {
     width: 100%;
     margin-top: 1.25rem;
   }
+
   #projects_filter a {
     width: 100%;
   }
@@ -756,6 +759,7 @@ section {
     width: 100%;
     gap: 1.2rem;
   }
+
   .filter {
     height: 3rem;
     margin: 0;
@@ -765,6 +769,7 @@ section {
     font-size: 0.7rem;
     padding: 0.8rem 0.6rem;
   }
+
   #projects_pages {
     margin-bottom: 2rem;
   }
@@ -778,6 +783,7 @@ section {
   .project_mainimage {
     min-width: 200px;
   }
+
   .project_mainimage,
   .project_gr,
   .image_container {

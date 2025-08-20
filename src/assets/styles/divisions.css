@@ -42,12 +42,12 @@
   transition: all 0.2s ease-in-out;
 }
 
-.division:hover > .division_gr {
+.division:hover>.division_gr {
   opacity: 1;
   transition: all 0.2s ease-in-out;
 }
 
-.division:hover > .division_title {
+.division:hover>.division_title {
   transform: scale(1.2);
 }
 
@@ -340,7 +340,7 @@
     transform-origin: center;
   }
 
-  #divisions .division:hover > .division_title {
+  #divisions .division:hover>.division_title {
     transform: none;
   }
 

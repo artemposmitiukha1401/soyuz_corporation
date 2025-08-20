@@ -123,6 +123,7 @@
 }
 
 @media (max-width: 1200px) {
+
   #contracts ul,
   #directions_textbox ul,
   #contracts p,
@@ -293,9 +294,11 @@
   #page_description {
     display: none;
   }
+
   img {
     min-width: 100px;
   }
+
   .gallery {
     gap: 0.6rem;
     padding: 0.6rem;

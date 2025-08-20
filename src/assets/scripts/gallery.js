@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <!DOCTYPE html>
         <html>
         <head>
-            <title>Image View</title>
+            <title>Перегляд зображень</title>
             <style>
                 body {
                     margin: 0;

@@ -79,6 +79,7 @@ h1 {
   margin-left: 2%;
   transition: transform 0.2s ease-in-out;
 }
+
 #nav_logo:hover {
   transform: scale(1.1);
   cursor: pointer;
@@ -155,9 +156,10 @@ h1 {
   padding: 2rem;
 }
 
-#info > .info_text {
+#info>.info_text {
   max-width: 100%;
 }
+
 #details {
   gap: 2.5rem;
   display: flex;
@@ -276,6 +278,7 @@ h1 {
   min-width: 280px;
   margin-inline: auto;
 }
+
 #iso {
   display: flex;
   flex-direction: row;
@@ -288,6 +291,7 @@ h1 {
 #iso .reporting_card .reporting_year {
   font-size: 1.2rem;
 }
+
 #iso .reporting_card {
   background-color: var(--primary-color);
   border-radius: 10px;
@@ -303,6 +307,7 @@ h1 {
   flex-basis: calc(50% - 0.5rem);
   max-width: calc(50% - 0.5rem);
 }
+
 .projects_geography {
   margin-bottom: 50px;
   max-width: 1200px;
@@ -316,6 +321,7 @@ h1 {
   min-width: 120px;
   transition: transform 0.2s ease-in-out;
 }
+
 #footer_logo:hover {
   transform: scale(1.1);
   cursor: pointer;
@@ -588,6 +594,7 @@ h1 {
 #diplomas .reporting_card h3 {
   font-size: 2rem;
 }
+
 @media (max-width: 1500px) {
   section {
     max-width: 80% !important;
@@ -603,11 +610,11 @@ h1 {
     max-width: 100%;
   }
 
-  #info > .info_image:nth-of-type(1) {
+  #info>.info_image:nth-of-type(1) {
     display: none;
   }
 
-  #info > .info_image:nth-of-type(2) {
+  #info>.info_image:nth-of-type(2) {
     width: 50%;
     max-width: 50% !important;
     height: 100%;
@@ -795,6 +802,7 @@ h1 {
     width: 100%;
     max-width: 100%;
   }
+
   #reportings_list {
     flex-direction: column;
     align-items: center;
@@ -922,7 +930,7 @@ h1 {
     margin-bottom: 1rem;
   }
 
-  #checkbox2:checked + .toggle2 {
+  #checkbox2:checked+.toggle2 {
     transform: rotate(180deg);
     position: fixed;
     right: 1rem;
@@ -1057,16 +1065,20 @@ h1 {
     height: 10rem;
     min-height: 10rem;
   }
+
   section {
     max-width: 85% !important;
   }
+
   .projects_geography {
     max-width: 80%;
   }
+
   #info_description {
     max-width: 100% !important;
     width: 100% !important;
   }
+
   #info_text {
     max-width: 100% !important;
   }
@@ -1074,18 +1086,23 @@ h1 {
   header {
     height: 5rem;
   }
+
   .toggle2 {
     margin-bottom: 1rem;
   }
+
   body {
     font-size: 14px;
   }
+
   .division {
     height: 2rem;
   }
+
   .division_title {
     font-size: 1.5rem;
   }
+
   .division_btn {
     font-size: 1rem;
     height: 3rem;

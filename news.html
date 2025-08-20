@@ -1,86 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="x-icon" href="./src/assets/images/shortcut_icon.png" › />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./src/assets/styles/normalize.css" />
-    <link rel="stylesheet" href="./src/assets/styles/news.css" />
-    <title>Новини</title>
-  </head>
 
-  <body>
-    <header>
-      <img id="nav_logo" src="./src/assets/images/logo.png" alt="" />
-      <input id="checkbox2" type="checkbox" />
-      <label class="toggle toggle2" for="checkbox2">
-        <div id="bar4" class="bars"></div>
-        <div id="bar5" class="bars"></div>
-        <div id="bar6" class="bars"></div>
-      </label>
-      <nav id="menu_list">
-        <a class="menu_link" href="/about.html">Про компанію</a>
-        <a class="menu_link" href="/divisions.html">Послуги</a>
-        <a class="menu_link" href="/projects.html">Проєкти</a>
-        <a class="menu_link" href="/media.html">Медіа</a>
-        <a class="menu_link" href="/contacts.html">Контакти</a>
-        <a class="menu_link" href="/career.html">Карʼєра</a>
-        <div id="google_translate_element"></div>
-        <button id="to_ukrainian" type="button">Українська</button>
-      </nav>
-    </header>
-    <div id="background">
-      <img id="title_background" src="./src/assets/images/photogallery/vysota_ps_750kv.jpg" alt="" />
-      <div id="title_gr"></div>
-      <h1 id="page_title">Медіа</h1>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <link rel="shortcut icon" type="x-icon" href="./src/assets/images/shortcut_icon.png" › />
 
-    <a class="to_general" href="/media.html">Медіа</a>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./src/assets/styles/normalize.css" />
+  <link rel="stylesheet" href="./src/assets/styles/news.css" />
+  <title>Новини</title>
+</head>
 
-    <section id="news">
-      <h2 class="about_title">Новини</h2>
-      <div id="news_list">
-        <template id="news-template">
-          <div class="news_card">
-            <h2 class="news_title" data-news="title"></h2>
-            <div class="news_info">
-              <a class="news_btn" data-news="link">Детальніше</a>
-              <time data-news="date"></time>
-            </div>
+<body>
+  <header>
+    <img id="nav_logo" src="./src/assets/images/logo.png" alt="" />
+    <input id="checkbox2" type="checkbox" />
+    <label class="toggle toggle2" for="checkbox2">
+      <div id="bar4" class="bars"></div>
+      <div id="bar5" class="bars"></div>
+      <div id="bar6" class="bars"></div>
+    </label>
+    <nav id="menu_list">
+      <a class="menu_link" href="/about.html">Про компанію</a>
+      <a class="menu_link" href="/divisions.html">Послуги</a>
+      <a class="menu_link" href="/projects.html">Проєкти</a>
+      <a class="menu_link" href="/media.html">Медіа</a>
+      <a class="menu_link" href="/contacts.html">Контакти</a>
+      <a class="menu_link" href="/career.html">Карʼєра</a>
+      <div id="google_translate_element"></div>
+      <button id="to_ukrainian" type="button">Українська</button>
+    </nav>
+  </header>
+  <div id="background">
+    <img id="title_background" src="./src/assets/images/photogallery/vysota_ps_750kv.jpg" alt="" />
+    <div id="title_gr"></div>
+    <h1 id="page_title">Медіа</h1>
+  </div>
+
+  <a class="to_general" href="/media.html">Медіа</a>
+
+  <section id="news">
+    <h2 class="about_title">Новини</h2>
+    <div id="news_list">
+      <template id="news-template">
+        <div class="news_card">
+          <h2 class="news_title" data-news="title"></h2>
+          <div class="news_info">
+            <a class="news_btn" data-news="link">Детальніше</a>
+            <time data-news="date"></time>
           </div>
-        </template>
-      </div>
-    </section>
-    <div id="news_pages" class="pagination-container"></div>
+        </div>
+      </template>
+    </div>
+  </section>
+  <div id="news_pages" class="pagination-container"></div>
 
-    <a class="to_general" href="/media.html">Медіа</a>
-    <footer>
-      <img id="footer_logo" src="./src/assets/images/logo.png" alt="" />
-      <div id="links">
-        <a class="footer_links" href="/about.html">Про компанію</a>
-        <a class="footer_links" href="/divisions.html">Послуги</a>
-        <a class="footer_links" href="/projects.html">Проєкти</a>
-        <a class="footer_links" href="/media.html">Медіа</a>
-        <a class="footer_links" href="/contacts.html">Контакти</a>
-        <a class="footer_links" href="/career.html">Карʼєра</a>
-      </div>
-      <div id="contacts">
-        <address>м. Одеса, пр-т Шевченка, 1</address>
-        <a href="tel:+380487900110">+38 (048) 790 01 10</a>
-        <a href="mailto:office@soyuz-corp.com.ua">office@soyuz-corp.com.ua</a>
-      </div>
-      <p>&copy; 2025 «СОЮЗ» являється зареестрованою торговою маркою. Всі права захищено</p>
-    </footer>
-    <script src="./src/assets/scripts/script.js"></script>
-  
-    <script src="./src/assets/scripts/news/news_list.js"></script>
-    <script
-      type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
-  </body>
+  <a class="to_general" href="/media.html">Медіа</a>
+  <footer>
+    <img id="footer_logo" src="./src/assets/images/logo.png" alt="" />
+    <div id="links">
+      <a class="footer_links" href="/about.html">Про компанію</a>
+      <a class="footer_links" href="/divisions.html">Послуги</a>
+      <a class="footer_links" href="/projects.html">Проєкти</a>
+      <a class="footer_links" href="/media.html">Медіа</a>
+      <a class="footer_links" href="/contacts.html">Контакти</a>
+      <a class="footer_links" href="/career.html">Карʼєра</a>
+    </div>
+    <div id="contacts">
+      <address>м. Одеса, пр-т Шевченка, 1</address>
+      <a href="tel:+380487900110">+38 (048) 790 01 10</a>
+      <a href="mailto:office@soyuz-corp.com.ua">office@soyuz-corp.com.ua</a>
+    </div>
+    <p>&copy; 2025 «СОЮЗ» являється зареестрованою торговою маркою. Всі права захищено</p>
+  </footer>
+  <script src="./src/assets/scripts/script.js"></script>
+
+  <script src="./src/assets/scripts/news/news_list.js"></script>
+  <script type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
 </html>

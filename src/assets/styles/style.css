@@ -8,6 +8,7 @@
   --font-inter: "Inter", sans-serif;
   --font-nunito: "Nunito Sans", sans-serif;
 }
+
 .goog-te-menu-frame {
   border-radius: 12px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
@@ -146,7 +147,7 @@
 }
 
 .goog-te-banner-frame,
-.skiptranslate > iframe {
+.skiptranslate>iframe {
   display: none !important;
 }
 
@@ -155,6 +156,7 @@
     opacity: 0;
     transform: translateY(-10px) scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -166,6 +168,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -241,6 +244,7 @@
   font-size: 18px;
   line-height: 1;
 }
+
 * {
   color: var(--white);
   font-family: var(--font-inter);
@@ -276,8 +280,8 @@ p {
   width: 100%;
 }
 
-.VIpgJd-ZVi9od-xl07Ob-lTBxed > span:nth-child(3),
-.VIpgJd-ZVi9od-xl07Ob-lTBxed > span:nth-child(5) {
+.VIpgJd-ZVi9od-xl07Ob-lTBxed>span:nth-child(3),
+.VIpgJd-ZVi9od-xl07Ob-lTBxed>span:nth-child(5) {
   display: none;
 }
 
@@ -396,26 +400,26 @@ header {
   transition: 0.8s;
 }
 
-#checkbox2:checked + .toggle2 .bars {
+#checkbox2:checked+.toggle2 .bars {
   position: absolute;
   transition: 0.5s;
 }
 
-#checkbox2:checked + .toggle2 #bar5 {
+#checkbox2:checked+.toggle2 #bar5 {
   transform: scaleX(0);
 }
 
-#checkbox2:checked + .toggle2 #bar4 {
+#checkbox2:checked+.toggle2 #bar4 {
   width: 100%;
   transform: rotate(45deg);
 }
 
-#checkbox2:checked + .toggle2 #bar6 {
+#checkbox2:checked+.toggle2 #bar6 {
   width: 100%;
   transform: rotate(-45deg);
 }
 
-#checkbox2:checked + .toggle2 {
+#checkbox2:checked+.toggle2 {
   transform: rotate(180deg);
 }
 
@@ -459,7 +463,7 @@ header {
   transition: right 0.5s ease-in-out;
 }
 
-#checkbox2:checked ~ #menu_list {
+#checkbox2:checked~#menu_list {
   right: 0;
 }
 
@@ -509,6 +513,7 @@ header {
 .btn:hover {
   transform: scale(1.05);
 }
+
 footer {
   flex-wrap: wrap;
   padding: 2rem;
@@ -551,16 +556,19 @@ footer p {
   gap: 1.25rem;
   width: fit-content;
 }
+
 .footer_links {
   font-size: 1rem;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   transform-origin: center;
 }
+
 .footer_links:hover {
   font-weight: 700;
   transform: scale(1.2);
 }
+
 #contacts {
   margin: 2.5rem 1.875rem 0 0;
   display: flex;
@@ -568,6 +576,7 @@ footer p {
   gap: 0.938rem;
   min-width: 280px;
 }
+
 #footer_logo {
   max-width: 300px;
   min-width: 120px;
@@ -1141,6 +1150,7 @@ footer p {
     min-width: 80px;
   }
 }
+
 @media (max-width: 480px) {
   *:not(.toggle):not(.bars):not(#menu_list):not(#bar4):not(#bar5):not(#bar6):not(.more_link) {
     transform: none !important;

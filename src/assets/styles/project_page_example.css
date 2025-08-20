@@ -3,6 +3,7 @@
 br {
   margin-bottom: 20px;
 }
+
 p,
 ul,
 ol,
@@ -125,6 +126,7 @@ h3 {
 }
 
 @media (max-width: 992px) {
+
   p,
   ul,
   ol,
@@ -174,6 +176,7 @@ h3 {
 }
 
 @media (max-width: 780px) {
+
   p,
   ul,
   ol,
@@ -226,6 +229,7 @@ h3 {
 }
 
 @media only screen and (max-width: 480px) {
+
   p,
   ul,
   ol,
@@ -283,6 +287,7 @@ h3 {
 }
 
 @media (max-width: 320px) {
+
   p,
   ul,
   ol,
