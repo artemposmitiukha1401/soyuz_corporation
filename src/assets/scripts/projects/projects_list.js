@@ -1,7 +1,7 @@
 window.allProjects = [
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PL_750kV_KHAES_Zheshuv/xaec_1.jpg",
-    link: "../../pages/projects/project_page_example.html?id=1",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PL_750kV_KHAES_Zheshuv/xaec_1.jpg",
+    link: "../../../project_page_example.html?id=1",
     title:
       "ВИКОНАННЯ КОМПЛЕКСУ РОБІТ З РЕКОНСТРУКЦІЇ ПЛ 750 КВ ХАЕС-ЖЕШУВ З ПЕРЕВОДОМ НА НАПРУГУ 400 КВ ІЗ РЕКОНСТРУКЦІЄЮ ВРП 750 КВ ВП «ХАЕС» ТА ВСТАНОВЛЕННЯМ АТ 750/400 КВ",
     client: "НЕК «Укренерго»",
@@ -12,8 +12,8 @@ window.allProjects = [
     filter: "big_projects",
   },
   {
-    image: "../../images/projects_images/PL_110KV_Sonyachna_Artsyza/Artsyzz-Solnechnaya.jpg",
-    link: "../../pages/projects/project_page_example.html?id=19",
+    image: "./src/assets/images/projects_images/PL_110KV_Sonyachna_Artsyza/Artsyzz-Solnechnaya.jpg",
+    link: "../../../project_page_example.html?id=19",
     title: "ПЛ 110 кВ СЕС «СОНЯЧНА - АРЦИЗ», ПС 110 кВ СОНЯЧНА-АРЦИЗ",
     client: "ДП НЕК «Укренерго»",
     contract:
@@ -24,8 +24,8 @@ window.allProjects = [
     filter: "big_projects",
   },
   {
-    image: "../../images/projects_images/PL_110KV_Sonyachna_Kiliya/0822.jpg",
-    link: "../../pages/projects/project_page_example.html?id=20 ",
+    image: "./src/assets/images/projects_images/PL_110KV_Sonyachna_Kiliya/0822.jpg",
+    link: "../../../project_page_example.html?id=20 ",
     title: "ПЛ 110 кВ СЕС «СОНЯЧНА - КІЛІЯ», ПС 110 кВ СОНЯЧНА - КІЛІЯ",
     client: "ДП НЕК «Укренерго»",
     contract:
@@ -35,8 +35,8 @@ window.allProjects = [
     period: "2011-2014",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PL_220kV_Centrolit_Kominternove/P8100028.JPG",
-    link: "../../pages/projects/project_page_example.html?id=22",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PL_220kV_Centrolit_Kominternove/P8100028.JPG",
+    link: "../../../project_page_example.html?id=22",
     title: "РЕКОНСТРУКЦІЯ ПЛ 220 кВ ЦЕНТРОЛІТ - КОМІНТЕРНОВЕ",
     client: "ДП НЕК «Укренерго»",
     contract: "Роботи з реконструкції ПЛ 220 кВ в прогоні опор 1-99",
@@ -46,8 +46,8 @@ window.allProjects = [
   },
   {
     image:
-      "../../images/projects_images/Rekonstruktsiya_PL_330kV_Kryvorizka_TES_Trykhati/PL_330kV_Kryvorizka_TES_Trykhaty.JPG",
-    link: "../../pages/projects/project_page_example.html?id=24",
+      "./src/assets/images/projects_images/Rekonstruktsiya_PL_330kV_Kryvorizka_TES_Trykhati/PL_330kV_Kryvorizka_TES_Trykhaty.JPG",
+    link: "../../../project_page_example.html?id=24",
     title: "РЕКОНСТРУКЦІЯ ПЛ 330 кВ КРИВОРІЗЬКА ТЕС - ТРИХАТИ",
     client: "ДП НЕК «Укренерго»",
     contract: "Реконструкція ділянки в прогоні № 74-150, 160-172 з заміною залізобетонних опор на металеві опори",
@@ -56,8 +56,8 @@ window.allProjects = [
     period: "2012",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PS_750kV_Vinnytska/TS_2.jpg",
-    link: "../../pages/projects/project_page_example.html?id=7",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PS_750kV_Vinnytska/TS_2.jpg",
+    link: "../../../project_page_example.html?id=7",
     title: "РЕКОНСТРУКЦІЯ ПС 750 КВ «ВІННИЦЬКА»",
     client: " ПрАТ «НЕК «Укренерго»",
     contract: "  Реконструкція ПС 750 кВ «Вінницька»",
@@ -67,8 +67,8 @@ window.allProjects = [
     filter: "big_projects",
   },
   {
-    image: "../../images/projects_images/Tekhnichne_pereosnashchennya_PS_330kV_Novokyivska/02.jpg",
-    link: "../../pages/projects/project_page_example.html?id=8",
+    image: "./src/assets/images/projects_images/Tekhnichne_pereosnashchennya_PS_330kV_Novokyivska/02.jpg",
+    link: "../../../project_page_example.html?id=8",
     title: "ТЕХНІЧНЕ ПЕРЕОСНАЩЕННЯ ПС 330 КВ «НОВОКИЇВСЬКА»",
     client: "ДП НЕК «Укренерго»",
     contract:
@@ -78,8 +78,8 @@ window.allProjects = [
     period: "2017-2021",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PL_110kV_Adzhalyk_Berehova/support_type_PB-110-8.jpg",
-    link: "../../pages/projects/project_page_example.html?id=9",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PL_110kV_Adzhalyk_Berehova/support_type_PB-110-8.jpg",
+    link: "../../../project_page_example.html?id=9",
     title: "РЕКОНСТРУКЦІЯ ПЛ 110 кВ «АДЖАЛИК-БЕРЕГОВА 1,2»",
     client: " ДП «Морський торговельний порт «Южний»»",
     contract: "Реконструкція ПЛ 110 кВ «АДЖАЛИК-БЕРЕГОВА 1,2».",
@@ -88,8 +88,8 @@ window.allProjects = [
     period: "2018",
   },
   {
-    image: "../../images/projects_images/Budivnytstvo_PL_750kV_Rivnenska_AES_PS_750kV_Kyivska/20150409_101711.jpg",
-    link: "../../pages/projects/project_page_example.html?id=10",
+    image: "./src/assets/images/projects_images/Budivnytstvo_PL_750kV_Rivnenska_AES_PS_750kV_Kyivska/20150409_101711.jpg",
+    link: "../../../project_page_example.html?id=10",
     title: "БУДІВНИЦТВО ПЛ 750 КВ «РІВНЕНСЬКА АЕС – ПС 750 КВ КИЇВСЬКА»",
     client: "ДП «НЕК «Укренерго»",
     contract: "Будівництво ПЛ 750 кВ «Рівненська АЕС – ПС Київська».",
@@ -99,8 +99,8 @@ window.allProjects = [
     filter: "big_projects",
   },
   {
-    image: "../../images/projects_images/Budivnytstvo_KNS_6B_KNS_7A_Odesa/20150622_120946.jpg",
-    link: "../../pages/projects/project_page_example.html?id=11",
+    image: "./src/assets/images/projects_images/Budivnytstvo_KNS_6B_KNS_7A_Odesa/20150622_120946.jpg",
+    link: "../../../project_page_example.html?id=11",
     title: "БУДІВНИЦТВО КНС 7А та КНС 6Б В М. ОДЕСА",
     client: " КП Агентство програм розвитку Одеси Одеської міськради",
     contract:
@@ -110,8 +110,8 @@ window.allProjects = [
     period: "2015",
   },
   {
-    image: "../../images/projects_images/Demontazh_budivel_PS_750kV_Kakhovska/SAM_3010.JPG",
-    link: "../../pages/projects/project_page_example.html?id=12",
+    image: "./src/assets/images/projects_images/Demontazh_budivel_PS_750kV_Kakhovska/SAM_3010.JPG",
+    link: "../../../project_page_example.html?id=12",
     title: "ДЕМОНТАЖ БУДІВЕЛЬНИХ СПОРУД НА ПС 750 кВ «КАХОВСЬКА»",
     client: "ДП НЕК «Укренерго» Південна ЕС",
     contract: "Роботи з демонтажу будівель, металоконструкцій та споруд на ПС 750 кВ «Каховська»",
@@ -120,8 +120,8 @@ window.allProjects = [
     period: "2014",
   },
   {
-    image: "../../images/projects_images/Budivnytstvo_PS_750kV_Kakhovska/Kakhovskaya_oktyabr_2016_1.jpg",
-    link: "../../pages/projects/project_page_example.html?id=13",
+    image: "./src/assets/images/projects_images/Budivnytstvo_PS_750kV_Kakhovska/Kakhovskaya_oktyabr_2016_1.jpg",
+    link: "../../../project_page_example.html?id=13",
     title: "БУДІВНИЦТВО ПС 750/330 кВ «КАХОВСЬКА»",
     client: "ПрАТ «НЕК «Укренерго»",
     contract:
@@ -132,8 +132,8 @@ window.allProjects = [
     filter: "big_projects",
   },
   {
-    image: "../../images/projects_images/VRP_110kV_PS_330kV_Usatove_proektuvannya/13photo.JPG",
-    link: "../../pages/projects/project_page_example.html?id=15",
+    image: "./src/assets/images/projects_images/VRP_110kV_PS_330kV_Usatove_proektuvannya/13photo.JPG",
+    link: "../../../project_page_example.html?id=15",
     title: "РЕКОНСТРУКЦІЯ ВРП 110 кВ ПС 330 кВ «УСАТОВЕ",
     client: "ДП НЕК «Укренерго»",
     contract:
@@ -143,8 +143,8 @@ window.allProjects = [
     period: "2014-2016",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PS_330kV_VRP_110kV_Usatove/3photo.JPG",
-    link: "../../pages/projects/project_page_example.html?id=14",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PS_330kV_VRP_110kV_Usatove/3photo.JPG",
+    link: "../../../project_page_example.html?id=14",
     title: "РЕКОНСТРУКЦІЯ ВРП 110 кВ ПС 330 кВ «УСАТОВЕ»",
     client: "ДП НЕК «Укренерго»",
     contract:
@@ -154,8 +154,8 @@ window.allProjects = [
     period: "2013",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_TGV-200_Burshtynska_TES/Vyd_Burshtynskoi_TES.JPG",
-    link: "../../pages/projects/project_page_example.html?id=16",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_TGV-200_Burshtynska_TES/Vyd_Burshtynskoi_TES.JPG",
+    link: "../../../project_page_example.html?id=16",
     title: "РЕКОНСТРУКЦІЯ ТУРБОГЕНЕРАТОРА ТГВ – 200 НА ЕНЕРГОБЛОЦІ №5 ДТЕК БУРШТИНСЬКА ТЕС",
     client: " ПАТ «ДТЕК Західенерго»",
     contract:
@@ -165,8 +165,8 @@ window.allProjects = [
     period: "2013-2015",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_elektrotekhnichnoho_oblad_Burshtynska_TES/VRP_220kV.JPG",
-    link: "../../pages/projects/project_page_example.html?id=17",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_elektrotekhnichnoho_oblad_Burshtynska_TES/VRP_220kV.JPG",
+    link: "../../../project_page_example.html?id=17",
     title: "РЕКОНСТРУКЦІЯ ЕЛЕКТРОТЕХНІЧНОГО ОБЛАДНАННЯ ЕНЕРГОБЛОКУ №5 ДТЕК БУРШТИНСЬКА ТЕС",
     client: "ПАТ «ДТЕК Західенерго»",
     contract: "Роботи з реконструкції електротехнічного обладнання енергоблоку № 5 ДТЕК Бурштинська ТЕС.    ",
@@ -175,8 +175,8 @@ window.allProjects = [
     period: "2013-2015",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PL_330kV_Adzhalyk_Usatove/events.jpg",
-    link: "../../pages/projects/project_page_example.html?id=18",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PL_330kV_Adzhalyk_Usatove/events.jpg",
+    link: "../../../project_page_example.html?id=18",
     title: "РЕКОНСТРУКЦІЯ ПЛ 330 кВ АДЖАЛИК - УСАТОВЕ",
     client: "ДП НЕК «Укренерго»",
     contract: "Реконструкція дволанцюгової ділянки ПЛ 330 кВ Аджалик 2 – Усатове / Молдавська ДРЕС – Усатове»",
@@ -187,8 +187,8 @@ window.allProjects = [
   },
 
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PS_330kV_Usatove/Events_0011.jpg",
-    link: "../../pages/projects/project_page_example.html?id=21",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PS_330kV_Usatove/Events_0011.jpg",
+    link: "../../../project_page_example.html?id=21",
     title: "РЕКОНСТРУКЦІЯ ПС 330 кВ УСАТОВЕ",
     client: "ДП НЕК «Укренерго»",
     contract:
@@ -199,8 +199,8 @@ window.allProjects = [
     filter: "big_projects",
   },
   {
-    image: "../../images/projects_images/AVR_PL_330kV_Mykolaivska_Khersonska/AVR_PL_330kV_Mykolaivska_Khersonska.jpg",
-    link: "../../pages/projects/project_page_example.html?id=2",
+    image: "./src/assets/images/projects_images/AVR_PL_330kV_Mykolaivska_Khersonska/AVR_PL_330kV_Mykolaivska_Khersonska.jpg",
+    link: "../../../project_page_example.html?id=2",
     title: "ВИКОНАННЯ АВР НА ПЛ 330 КВ «МИКОЛАЇВСЬКА-ХЕРСОНСЬКА»",
     client: "ДП НЕК «Укренерго»",
     contract: " Виконання аварійно-відновлювальних робіт на ПЛ 330 кВ «Миколаївська-Херсонська»      ",
@@ -209,8 +209,8 @@ window.allProjects = [
     period: "2022",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PS_220kV_Centrolit/P8100034.JPG",
-    link: "../../pages/projects/project_page_example.html?id=23",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PS_220kV_Centrolit/P8100034.JPG",
+    link: "../../../project_page_example.html?id=23",
     title: "РЕКОНСТРУКЦІЯ ПС 220 кВ ЦЕНТРОЛІТ",
     client: "ДП НЕК «Укренерго»»",
     contract:
@@ -220,8 +220,8 @@ window.allProjects = [
     period: "2012",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PL_330kV_Moldavska_DRES_Kotovska/Opora_typu_PB-330-7n.JPG",
-    link: "../../pages/projects/project_page_example.html?id=25",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PL_330kV_Moldavska_DRES_Kotovska/Opora_typu_PB-330-7n.JPG",
+    link: "../../../project_page_example.html?id=25",
     title: "РЕКОНСТРУКЦІЯ ПЛ 330 кВ МОЛДАВСЬКА ДРЕС-КОТОВСЬКА",
     client: "ДП НЕК «Укренерго»",
     contract: "Зменшення анкерного прорізу опор № 382 - 435",
@@ -230,8 +230,8 @@ window.allProjects = [
     period: "2012",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_Energoblok7_Burshtynska_TES/turbine_N7.jpg",
-    link: "../../pages/projects/project_page_example.html?id=26",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_Energoblok7_Burshtynska_TES/turbine_N7.jpg",
+    link: "../../../project_page_example.html?id=26",
     title: "РЕКОНСТРУКЦІЯ ЕНЕРГОБЛОКУ № 7 БУРШТИНСЬКОЇ ТЕС",
     client: "ВАТ «Західенерго»",
     contract: " Роботи з реконструкції та технічного переоснащення обладнання енергоблоку № 7",
@@ -240,8 +240,8 @@ window.allProjects = [
     period: "2011",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PL_110kV_Usatove_Centrolit/P8100001.JPG",
-    link: "../../pages/projects/project_page_example.html?id=27",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PL_110kV_Usatove_Centrolit/P8100001.JPG",
+    link: "../../../project_page_example.html?id=27",
     title: "РЕКОНСТРУКЦІЯ ПЛ 110 кВ УСАТОВЕ-ЦЕНТРОЛІТ",
     client: "ВАТ «Одесаобленерго»",
     contract: "Реконструкція ПЛ 110 кВ Кіровська – Більшовик, Усатове – Кіровська, Усатове –Центроліт",
@@ -250,8 +250,8 @@ window.allProjects = [
     period: "2010-2011",
   },
   {
-    image: "../../images/projects_images/Zamina_Vymykachiv_PS_330kV_Trykhati/PS_330kV_Trykhaty.JPG",
-    link: "../../pages/projects/project_page_example.html?id=28",
+    image: "./src/assets/images/projects_images/Zamina_Vymykachiv_PS_330kV_Trykhati/PS_330kV_Trykhaty.JPG",
+    link: "../../../project_page_example.html?id=28",
     title: "ЗАМІНА ВИМИКАЧІВ НА ПС 330 кВ ТРИХАТИ",
     client: "ДП НЕК «Укренерго»",
     contract: "Роботи з заміни чотирьох повітряних вимикачів 330 кВ на елегазові вимикачі",
@@ -260,8 +260,8 @@ window.allProjects = [
     period: "2010-2011",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PS_330kV_VRP_110kV_Usatove/3photo.JPG",
-    link: "../../pages/projects/project_page_example.html?id=29",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PS_330kV_VRP_110kV_Usatove/3photo.JPG",
+    link: "../../../project_page_example.html?id=29",
     title: "РЕКОНСТРУКЦІЯ ПС 330 кВ 1-3 СЕКЦІЙ ВРП 110 кВ УСАТОВЕ",
     client: "ДП НЕК «Укренерго»»",
     contract: "Реконструкція ПС 330 кВ «Усатове» з реконструкцією 1-3 секцій  ВРП 110 кВ",
@@ -271,8 +271,8 @@ window.allProjects = [
   },
   {
     image:
-      "../../images/projects_images/Rekonstruktsiya_PL_110kV_Usatove_Chumka/PL_110_Usatove_Chumka_OTEC_Chumka.jpg.JPG",
-    link: "../../pages/projects/project_page_example.html?id=30",
+      "./src/assets/images/projects_images/Rekonstruktsiya_PL_110kV_Usatove_Chumka/PL_110_Usatove_Chumka_OTEC_Chumka.jpg.JPG",
+    link: "../../../project_page_example.html?id=30",
     title: "РЕКОНСТРУКЦІЯ ПЛ 110 кВ УСАТОВЕ - ЧУМКА, ОДЕСЬКА ТЕЦ - ЧУМКА",
     client: "ВАТ «Одесаобленерго»",
     contract: "Будівельно-монтажні та пусконалагоджувальні роботи, постачання обладнанн",
@@ -281,8 +281,8 @@ window.allProjects = [
     period: "2009-2010",
   },
   {
-    image: "../../images/projects_images/Demontazh_PL_330kV_Adzhalyk_Usatove/SAM_3028.JPG",
-    link: "../../pages/projects/project_page_example.html?id=31",
+    image: "./src/assets/images/projects_images/Demontazh_PL_330kV_Adzhalyk_Usatove/SAM_3028.JPG",
+    link: "../../../project_page_example.html?id=31",
     title: "ДЕМОНТАЖ ПЛ 330 кВ АДЖАЛИК - УСАТОВЕ",
     client: "ДП НЕК «Укренерго»",
     contract: "Роботи по демонтажу дільниці ПЛ 330 кВ Усатове – Молдавська ДРЕС між опорами №№ 248-238",
@@ -291,8 +291,8 @@ window.allProjects = [
     period: "2012-2013",
   },
   {
-    image: "../../images/projects_images/Kapitalnyi_remont_PL_400kV_Moldavska_DRES_Vulkaneshty/mold_vulkaneshti.JPG",
-    link: "../../pages/projects/project_page_example.html?id=32",
+    image: "./src/assets/images/projects_images/Kapitalnyi_remont_PL_400kV_Moldavska_DRES_Vulkaneshty/mold_vulkaneshti.JPG",
+    link: "../../../project_page_example.html?id=32",
     title: "КАПІТАЛЬНИЙ РЕМОНТ ПЛ 400 кВ МОЛДАВСЬКА ДРЕС-ВУЛКАНЕШТИ",
     client: "ІНТЕР РАТ ЄЕС ЗАТ «Молдавська ДРЕС»",
     contract: "Капітальний ремонт ПЛ 400 кВ «Молдавська ДРЕС-Вулканешти»",
@@ -301,8 +301,8 @@ window.allProjects = [
     period: "2010-2011",
   },
   {
-    image: "../../images/projects_images/Budivnytstvo_Orlivska_VES/Ustanovka_opalubki_anker_klet_fundamenta_VEU.jpg",
-    link: "../../pages/projects/project_page_example.html?id=33",
+    image: "./src/assets/images/projects_images/Budivnytstvo_Orlivska_VES/Ustanovka_opalubki_anker_klet_fundamenta_VEU.jpg",
+    link: "../../../project_page_example.html?id=33",
     title: "БУДІВНИЦТВО ОРЛІВСЬКОЇ ВІТРОЕЛЕКТРОСТАНЦІЇ ЗАГАЛЬНОЮ ПОТУЖНІСТЮ 100 МВТ",
     client: "ТОВ «ВЕСТАС ЮКРЕЙН»",
     contract: "Будівництво Орлівської вітрової електростанції",
@@ -312,8 +312,8 @@ window.allProjects = [
     filter: "big_projects",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PS_220_35_10_Berezan/00328.01_06_00_16.Still082.jpg",
-    link: "../../pages/projects/project_page_example.html?id=34",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PS_220_35_10_Berezan/00328.01_06_00_16.Still082.jpg",
+    link: "../../../project_page_example.html?id=34",
     title: "РЕКОНСТРУКЦІЯ ПС 220/35/10 КВ «БЕРЕЗАНЬ»",
     client: "ДП НЕК «Укренерго»",
     contract: "Реконструкція ПС 220/35/10 кВ",
@@ -322,8 +322,8 @@ window.allProjects = [
     period: "2017-2018",
   },
   {
-    image: "../../images/projects_images/Biomasa_Elektrostantsiya_Pereyaslav_Khmelnytskyi/20180503_101443.jpg",
-    link: "../../pages/projects/project_page_example.html?id=35",
+    image: "./src/assets/images/projects_images/Biomasa_Elektrostantsiya_Pereyaslav_Khmelnytskyi/20180503_101443.jpg",
+    link: "../../../project_page_example.html?id=35",
     title: "ЕЛЕКТРОСТАНЦІЯ НА БІОМАСІ ВСТАНОВЛЕНОЮ ПОТУЖНІСТЮ 5000 КВТ",
     client: " ТОВ «Енергопромислова група «ЮГЭНЕРГОПРОМТРАНС»",
     contract: "Будівництво  електростанції на біомасі",
@@ -332,8 +332,8 @@ window.allProjects = [
     period: "2018",
   },
   {
-    image: "../../images/projects_images/Biopalivo_Elektrostantsiya_Koryukivka/Vyd_zverhu.jpg",
-    link: "../../pages/projects/project_page_example.html?id=36",
+    image: "./src/assets/images/projects_images/Biopalivo_Elektrostantsiya_Koryukivka/Vyd_zverhu.jpg",
+    link: "../../../project_page_example.html?id=36",
     title: "ТЕПЛОВА ЕЛЕКТРОСТАНЦІЯ НА БІОПАЛИВІ (ВІДХОДИ ДЕРЕВИНИ) ЕЛЕКТРИЧНОЮ ПОТУЖНІСТЮ 4000 КВА",
     client: "ТОВ «КЛІАР ЕНЕРДЖІ»",
     contract: "Будівництво  теплової електростанції на біопаливі ",
@@ -342,8 +342,8 @@ window.allProjects = [
     period: "2016",
   },
   {
-    image: "../../images/projects_images/Postachannya_ROU_PL_750kV_ZAES_Kakhovska/ORU_750_28.18.jpg",
-    link: "../../pages/projects/project_page_example.html?id=37",
+    image: "./src/assets/images/projects_images/Postachannya_ROU_PL_750kV_ZAES_Kakhovska/ORU_750_28.18.jpg",
+    link: "../../../project_page_example.html?id=37",
     title: "ПОСТАЧАННЯ РОЗ’ЄДНУВАЧІВ НА НАПРУГУ 750 кВ ДЛЯ ПІДКЛЮЧЕННЯ ПЛ 750 кВ «ЗАПОРІЗЬКА АЕС-КАХОВСЬКА»",
     client: "ДП НЕК «Укренерго»",
     contract: "Постачання роз’єднувачів на напругу 750 кВ для підключення ПЛ 750 кВ «Запорізька АЕС-Каховська»",
@@ -352,8 +352,8 @@ window.allProjects = [
     period: "2018",
   },
   {
-    image: "../../images/news_images/rekonstruktsiya_pl_110kv_starokozache_kanal/1729839991862.jpg",
-    link: "../../pages/projects/project_page_example.html?id=38",
+    image: "./src/assets/images//news_images/rekonstruktsiya_pl_110kv_starokozache_kanal/1729839991862.jpg",
+    link: "../../../project_page_example.html?id=38",
     title: "Реконструкція повітряної лінії 110 кВ «Старокозаче – Канал",
     client: "НЕК «Укренерго»",
     contract: "Постачання роз’єднувачів на напругу 750 кВ для підключення ПЛ 750 кВ «Запорізька АЕС-Каховська»",
@@ -363,8 +363,8 @@ window.allProjects = [
     filter: "big_projects",
   },
   {
-    image: "../../images/projects_images/Rekonstruktsiya_PL_330kV_Adzhalyk_Trykhati/lep_and_sky.JPG",
-    link: "../../pages/projects/project_page_example.html?id=3",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PL_330kV_Adzhalyk_Trykhati/lep_and_sky.JPG",
+    link: "../../../project_page_example.html?id=3",
     title: "РЕКОНСТРУКЦІЯ ПЛ 330 КВ «АДЖАЛИК – ТРИХАТИ»",
     client: "ПрАТ «НЕК «Укренерго»",
     contract: " Реконструкція ПЛ 330 кВ «Аджалик-Трихати з улаштуванням заходів на ПС 330 кВ «Тилігул»",
@@ -374,8 +374,8 @@ window.allProjects = [
   },
   {
     image:
-      "../../images/projects_images/Rekonstruktsiya_PS_330kV_Shepetivka_Kamyanets/shepetivka_ps_330kv_roboty_vykonuyutsya.jpg ",
-    link: "../../pages/projects/project_page_example.html?id=4",
+      "./src/assets/images/projects_images/Rekonstruktsiya_PS_330kV_Shepetivka_Kamyanets/shepetivka_ps_330kv_roboty_vykonuyutsya.jpg ",
+    link: "../../../project_page_example.html?id=4",
     title: "РЕКОНСТРУКЦІЯ ПС 330 КВ «ШЕПЕТІВКА» ТА «КАМ’ЯНЕЦЬ-ПОДІЛЬСЬКА»",
     client: "ПрАТ «НЕК «Укренерго»",
     contract: "Реконструкція ПС 330 кВ «Шепетівка» та «Кам’янець-Подільська»",
@@ -384,8 +384,8 @@ window.allProjects = [
     period: "2022-2022",
   },
   {
-    image: "../../images/projects_images/Budivnytstvo_FES_Inhulets/3_1.jpg",
-    link: "../../pages/projects/project_page_example.html?id=5",
+    image: "./src/assets/images/projects_images/Budivnytstvo_FES_Inhulets/3_1.jpg",
+    link: "../../../project_page_example.html?id=5",
     title: "БУДІВНИЦТВО ФОТОГАЛЬВАНІЧНОЇ ЕЛЕКТРОСТАНЦІЇ «ІНГУЛЕЦЬ»",
     client: "ТОВ «Інгулець енерго-2»",
     contract: "Будівництво Фотогальванічної електростанці",
@@ -394,8 +394,8 @@ window.allProjects = [
     period: "2018-2019",
   },
   {
-    image: "../../images/projects_images/Budivnytstvo_FES_Inhulets/3_1.jpg",
-    link: "../../pages/projects/project_page_example.html?id=6",
+    image: "./src/assets/images/projects_images/Rekonstruktsiya_PL_150kV_GPP_Nova_Kakhovka_Dudchyno/00328.00_32_53_05.Still038.jpg",
+    link: "../../../project_page_example.html?id=6",
     title: "РЕКОНСТРУКЦІЯ ПЛ 150 кВ «ГПП НОВА КАХОВКА-ДУДЧИНО»",
     client: "Реконструкція ПЛ 150 кВ «ГПП Нова Каховка-Дудчино»",
     contract: "Будівництво Фотогальванічної електростанці",

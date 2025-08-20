@@ -1,15 +1,45 @@
 const NEWS_PER_PAGE = 6;
+
+const newsData = [
+  {
+    "title": "Реконструкція ПЛ 110 кВ Старокозаче-Канал",
+    "link": "/news_page_example.html?id=1",
+    "date": "2025-04-08"
+  },
+  {
+    "title": "Підписання меморандуму GE - Союз",
+    "link": "/news_page_example.html?id=2",
+    "date": "2023-05-23"
+  },
+  {
+    "title": "Реконструкція ПЛ 750 кВ ХАЕС-Жешув, ВП ХАЕС з встановленням АТ 750 400 кВ",
+    "link": "/news_page_example.html?id=3",
+    "date": "2021-11-23"
+  },
+  {
+    "title": "Реконструкція ПС 750 кВ Вінницька",
+    "link": "/news_page_example.html?id=4",
+    "date": "2025-02-14"
+  },
+  {
+    "title": "Технічне переоснащення ПС 330 кВ Новокиївська",
+    "link": "/news_page_example.html?id=5",
+    "date": "2021-05-24"
+  },
+  {
+    "title": "Виконання АВР на ПЛ 330 кВ Миколаївська-Херсонська",
+    "link": "/news_page_example.html?id=6",
+    "date": "2023-05-23"
+  }
+];
+
 let allNews = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("./news.json")
-    .then((res) => res.json())
-    .then((data) => {
-      allNews = sortNewsByDate(data);
-      renderNews();
-      renderPagination();
-    })
-    .catch((err) => console.error("Помилка завантаження новин:", err));
+
+  allNews = sortNewsByDate(newsData);
+  renderNews();
+  renderPagination();
 });
 
 function getCurrentPage() {
@@ -65,10 +95,12 @@ function renderPagination() {
     a.className = "page_selector";
     a.textContent = i;
     a.href = `?page=${i}`;
+
     if (i === current) {
       a.style.backgroundColor = "#002e4e";
       a.style.color = "white";
     }
+
     pagination.appendChild(a);
   }
-}
+};
